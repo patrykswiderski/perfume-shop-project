@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Almarai&family=K2D:wght@500&family=Kodchasan&display=swap");
+body,
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s all ease;
+}
+
+.navbar-first {
+  padding: 0;
+}
+.navbar-first .navbar-top {
+  background-color: #4d2952;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+}
+.navbar-first .navbar-top .navbar-top__nav {
+  display: inline-flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+.navbar-first .navbar-top .navbar-top__nav .navbar-top__item {
+  display: inline-block;
+}
+.navbar-first .navbar-top .navbar-top__nav .navbar-top__item .navbar-top__link {
+  display: inline-block;
+  font-weight: 400;
+  color: #fff;
+}
+.navbar-first .navbar-top .navbar-top__valentines .navbar-top__valentines-content {
+  margin: 0;
+}
+
+.navbar-second {
+  padding: 0;
+}
+.navbar-second .navbar-middle .navbar-middle__search {
+  position: relative;
+}
+.navbar-second .navbar-middle .navbar-middle__search .navbar-middle__search-input {
+  width: 100%;
+  height: 4rem;
+  max-height: 46px;
+  padding-left: 3rem;
+  border-radius: 29px;
+  border: 1px solid #e5e5e5;
+  font-size: 1rem;
+}
+.navbar-second .navbar-middle .navbar-middle__search .navbar-middle__search-input:focus {
+  transition: none;
+}
+.navbar-second .navbar-middle .navbar-middle__search .navbar-middle__search-button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  z-index: 1;
+  top: 16%;
+  right: 4%;
+}
+.navbar-second .navbar-middle .navbar-middle__logo {
+  max-height: 38px;
+}
+.navbar-second .navbar-middle .navbar-middle__logo .navbar-middle__logo-brand {
+  max-height: 38px;
+  padding-left: 1.5%;
+}
+.navbar-second .navbar-middle .navbar-middle__logo .navbar-middle__logo-brand .navbar-middle__logo-name {
+  font-family: "Kodchasan", sans-serif;
+  color: #4d2952;
+  font-size: 2.4rem;
+  line-height: 1.8rem;
+  margin: 0;
+}
+.navbar-second .navbar-middle .navbar-middle__logo .navbar-middle__logo-brand .navbar-middle__logo-name .navbar-middle__logo-name-domain {
+  font-family: "K2D", sans-serif;
+  font-size: 1.1rem;
+}
+.navbar-second .navbar-middle .navbar-middle__logo .navbar-middle__logo-brand .navbar-middle__logo-since {
+  font-family: "Almarai", sans-serif;
+  color: #585858;
+  font-size: 0.95rem;
+  line-height: 0.4rem;
+  margin: 0;
+}
+.navbar-second .navbar-middle .navbar-middle__client-data .navbar-middle__client-data__nav {
+  display: inline-flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+.navbar-second .navbar-middle .navbar-middle__client-data .navbar-middle__client-data__nav .navbar-middle__client-data__item {
+  display: inline-flex;
+  align-content: center;
+  max-height: 25px;
+  gap: 1rem;
+}
+.navbar-second .navbar-middle .navbar-middle__client-data .navbar-middle__client-data__nav .navbar-middle__client-data__item .navbar-middle__client-data__link {
+  color: #000000;
+  font-size: 1rem;
+  padding-top: 3%;
+}
+
+.navbar-third {
+  padding: 0;
+}
+.navbar-third .navbar-bottom__row {
+  margin: 0;
+}
+.navbar-third .navbar-bottom__row .navbar-bottom__nav {
+  max-width: 1100px;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+.navbar-third .navbar-bottom__row .navbar-bottom__nav .navbar-bottom__item {
+  display: inline-flex;
+}
+.navbar-third .navbar-bottom__row .navbar-bottom__nav .navbar-bottom__item .navbar-bottom__link {
+  color: #000000;
+  font-size: 1rem;
+}
