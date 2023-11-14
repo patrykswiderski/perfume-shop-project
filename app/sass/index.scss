@@ -1,10 +1,12 @@
-// import google font
+ // import google font
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Almarai&family=K2D:wght@500&family=Kodchasan&display=swap");
 
 $white: #fff;
 $black: #000000;
 $primary: #4d2952;
 $rose: #ffe8f0;
+$dark_rose: #BE5B75;
+$button_gray: #898989;
 
 $font-family: "Montserrat", sans-serif;
 $font-brand-since: "Almarai", sans-serif;
@@ -16,6 +18,7 @@ $md: 768px;
 $lg: 992px;
 $xl: 1200px;
 $xxl: 1400px;
+
 
 body,
 html {
@@ -32,124 +35,295 @@ a {
   transition: 0.3s all ease;
 }
 
+@mixin btn-styles {
+  white-space: nowrap;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 750;
+  line-height: 1rem;
+  padding: 0.95rem 3.3rem;
+}
+
+.btn-common {
+  @include btn-styles;
+}
+// Tu zapewne można zrobić mixin,
+
+.btn-transparent {
+  @include btn-styles;
+  color: $black;
+  background-color: transparent;
+  border: 2px solid $button_gray;
+}
+
+.title-text {
+  font-size: 1.75rem;
+  font-weight: 750;
+  margin: 0;
+}
+
 .navbar-first {
   padding: 0;
-  .navbar-top {
-    background-color: $primary;
-    font-size: 1rem;
+}
+
+.navbar-top {
+  background-color: $primary;
+  font-size: 1rem;
+  font-weight: 400;
+  color: $white;
+  
+  &__nav {
+  display: inline-flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  }
+
+  &__item {
+    display: inline-block;
+  }
+  &__link {
+    display: inline-block;
     font-weight: 400;
     color: $white;
-    .navbar-top__nav {
-      display: inline-flex;
-      gap: 2rem;
-      padding: 0;
-      margin: 0;
-      .navbar-top__item {
-        display: inline-block;
-        .navbar-top__link {
-          display: inline-block;
-          font-weight: 400;
-          color: $white;
-        }
-      }
-    }
-    .navbar-top__valentines {
-      .navbar-top__valentines-content {
-        margin: 0;
-      }
-    }
+  }
+  
+  &__valentines-content {
+    margin: 0;
   }
 }
 
 .navbar-second {
   padding: 0;
-  .navbar-middle {
-    .navbar-middle__search {
-      position: relative;
-      .navbar-middle__search-input {
-        width: 100%;
-        height: 4rem;
-        max-height: 46px;
-        padding-left: 3rem;
-        border-radius: 29px;
-        border: 1px solid #e5e5e5;
-        font-size: 1rem;
-      }
-      .navbar-middle__search-input:focus {
-        transition: none;
-      }
-      .navbar-middle__search-button {
-        background-color: transparent;
-        border: none;
-        position: absolute;
-        z-index: 1;
-        top: 16%;
-        right: 4%;
-      }
-    }
-    .navbar-middle__logo {
+}
+
+.navbar-middle {
+  &__search {
+    position: relative;
+  }
+  
+  &__search-input {
+    width: 100%;
+    height: 4rem;
+    max-height: 46px;
+    padding-left: 3rem;
+    border-radius: 29px;
+    border: 1px solid #e5e5e5;
+    font-size: 1rem;
+  }
+
+  &__search-input:focus {
+    transition: none;
+  }
+
+  &__search-button {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    z-index: 1;
+    top: 20%;
+    right: 4%;
+  }
+  
+  &__logo {
       max-height: 38px;
-      .navbar-middle__logo-brand {
-        max-height: 38px;
-        padding-left: 1.5%;
-        .navbar-middle__logo-name {
-          font-family: $font-brand-main;
-          color: $primary;
-          font-size: 2.4rem;
-          line-height: 1.8rem;
-          margin: 0;
-          .navbar-middle__logo-name-domain {
-            font-family: $font-brand-domain;
-            font-size: 1.1rem;
-          }
-        }
-        .navbar-middle__logo-since {
-          font-family: $font-brand-since;
-          color: #585858;
-          font-size: 0.95rem;
-          line-height: 0.4rem;
-          margin: 0;
-        }
-      }
+  }
+
+  &__logo-brand {
+    max-height: 38px;
+    padding-left: 1.5%;
+  }
+
+  &__logo-name {
+    font-family: $font-brand-main;
+    color: $primary;
+    font-size: 2rem;
+    line-height: 1.8rem;
+    margin: 0;
+  }
+
+  &__logo-name-domain {
+    font-family: $font-brand-domain;
+    font-size: 1.1rem;
+  }
+  
+  &__logo-since {
+    font-family: $font-brand-since;
+    color: #585858;
+    font-size: 0.8rem;
+    line-height: 0.4rem;
+    margin: 0;
+  }
+  
+  &__client-data {
+    
+    &__nav {
+    display: inline-flex;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
     }
-    .navbar-middle__client-data {
-      .navbar-middle__client-data__nav {
-        display: inline-flex;
-        gap: 2rem;
-        padding: 0;
-        margin: 0;
-        .navbar-middle__client-data__item {
-          display: inline-flex;
-          align-content: center;
-          max-height: 25px;
-          gap: 1rem;
-          .navbar-middle__client-data__link {
-            color: $black;
-            font-size: 1rem;
-            padding-top: 3%;
-          }
-        }
-      }
+
+    &__item {
+    display: inline-flex;
+    align-content: center;
+    max-height: 25px;
+    gap: 0.4rem;
+    }
+
+    &__link {
+    color: $black;
+    font-size: 0.9rem;
+    font-weight: 450;
+    padding-top: 3%;
     }
   }
 }
 
+
 .navbar-third {
   padding: 0;
-  .navbar-bottom__row {
+}
+
+.navbar-bottom {
+
+  &__row {
     margin: 0;
-    .navbar-bottom__nav {
+  }
+  
+  &__nav {
       max-width: 1100px;
-      gap: 2rem;
+      gap: 1rem;
       padding: 0;
       margin: 0;
-      .navbar-bottom__item {
-        display: inline-flex;
-        .navbar-bottom__link {
-          color: $black;
-          font-size: 1rem;
-        }
-      }
+  }
+
+  &__item {
+    display: inline-flex;
+  }
+    
+  &__link {
+    color: $black;
+    font-size: 0.9rem;
+    font-weight: 450;
+  }
+}
+
+.special-offer {
+  padding: 0;
+  font-weight: 750;
+  letter-spacing: 0.05rem;
+
+  &__flex {
+    background-color: $rose;
+    gap: 3.5rem;
+  }
+
+  &__link {
+    color: $black;
+    font-weight: 600;
+    text-decoration: underline;
+    letter-spacing: normal;
+  }
+
+  &__middle {
+    font-size: 0.8rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: $white;
+    border-radius: 100%;
+    padding-top: 0.4%;
+  }
+}
+
+.carousel-frame {
+  padding: 0;
+  
+  &__top {
+    gap: 0.5rem;
+    
+    &__btn {
+      border: none;
+      background-color: transparent;
     }
+
+    &__btn-image {
+      color: $white;
+      background-color: $dark_rose;
+      left: 21.3%;
+      bottom: 16%;
+      }
+  }
+
+  &__bottom-pagination {
+    margin: 0;
+    cursor: pointer;
+  }
+}
+
+.search-for-brand {
+  padding: 0;
+  margin: 0;
+
+  &__btn-image {
+    color: $white;
+    background-color: $primary;
+    left: 23%;
+    bottom: 25%;
+  }
+}
+
+.our-collection {
+  padding: 0;
+  max-width: 1234px;
+  gap
+  &__content {
+    
+  }
+
+  &__btn {
+    color: $black;
+    background-color: transparent;
+    
+  }
+
+  &__navigation {
+    padding: 0;
+    max-width: 1234px;
+  }
+  
+  &__navigation-block {
+    position: relative;
+    width: 391px;
+    height: 316px;
+    overflow: hidden;
+  }
+
+  &__navigation-img {
+    position: absolute;
+    width: 360px;
+    right: -6rem;
+    bottom: -4.5rem;
+  }
+
+  &__navigation-content {
+    width: 391px;
+    height: 316px;
+    background: rgba(0, 0, 0, 0.2);
+    color: $white;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+    position: absolute;
+    z-index: 1;
+    padding-top: 8.7rem;
+
+    &__link {
+      color: white;
+      font-size: 0.9rem;
+      text-decoration: underline;
+      letter-spacing: normal;
+    }
+
   }
 }

@@ -14,40 +14,69 @@ a {
   transition: 0.3s all ease;
 }
 
+.btn-common {
+  white-space: nowrap;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 750;
+  line-height: 1rem;
+  padding: 0.95rem 3.3rem;
+}
+
+.btn-transparent {
+  white-space: nowrap;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 750;
+  line-height: 1rem;
+  padding: 0.95rem 3.3rem;
+  color: #000000;
+  background-color: transparent;
+  border: 2px solid #898989;
+}
+
+.title-text {
+  font-size: 1.75rem;
+  font-weight: 750;
+  margin: 0;
+}
+
 .navbar-first {
   padding: 0;
 }
-.navbar-first .navbar-top {
+
+.navbar-top {
   background-color: #4d2952;
   font-size: 1rem;
   font-weight: 400;
   color: #fff;
 }
-.navbar-first .navbar-top .navbar-top__nav {
+.navbar-top__nav {
   display: inline-flex;
-  gap: 2rem;
+  gap: 1rem;
   padding: 0;
   margin: 0;
 }
-.navbar-first .navbar-top .navbar-top__nav .navbar-top__item {
+.navbar-top__item {
   display: inline-block;
 }
-.navbar-first .navbar-top .navbar-top__nav .navbar-top__item .navbar-top__link {
+.navbar-top__link {
   display: inline-block;
   font-weight: 400;
   color: #fff;
 }
-.navbar-first .navbar-top .navbar-top__valentines .navbar-top__valentines-content {
+.navbar-top__valentines-content {
   margin: 0;
 }
 
 .navbar-second {
   padding: 0;
 }
-.navbar-second .navbar-middle .navbar-middle__search {
+
+.navbar-middle__search {
   position: relative;
 }
-.navbar-second .navbar-middle .navbar-middle__search .navbar-middle__search-input {
+.navbar-middle__search-input {
   width: 100%;
   height: 4rem;
   max-height: 46px;
@@ -56,76 +85,178 @@ a {
   border: 1px solid #e5e5e5;
   font-size: 1rem;
 }
-.navbar-second .navbar-middle .navbar-middle__search .navbar-middle__search-input:focus {
+.navbar-middle__search-input:focus {
   transition: none;
 }
-.navbar-second .navbar-middle .navbar-middle__search .navbar-middle__search-button {
+.navbar-middle__search-button {
   background-color: transparent;
   border: none;
   position: absolute;
   z-index: 1;
-  top: 16%;
+  top: 20%;
   right: 4%;
 }
-.navbar-second .navbar-middle .navbar-middle__logo {
+.navbar-middle__logo {
   max-height: 38px;
 }
-.navbar-second .navbar-middle .navbar-middle__logo .navbar-middle__logo-brand {
+.navbar-middle__logo-brand {
   max-height: 38px;
   padding-left: 1.5%;
 }
-.navbar-second .navbar-middle .navbar-middle__logo .navbar-middle__logo-brand .navbar-middle__logo-name {
+.navbar-middle__logo-name {
   font-family: "Kodchasan", sans-serif;
   color: #4d2952;
-  font-size: 2.4rem;
+  font-size: 2rem;
   line-height: 1.8rem;
   margin: 0;
 }
-.navbar-second .navbar-middle .navbar-middle__logo .navbar-middle__logo-brand .navbar-middle__logo-name .navbar-middle__logo-name-domain {
+.navbar-middle__logo-name-domain {
   font-family: "K2D", sans-serif;
   font-size: 1.1rem;
 }
-.navbar-second .navbar-middle .navbar-middle__logo .navbar-middle__logo-brand .navbar-middle__logo-since {
+.navbar-middle__logo-since {
   font-family: "Almarai", sans-serif;
   color: #585858;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   line-height: 0.4rem;
   margin: 0;
 }
-.navbar-second .navbar-middle .navbar-middle__client-data .navbar-middle__client-data__nav {
+.navbar-middle__client-data__nav {
   display: inline-flex;
-  gap: 2rem;
+  gap: 1.5rem;
   padding: 0;
   margin: 0;
 }
-.navbar-second .navbar-middle .navbar-middle__client-data .navbar-middle__client-data__nav .navbar-middle__client-data__item {
+.navbar-middle__client-data__item {
   display: inline-flex;
   align-content: center;
   max-height: 25px;
-  gap: 1rem;
+  gap: 0.4rem;
 }
-.navbar-second .navbar-middle .navbar-middle__client-data .navbar-middle__client-data__nav .navbar-middle__client-data__item .navbar-middle__client-data__link {
+.navbar-middle__client-data__link {
   color: #000000;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-weight: 450;
   padding-top: 3%;
 }
 
 .navbar-third {
   padding: 0;
 }
-.navbar-third .navbar-bottom__row {
+
+.navbar-bottom__row {
   margin: 0;
 }
-.navbar-third .navbar-bottom__row .navbar-bottom__nav {
+.navbar-bottom__nav {
   max-width: 1100px;
-  gap: 2rem;
+  gap: 1rem;
   padding: 0;
   margin: 0;
 }
-.navbar-third .navbar-bottom__row .navbar-bottom__nav .navbar-bottom__item {
+.navbar-bottom__item {
   display: inline-flex;
 }
-.navbar-third .navbar-bottom__row .navbar-bottom__nav .navbar-bottom__item .navbar-bottom__link {
+.navbar-bottom__link {
   color: #000000;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-weight: 450;
+}
+
+.special-offer {
+  padding: 0;
+  font-weight: 750;
+  letter-spacing: 0.05rem;
+}
+.special-offer__flex {
+  background-color: #ffe8f0;
+  gap: 3.5rem;
+}
+.special-offer__link {
+  color: #000000;
+  font-weight: 600;
+  text-decoration: underline;
+  letter-spacing: normal;
+}
+.special-offer__middle {
+  font-size: 0.8rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: #fff;
+  border-radius: 100%;
+  padding-top: 0.4%;
+}
+
+.carousel-frame {
+  padding: 0;
+}
+.carousel-frame__top {
+  gap: 0.5rem;
+}
+.carousel-frame__top__btn {
+  border: none;
+  background-color: transparent;
+}
+.carousel-frame__top__btn-image {
+  color: #fff;
+  background-color: #BE5B75;
+  left: 21.3%;
+  bottom: 16%;
+}
+.carousel-frame__bottom-pagination {
+  margin: 0;
+  cursor: pointer;
+}
+
+.search-for-brand {
+  padding: 0;
+  margin: 0;
+}
+.search-for-brand__btn-image {
+  color: #fff;
+  background-color: #4d2952;
+  left: 23%;
+  bottom: 25%;
+}
+
+.our-collection {
+  padding: 0;
+  max-width: 1234px;
+}
+.our-collection__btn {
+  color: #000000;
+  background-color: transparent;
+}
+.our-collection__navigation {
+  padding: 0;
+  max-width: 1234px;
+}
+.our-collection__navigation-block {
+  position: relative;
+  width: 391px;
+  height: 316px;
+  overflow: hidden;
+}
+.our-collection__navigation-img {
+  position: absolute;
+  width: 360px;
+  right: -6rem;
+  bottom: -4.5rem;
+}
+.our-collection__navigation-content {
+  width: 391px;
+  height: 316px;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  position: absolute;
+  z-index: 1;
+  padding-top: 8.7rem;
+}
+.our-collection__navigation-content__link {
+  color: white;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  letter-spacing: normal;
 }
