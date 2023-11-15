@@ -238,26 +238,28 @@ a {
 
 .carousel-frame {
   padding: 0;
-  
-  &__top {
-    gap: 0.5rem;
-    
-    &__btn {
-      border: none;
-      background-color: transparent;
-    }
+}
 
-    &__btn-image {
-      color: $white;
-      background-color: $dark_rose;
-      left: 21.3%;
-      bottom: 16%;
-      }
+.carousel-frame-top {
+  gap: 0.5rem;
+    
+  &__btn {
+    border: none;
+    background-color: transparent;
   }
 
-  &__bottom-pagination {
-    margin: 0;
-    cursor: pointer;
+  &__btn-image {
+    color: $white;
+    background-color: $dark_rose;
+    left: 21.3%;
+    bottom: 16%;
+    }
+  }
+
+.carousel-frame-bottom {
+  &__pagination {
+  margin: 0;
+  cursor: pointer;
   }
 }
 
@@ -317,13 +319,12 @@ a {
     position: absolute;
     z-index: 1;
     padding-top: 8.7rem;
+  }
 
-    &__link {
-      color: white;
-      font-size: 0.9rem;
-      text-decoration: underline;
-      letter-spacing: normal;
-    }
-
+  &__navigation-content-link {
+    color: white;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    letter-spacing: normal;
   }
 }
