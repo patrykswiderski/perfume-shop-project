@@ -147,3 +147,88 @@
     bottom: 14%;
   }
 }
+
+.security-row {
+  gap: 7rem;
+  background-color: $primary;
+  margin-top: 7rem;
+}
+
+.security-box {
+  display: inline-flex;
+  align-content: center;
+  gap: 1rem;
+  color: $white;
+
+  &__image {
+    max-height: 20px;
+  }
+
+  &__content {
+    margin: 0;
+  }
+}
+
+.sign-up {
+  background-color: $sign-up;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+.sign-up-left {
+  max-width: 960px;
+  border-right: 1px solid #CCCCCC;
+  padding: 3rem 6rem;
+
+  &__title {
+    font-size: 1rem;
+    font-weight: 750;
+    margin: 0;
+  }
+
+  &__input {
+
+    color: $button_gray;
+  }
+
+  &__input-data {
+    width: 40%;
+    max-width: 286px;
+    border: none;
+    border-bottom: 2px solid $black;
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    max-height: 48px;
+  }
+
+
+  &__input-btn {
+    max-height: 42px;
+    line-height: 0.8rem;
+  }
+
+  &__content {
+    max-width: 760px;
+    font-size: 0.67rem;
+  }
+
+  &__content-underline {
+  color: $black;
+  text-decoration: underline;
+  }
+}
+
+.sign-up-right {
+  max-width: 960px;
+  padding: 3rem 6rem;
+
+  &__title {
+    font-size: 1rem;
+    font-weight: 750;
+    margin: 0;
+    padding-bottom: 0.4rem;
+  }
+
+  &__bottom-content {
+    text-transform: uppercase;
+    margin: 0;
+  }
+}
