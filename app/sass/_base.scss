@@ -1,0 +1,62 @@
+// import google font
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Almarai&family=K2D:wght@500&family=Kodchasan&family=Mulish:wght@500;600;700;800;900;1000&display=swap");
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: $font-family;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s all ease;
+}
+
+@mixin btn-styles {
+  white-space: nowrap;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 750;
+  line-height: 1rem;
+  padding: 0.95rem 3.3rem;
+  z-index: 1;
+}
+
+.btn-common {
+  @include btn-styles;
+  color: $white
+}
+
+.btn-transparent {
+  @include btn-styles;
+  color: $black;
+  background-color: transparent;
+  border: 2px solid $button_gray;
+}
+
+.btn-next-product {
+  border: none;
+  background-color: transparent;
+}
+
+.btn-wishlist {
+  max-height: 16px;
+  background-color: transparent;
+  border: none;
+}
+
+.title-text {
+  font-size: 1.75rem;
+  font-weight: 750;
+  margin: 0;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+

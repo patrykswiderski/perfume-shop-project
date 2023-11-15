@@ -1,213 +1,13 @@
- // import google font
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Almarai&family=K2D:wght@500&family=Kodchasan&display=swap");
+// variables & functions
+@import 'variables';
 
-$white: #fff;
-$black: #000000;
-$primary: #4d2952;
-$rose: #ffe8f0;
-$dark_rose: #BE5B75;
-$button_gray: #898989;
+// base & layout
+@import 'base';
+@import 'product-blocks';
 
-$font-family: "Montserrat", sans-serif;
-$font-brand-since: "Almarai", sans-serif;
-$font-brand-domain: "K2D", sans-serif;
-$font-brand-main: "Kodchasan", sans-serif;
+// header styles
+@import 'header';
 
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
-$xl: 1200px;
-$xxl: 1400px;
-
-
-body,
-html {
-  overflow-x: hidden;
-}
-
-body {
-  font-family: $font-family;
-  font-size: 14px;
-}
-
-a {
-  text-decoration: none;
-  transition: 0.3s all ease;
-}
-
-@mixin btn-styles {
-  white-space: nowrap;
-  text-align: center;
-  font-size: 0.9rem;
-  font-weight: 750;
-  line-height: 1rem;
-  padding: 0.95rem 3.3rem;
-}
-
-.btn-common {
-  @include btn-styles;
-}
-// Tu zapewne można zrobić mixin,
-
-.btn-transparent {
-  @include btn-styles;
-  color: $black;
-  background-color: transparent;
-  border: 2px solid $button_gray;
-}
-
-.title-text {
-  font-size: 1.75rem;
-  font-weight: 750;
-  margin: 0;
-}
-
-.navbar-first {
-  padding: 0;
-}
-
-.navbar-top {
-  background-color: $primary;
-  font-size: 1rem;
-  font-weight: 400;
-  color: $white;
-  
-  &__nav {
-  display: inline-flex;
-  gap: 1rem;
-  padding: 0;
-  margin: 0;
-  }
-
-  &__item {
-    display: inline-block;
-  }
-  &__link {
-    display: inline-block;
-    font-weight: 400;
-    color: $white;
-  }
-  
-  &__valentines-content {
-    margin: 0;
-  }
-}
-
-.navbar-second {
-  padding: 0;
-}
-
-.navbar-middle {
-  &__search {
-    position: relative;
-  }
-  
-  &__search-input {
-    width: 100%;
-    height: 4rem;
-    max-height: 46px;
-    padding-left: 3rem;
-    border-radius: 29px;
-    border: 1px solid #e5e5e5;
-    font-size: 1rem;
-  }
-
-  &__search-input:focus {
-    transition: none;
-  }
-
-  &__search-button {
-    background-color: transparent;
-    border: none;
-    position: absolute;
-    z-index: 1;
-    top: 20%;
-    right: 4%;
-  }
-  
-  &__logo {
-      max-height: 38px;
-  }
-
-  &__logo-brand {
-    max-height: 38px;
-    padding-left: 1.5%;
-  }
-
-  &__logo-name {
-    font-family: $font-brand-main;
-    color: $primary;
-    font-size: 2rem;
-    line-height: 1.8rem;
-    margin: 0;
-  }
-
-  &__logo-name-domain {
-    font-family: $font-brand-domain;
-    font-size: 1.1rem;
-  }
-  
-  &__logo-since {
-    font-family: $font-brand-since;
-    color: #585858;
-    font-size: 0.8rem;
-    line-height: 0.4rem;
-    margin: 0;
-  }
-  
-  &__client-data {
-    
-    &__nav {
-    display: inline-flex;
-    gap: 1.5rem;
-    padding: 0;
-    margin: 0;
-    }
-
-    &__item {
-    display: inline-flex;
-    align-content: center;
-    max-height: 25px;
-    gap: 0.4rem;
-    }
-
-    &__link {
-    color: $black;
-    font-size: 0.9rem;
-    font-weight: 450;
-    padding-top: 3%;
-    }
-  }
-}
-
-
-.navbar-third {
-  padding: 0;
-}
-
-.navbar-bottom {
-
-  &__row {
-    margin: 0;
-  }
-  
-  &__nav {
-      max-width: 1100px;
-      gap: 1rem;
-      padding: 0;
-      margin: 0;
-  }
-
-  &__item {
-    display: inline-flex;
-  }
-    
-  &__link {
-    color: $black;
-    font-size: 0.9rem;
-    font-weight: 450;
-  }
-}
 
 .special-offer {
   padding: 0;
@@ -241,11 +41,10 @@ a {
 }
 
 .carousel-frame-top {
-  gap: 0.5rem;
-    
-  &__btn {
-    border: none;
-    background-color: transparent;
+  max-width: 1354px;
+
+  &__image {
+    max-width: 1234px;
   }
 
   &__btn-image {
@@ -268,7 +67,6 @@ a {
   margin: 0;
 
   &__btn-image {
-    color: $white;
     background-color: $primary;
     left: 23%;
     bottom: 25%;
@@ -278,15 +76,10 @@ a {
 .our-collection {
   padding: 0;
   max-width: 1234px;
-  gap
-  &__content {
-    
-  }
 
   &__btn {
     color: $black;
     background-color: transparent;
-    
   }
 
   &__navigation {
@@ -326,5 +119,31 @@ a {
     font-size: 0.9rem;
     text-decoration: underline;
     letter-spacing: normal;
+  }
+}
+
+.subscription-top {
+  max-width: 1234px;
+
+  &__btn {
+    border: 2px solid $black;
+    left: 7%;
+    bottom: 23%;
+  }
+}
+
+.subscription-bottom {
+  max-width: 1234px;
+
+  &__left-btn {
+    background-color: $dark_rose;
+    left: 8.8%;
+    bottom: 14%;
+  }
+
+  &__right-btn {
+    background-color: $primary;
+    left: 8.8%;
+    bottom: 14%;
   }
 }

@@ -1,0 +1,105 @@
+.products-box-style {
+  @include flex-between;
+  align-items: center;
+  margin-inline: auto;
+  max-width: 1354px;
+}
+
+.products-middle-style {
+  @include flex-between;
+  margin: 0;
+  padding: 0;
+  max-width: 1234px;
+}
+
+.item-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 294px;
+
+  &__top {
+    @include flex-between;
+    width: 86%;
+  }
+
+  &__top-gender {
+    margin: 0;
+    padding: 0.15rem 0.4rem;
+    max-height: 20px;
+    text-align: center;
+    font-family: $font-item-block;
+    font-size: 0.6rem;
+    line-height: 1rem;
+    font-weight: 900;
+    color: $white;
+    background-color: $item-block-gender;
+
+  }
+
+  &__img {
+    max-width: 252px;
+  }
+
+  &__content {
+    text-align: center;
+
+  }
+
+  &__content-name {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 750;
+  }
+
+  &__content-brand {
+    margin: 0;
+    color: $button_gray;
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+
+  &__content-brand-underline {
+    text-decoration: underline;
+  }
+
+  &__content-type {
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 300;
+    padding: 0.8rem 0;
+  }
+
+  &__content-price {
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 150%;
+    vertical-align: text-bottom;
+    padding-bottom: 1rem;
+  }
+
+  &__content-price-bold{
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 750;
+    letter-spacing: 0.1rem;
+  }
+
+  &__add {
+    display: flex;
+  }
+
+  &__add-btn {
+    white-space: nowrap;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 750;
+    line-height: 1rem;
+    padding: 0.95rem 5rem;
+    color: $black;
+    background-color: transparent;
+    border: 1px solid #C4C4C4;
+    max-width: 252px;
+  }
+}
