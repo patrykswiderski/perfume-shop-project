@@ -32,19 +32,29 @@
     height: 2rem;
     background-color: $white;
     border-radius: 100%;
-    padding-top: 0.4%;
+    padding-top: 0.3%;
   }
 }
 
 .carousel-frame {
   padding: 0;
+
+  &__flex{
+    padding: 0.8% 0;
+  }
 }
 
 .carousel-frame-top {
+  justify-content: space-between;
   max-width: 1354px;
 
-  &__image {
+  &__carousel-image {
+    width: 93%;
     max-width: 1234px;
+  }
+
+  &__image {
+    max-width: 100%;
   }
 
   &__btn-image {
@@ -56,9 +66,19 @@
   }
 
 .carousel-frame-bottom {
+  width: 6.1%;
+  padding-top: 0.4%;
+
   &__pagination {
   margin: 0;
   cursor: pointer;
+  width: 100%;
+  max-width: 120px;
+  }
+
+  &__pagination-image {
+    width: 100%;
+    max-width: 39px;
   }
 }
 
@@ -66,16 +86,63 @@
   padding: 0;
   margin: 0;
 
+  &__flex {
+    max-width: 1234px;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 1234px;
+  }
+
   &__btn-image {
     background-color: $primary;
-    left: 23%;
-    bottom: 25%;
+    left: 7.8%;
+    bottom: 27%;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .special-offer {
+
+    &__middle {
+      padding-top: 0.55%;
+    }
+  }
+
+  .carousel-frame-top {
+    justify-content: center;
+    max-width: 1234px;
+
+    &__carousel-image {
+    width: 100%;
+    }
+
+    &__btn-left {
+      position: absolute;
+      top: 42%;
+      left: 1%;    
+    }
+
+    &__btn-right {
+      position: absolute;
+      top: 42%;  
+      right: 1%;    
+    }
   }
 }
 
 .our-collection {
   padding: 0;
   max-width: 1234px;
+
+  &__top {
+    padding: 4% 0;
+  }
+
+  &__title {
+    padding-bottom: 0.8%;
+  }
 
   &__btn {
     color: $black;
@@ -84,26 +151,39 @@
 
   &__navigation {
     padding: 0;
+  }
+
+  &__navigation-row {
+    padding: 1.5% 0;
+    width: 100%;
+    height: 100vh;
     max-width: 1234px;
+    max-height: 651px;
+    row-gap: 4%;
   }
   
   &__navigation-block {
     position: relative;
-    width: 391px;
-    height: 316px;
+    width: 32%;
+    max-width: 391px;
+    height: 49%;
+    max-height: 316px;
     overflow: hidden;
   }
 
   &__navigation-img {
     position: absolute;
-    width: 360px;
-    right: -6rem;
-    bottom: -4.5rem;
+    width: 93%;
+    max-width: 360px;
+    right: -25%;
+    bottom: -20%;
   }
 
   &__navigation-content {
-    width: 391px;
-    height: 316px;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
     background: rgba(0, 0, 0, 0.2);
     color: $white;
     font-size: 1.6rem;
@@ -111,7 +191,7 @@
     font-weight: 600;
     position: absolute;
     z-index: 1;
-    padding-top: 8.7rem;
+    padding-top: 34.3%;
   }
 
   &__navigation-content-link {
@@ -122,18 +202,74 @@
   }
 }
 
+.recommended {
+  padding: 2% 0;
+
+  &__top {
+    padding: 1% 0;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .recommended-middle {
+
+    &__btn {
+      display: none;
+    }
+  }
+}
+
+.new-arrivals-top {
+  padding: 1% 0;
+}
+
+@media screen and (max-width: 1200px){
+  .new-arrivals-middle {
+
+    &__btn {
+      display: none;
+    }
+  }
+}
+
+.subscription {
+  padding: 0;
+}
+
 .subscription-top {
   max-width: 1234px;
+  padding: 0;
+
+  &__image {
+    padding: 0;
+    width: 100%;
+    max-width: 1234px;
+  }
 
   &__btn {
     border: 2px solid $black;
     left: 7%;
     bottom: 23%;
+    width: initial;
+    font-size: 0.8rem;
   }
 }
 
 .subscription-bottom {
   max-width: 1234px;
+  padding: 0;
+
+  &__left {
+    padding: 0;
+  }
+
+  &__right {
+    padding: 0;
+  }
+
+  &__image {
+    width: 100%;
+  }
 
   &__left-btn {
     background-color: $dark_rose;
@@ -148,16 +284,37 @@
   }
 }
 
+.best-sellers-top {
+  padding: 2% 0;
+}
+
+@media screen and (max-width: 1200px){
+  .best-sellers-middle {
+
+    &__btn {
+      display: none;
+    }
+  }
+}
+
 .security-row {
-  gap: 6rem;
+  width: 100%;
+  height: 100%;
+  gap: 6%;
   background-color: $primary;
-  margin-top: 7rem;
+  margin-top: 3%;
+
+  &__delivery {
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
 
 .security-box {
-  display: inline-flex;
+  display: flex;
   align-content: center;
-  gap: 1rem;
+  white-space: nowrap;
+  gap: 5%;
   color: $white;
 
   &__image {
@@ -166,6 +323,16 @@
 
   &__content {
     margin: 0;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .security-box {
+
+    &__content {
+      font-size: calc(0.9rem - 0.4vw);
+    }
   }
 }
 
@@ -176,9 +343,8 @@
 }
 
 .sign-up-left {
-  max-width: 960px;
   border-right: 1px solid #CCCCCC;
-  padding: 3rem 6rem;
+  padding: 2.4% 4.8%;
 
   &__title {
     font-size: 1rem;
@@ -219,8 +385,7 @@
 }
 
 .sign-up-right {
-  max-width: 960px;
-  padding: 3rem 6rem;
+  padding: 2.4% 4.8%;
 
   &__title {
     font-size: 1rem;
@@ -235,14 +400,16 @@
   }
 }
 
-
 .footer-top-row {
-  max-width: 1560px;
-  padding-left: 6rem;
+  width: 100%;
+  padding: 3% 4.3%;
+  gap: 6%;
 }
 
 .footer-top-left {
   max-width: 905px;
+  height: 45vh;
+  max-height: 340px;
 }
 
 
@@ -250,27 +417,29 @@
   font-size: 1rem;
   font-weight: 750;
   margin: 0;
-  padding-bottom: 2rem;
+  padding-bottom: 13%;
 }
 
 .menu-links {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  column-gap: 4rem;
+  column-gap: 15%;
   color: $footer-menu-item;
   font-weight: 400;
-  line-height: 220%;
+  line-height: 190%;
   list-style-type: none;
   padding: 0;
   margin: 0;
+  height: 87%;
   max-height: 280px;
 }
 
 .menu-link {
   color: $footer-menu-item;
+  font-size: 0.9rem;
   font-weight: 400;
-  line-height: 220%;
+  line-height: 200%;
   text-decoration: none;
 }
 
@@ -301,6 +470,17 @@
   }
 }
 
+@media screen and (max-width: 1200px){
+  .menu-title {
+    font-size: calc(1rem - 0.3vw);
+    padding-bottom: 13%;
+  }
+  
+  .menu-link {
+    font-size: calc(0.8rem - 0.3vw);
+  }
+}
+
 .footer-end {
   background-color: $black;
   color: $white;
@@ -316,5 +496,15 @@
     font-weight: 400;
     font-size: 0.69rem;
     line-height: 150%;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .footer-end {
+  
+    &__middle-content {
+      font-size: calc(0.69rem - 0.3vw);
+
+    }
   }
 }

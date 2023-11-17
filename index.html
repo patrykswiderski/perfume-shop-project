@@ -16,8 +16,8 @@
         <!-- Start of the header section -->
     <header>
       <div class="navbar-first container-fluid">
-        <div class="navbar-top row px-5 py-2"> <!--Nie mam pojęcia dlaczego bez klasy flex-fill, wiersz nie wypełnia całej szerokości ekranu -->
-          <div class="navbar-top__left col-lg-3">
+        <div class="navbar-top row">
+          <div class="navbar-top__left col-4">
             <ul class="navbar-top__nav">
               <li class="navbar-top__item dropdown">
                 
@@ -54,11 +54,11 @@
             </ul>    
           </div>
           
-          <div class="navbar-top__valentines col-lg-6 text-center">
+          <div class="navbar-top__valentines col-4 text-center">
             <p class="navbar-top__valentines-content">&#128293 Only <span class="">11</span> days left until VALENTINE'S DAY! &#128293</p>
           </div>
 
-          <div class="navbar-top__right col-lg-3 text-end">
+          <div class="navbar-top__right col-4 text-end">
             <ul class="navbar-top__nav">
               <li class="navbar-top__item">
                 <a href="#" class="navbar-top__link">Help & Information</a>
@@ -72,7 +72,7 @@
       </div>
 
       <div class="navbar-second container-fluid">
-        <div class="navbar-middle row px-5 py-4">
+        <div class="navbar-middle row align-items-center">
           <div class="navbar-middle__search col-4">
             <input type="text" placeholder="Hey, what are you looking for?" class="navbar-middle__search-input">
             <button class="navbar-middle__search-button">
@@ -88,7 +88,7 @@
             </div>
           </div>
           
-          <div class="navbar-middle__client-data col-4 text-end">
+          <div class="navbar-middle__client-data col-4">
             <ul class="navbar-middle__client-data__nav">
               <li class="navbar-middle__client-data__item">
                 <img src="app\images\Account.png" alt="">
@@ -106,11 +106,11 @@
         </div>
       </div>
 
-      <div class="navbar-third container-fluid">
-        <div class="navbar-bottom__row row justify-content-center py-4">
+      <div class="navbar-third container-fluid ">
+        <div class="navbar-bottom__row row justify-content-center offcanvas-parent">
           <ul class="navbar-bottom__nav d-inline-flex justify-content-between">
             <li class="navbar-bottom__item">
-              <a href="#" class="navbar-bottom__link">PERFUMES</a>
+              <a href="#offcanvas_menu" class="navbar-bottom__link" type="button" data-bs-toggle="offcanvas">PERFUMES</a>
             </li>
             <li class="navbar-bottom__item">
               <a href="#" class="navbar-bottom__link">BRANDS</a>
@@ -135,6 +135,35 @@
             </li>
           </ul>
         </div>
+        
+        <!-- <div id="offcanvas_menu" class="navbar-bottom__row row justify-content-center py-4 mx-auto offcanvas offcanvas-top">
+          <ul class="navbar-bottom__nav d-inline-flex justify-content-between">
+            <li class="navbar-bottom__item">
+              <a href="#" class="navbar-bottom__link collapsed">PERFUMES</a>
+            </li>
+            <li class="navbar-bottom__item">
+              <a href="#" class="navbar-bottom__link">BRANDS</a>
+            </li>
+            <li class="navbar-bottom__item">
+              <a href="#" class="navbar-bottom__link">SKINCARE</a>
+            </li>
+            <li class="navbar-bottom__item">
+              <a href="#" class="navbar-bottom__link">MAKEUP</a>
+            </li>
+            <li class="navbar-bottom__item">
+              <a href="#" class="navbar-bottom__link">HAIRCARE</a>
+            </li>
+            <li class="navbar-bottom__item">
+              <a href="#" class="navbar-bottom__link">AROMATHERAPY</a>
+            </li>
+            <li class="navbar-bottom__item">
+              <a href="#" class="navbar-bottom__link">CANDLES</a>
+            </li>
+            <li class="navbar-bottom__item">
+              <a href="#" class="navbar-bottom__link">GIFTS</a>
+            </li>
+          </ul>
+        </div> -->
       </div>
     </header>
     <!-- End of the header section -->
@@ -160,37 +189,37 @@
       </div> 
 
       <div class="carousel-frame container-fluid">
-        <div class="carousel-frame__flex d-flex flex-column justify-content-between align-items-center py-3">
+        <div class="carousel-frame__flex d-flex flex-column justify-content-between align-items-center">
           
-          <div class="carousel-frame-top d-flex justify-content-between align-items-center flex-fill">
-            <button class="carousel-frame-top__btn btn-next-product">
+          <div class="carousel-frame-top d-flex align-items-center flex-fill">
+            <button class="carousel-frame-top__btn-left btn-next-product">
               <img src="app/images/Component 103.svg" alt="">
-              <a href="#" class="carousel-frame-top__btn-left "></a>
+              <a href="#" class="carousel-frame-top__link "></a>
             </button>
 
-            <div class="carousel-frame-top__image position-relative">
-              <img src="app/images/Frame 48a.jpg" alt="">
+            <div class="carousel-frame-top__carousel-image position-relative">
+              <img class="carousel-frame-top__image" src="app/images/Frame 48a.jpg" alt="">
               <a href="#" class="carousel-frame-top__btn-image btn-common position-absolute">Shop Now</a>
             </div>
 
-            <button class="carousel-frame-top__btn btn-next-product">
+            <button class="carousel-frame-top__btn-right btn-next-product">
               <img src="app/images/Component 102.svg" alt="">
-              <a href="#" class="carousel-frame-top__btn-right"></a>
+              <a href="#" class="carousel-frame-top__link"></a>
             </button>          
           </div>
 
-          <div class="carousel-frame-bottom">
-            <ul class="carousel-frame-bottom__pagination pagination py-2">
+          <div class="carousel-frame-bottom d-flex justify-content-center">
+            <ul class="carousel-frame-bottom__pagination pagination">
               <li class="carousel-frame-bottom__pagination-item page-item">
-                <img src="app/images/Frame 121.svg" alt="" class="page-item">
+                <img class="carousel-frame-bottom__pagination-image" src="app/images/Frame 121.svg" alt="" class="page-item">
                 <a href="#" class="carousel-frame-bottom__pagination-dot--active page-item"></a>
               </li>
               <li class="carousel-frame-bottom__pagination__item page-item">
-                <img src="app/images/Frame 122.svg" alt="">
+                <img class="carousel-frame-bottom__pagination-image" src="app/images/Frame 122.svg" alt="">
                 <a href="#" class="carousel-frame-bottom-pagination-dot page-item"></a>
               </li>
               <li class="carousel-frame-bottom__pagination-item page-item">
-                <img src="app/images/Frame 122.svg" alt="">
+                <img class="carousel-frame-bottom__pagination-image" src="app/images/Frame 122.svg" alt="">
                 <a href="#" class="carousel-frame-bottom__pagination-dot page-item"></a>
               </li>
             </ul>
@@ -199,8 +228,8 @@
       </div>
 
       <div class="search-for-brand container-fluid">
-        <div class="search-for-brand__flex d-flex justify-content-center position-relative py-2">
-          <img src="app/images/Frame 49a.jpg" alt="">
+        <div class="search-for-brand__flex d-flex justify-content-center position-relative mx-auto py-2">
+          <img class="search-for-brand__image" src="app/images/Frame 49a.jpg" alt="">
           <a href="#" class="search-for-brand__btn-image btn-common position-absolute">Search for brand</a>
         </div>
       </div>
@@ -210,8 +239,8 @@
     <!-- Start of the Shop Our Collection section -->
     <section>
       <div class="our-collection container-fluid">
-        <div class="our-collection__top text-center py-5">
-          <p class="our-collection__title title-text py-3">SHOP OUR COLLECTION</p>
+        <div class="our-collection__top text-center">
+          <p class="our-collection__title title-text ">SHOP OUR COLLECTION</p>
           
           <p class="our-collection__content pb-3">Our Delicious, limited-edition collection</p>
           
@@ -219,7 +248,7 @@
         </div>
 
         <div class="our-collection__navigation container-fluid">
-          <div class="our-collection__navigation-row d-flex flex-row flex-wrap gap-4 justify-content-between">
+          <div class="our-collection__navigation-row d-flex flex-row flex-wrap justify-content-between mx-auto">
 
             <div class="our-collection__navigation-block">
               <img class="our-collection__navigation-img" src="app/images/Rectangle 11544.png" alt="">
@@ -276,19 +305,20 @@
 
     <!-- Start of the Recommended For You section -->
     <section>
-      <div class="recommended container-fluid pb-3">
-        <div class="recommended-top text-center py-5">
-          <p class="recommended-title title-text">RECOMMENDED FOR YOU</p>
+      <div class="recommended container-fluid">
+        <div class="recommended__top text-center">
+          <p class="recommended__title title-text">RECOMMENDED FOR YOU</p>
         </div>
       
         <div class="recommended-middle products-box-style">
 
-          <button class="ecommended-middle__btn btn-next-product">
-            <img src="app/images/Component 103.svg" alt="">
+          <div class="recommended-middle__btn btn-next-product">
+            <img class="ecommended-middle__btn-image" src="app/images/Component 103.svg" alt="">
             <a href="#" class="ecommended-middle__btn-left"></a>
-          </button>
+          </div>
 
           <div class="recommended-middle__products products-middle-style flex-fill py-4">
+
             <div class="recommended-products__item item-block">
               <div class="item-block__top">
                 <p class="item-block__top-gender">WOMEN</p>
@@ -394,7 +424,7 @@
             </div>
           </div>
 
-          <button class="ecommended-middle__btn btn-next-product">
+          <button class="recommended-middle__btn btn-next-product">
             <img src="app/images/Component 102.svg" alt="">
             <a href="#" class="ecommended-middle__btn-right"></a>
           </button>
@@ -411,7 +441,7 @@
 
     <section>
       <div class="new-arrivals container-fluid ">
-        <div class="new-arrivals-top text-center py-4">
+        <div class="new-arrivals-top text-center">
           <p class="new-arrivals-title title-text">NEW ARRIVALS!</p>
         </div>
 
@@ -540,20 +570,20 @@
 
     <section>
       <div class="subscription container-fluid">
-        <div class="subscription-top d-flex justify-content-center position-relative py-2 mx-auto">
-          <img src="app/images/Frame 50.jpg" alt="" class="subscription__top__img">
+        <div class="subscription-top row position-relative py-2 mx-auto">
+          <img src="app/images/Frame 50.jpg" alt="" class="subscription-top__image">
           <a href="#" class="subscription-top__btn btn-transparent position-absolute">GET A GIFT CERTIFICATE</a>
         </div>
 
-        <div class="subscription-bottom d-flex justify-content-between py-2 mb-4 mx-auto">
+        <div class="subscription-bottom row py-2 mb-4 mx-auto">
 
-          <div class="subscription-bottom__left position-relative">
-            <img src="app/images/Frame 51a.jpg" alt="" class="subscription-bottom__left__img">
+          <div class="subscription-bottom__left col-6 position-relative">
+            <img src="app/images/Frame 51a.jpg" alt="" class="subscription-bottom__image">
             <a href="#" class="subscription-bottom__left-btn btn-common position-absolute">LEARN MORE</a>
           </div>
 
-          <div class="subscription-bottom__right position-relative">
-            <img src="app/images/Frame 51b.jpg" alt="" class="subscription-bottom__right__img">
+          <div class="subscription-bottom__right col-6 position-relative">
+            <img src="app/images/Frame 51b.jpg" alt="" class="subscription-bottom__image">
             <a href="#" class="subscription-bottom__right-btn btn-common position-absolute">LEARN MORE</a>
           </div>
         </div>
@@ -566,7 +596,7 @@
     <!-- Start of the Best Sellers section -->
     <section>
       <div class="best-sellers container-fluid">
-        <div class="best-sellers-top text-center py-4">
+        <div class="best-sellers-top text-center">
           <p class="best-sellers-title title-text">BEST SELLERS</p>
         </div>
 
@@ -696,7 +726,7 @@
     <section> 
       <div class="security container-fluid p-0">
         <div class="security-row d-flex justify-content-center align-items-center">
-          <div class="security-delivery security-box py-2">
+          <div class="security-row__delivery security-box py-2">
             <img class="security-box__image" src="app/images/Component 110.png" alt="">
             <p class="security-box__content">Free Delivery & Returns*</p>
           </div>
@@ -723,7 +753,7 @@
         </div>
       </div>
 
-      <div class="sign-up row justify-content-center">
+      <div class="sign-up row">
         <div class="sign-up-left col-6">
           <p class="sign-up-left__title">SIGN UP FOR SPECIAL OFFERS AND PROMOTIONS</p>
 
@@ -752,8 +782,8 @@
 
 
     <footer>
-      <div class="footer-top container-fluid py-5 px-0">
-        <div class="footer-top-row d-flex flex-fill justify-content-between py-5 gap-5">
+      <div class="footer-top container-fluid px-0">
+        <div class="footer-top-row d-flex">
           <div class="footer-top-left d-flex flex-fill justify-content-between">
             <div class="footer-top-left__menu">
               <p class="footer-top-left__menu-title menu-title">SHOP BY DEPARTMENT</p>

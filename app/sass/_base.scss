@@ -8,8 +8,10 @@ html {
 
 body {
   font-family: $font-family;
-  font-size: 14px;
+  font-size: 100%;
+  padding-right: 0 !important;
 }
+
 
 a {
   text-decoration: none;
@@ -21,9 +23,11 @@ a {
   text-align: center;
   font-size: 0.9rem;
   font-weight: 750;
-  line-height: 1rem;
-  padding: 0.95rem 3.3rem;
+  padding: 1.2% 4.3%;
   z-index: 1;
+  @media screen and (max-width: 1200px){
+    padding: 1.2% 3.9%;
+  }
 }
 
 .btn-common {
@@ -41,6 +45,7 @@ a {
 .btn-next-product {
   border: none;
   background-color: transparent;
+  z-index: 2;
 }
 
 .btn-wishlist {
@@ -50,15 +55,17 @@ a {
 }
 
 .title-text {
-  font-size: 1.75rem;
+  font-size: 175%;
   font-weight: 750;
   margin: 0;
 }
 
-@mixin flex-between {
-  display: flex;
-  justify-content: space-between;
-}
 
+@media screen and (max-width: 1200px){
+  body {
+    font-size: 80%;
+  }
+
+}
 
 

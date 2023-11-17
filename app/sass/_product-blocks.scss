@@ -1,14 +1,22 @@
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
 .products-box-style {
   @include flex-between;
   align-items: center;
   margin-inline: auto;
+  width: 100%;
   max-width: 1354px;
 }
 
 .products-middle-style {
   @include flex-between;
+  gap: 1%;
   margin: 0;
   padding: 0;
+  width: auto;
   max-width: 1234px;
 }
 
@@ -16,21 +24,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 294px;
+  width: 24%;
+  max-width: 294px;
 
   &__top {
     @include flex-between;
+    align-items: baseline;
     width: 86%;
+    max-width: 252px;
   }
 
   &__top-gender {
+    text-align: center;
     margin: 0;
-    padding: 0.15rem 0.4rem;
+    padding: 1% 2.5%;
     max-height: 20px;
     text-align: center;
     font-family: $font-item-block;
     font-size: 0.6rem;
-    line-height: 1rem;
     font-weight: 900;
     color: $white;
     background-color: $item-block-gender;
@@ -38,7 +49,8 @@
   }
 
   &__img {
-    max-width: 252px;
+    width: 100%;
+    max-width: 250px;
   }
 
   &__content {
@@ -88,18 +100,27 @@
 
   &__add {
     display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 252px;
   }
 
   &__add-btn {
     white-space: nowrap;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 750;
     line-height: 1rem;
-    padding: 0.95rem 5rem;
+    padding: 6% 30%;
     color: $black;
     background-color: transparent;
     border: 1px solid #C4C4C4;
     max-width: 252px;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .products-box-style {
+    max-width: 1234px;
   }
 }
