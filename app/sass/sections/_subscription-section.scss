@@ -1,0 +1,51 @@
+.subscription {
+  padding: 0;
+}
+
+.subscription-top {
+  max-width: 1234px;
+  padding: 0;
+
+  &__image {
+    padding: 0;
+    width: 100%;
+    max-width: 1234px;
+  }
+
+  &__btn {
+    border: 2px solid $black;
+    left: 7%;
+    bottom: 23%;
+    width: initial;
+    font-size: 0.8rem;
+  }
+}
+
+.subscription-bottom {
+  max-width: 1234px;
+  padding: 0;
+
+  &__left {
+    padding: 0;
+  }
+
+  &__right {
+    padding: 0;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__left-btn {
+    background-color: $dark_rose;
+    left: 8.8%;
+    bottom: 14%;
+  }
+
+  &__right-btn {
+    background-color: $primary;
+    left: 8.8%;
+    bottom: 14%;
+  }
+}

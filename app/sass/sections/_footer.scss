@@ -1,0 +1,108 @@
+.footer-top-row {
+  width: 100%;
+  padding: 3% 4.3%;
+  gap: 6%;
+}
+
+.footer-top-left {
+  max-width: 905px;
+  height: 45vh;
+  max-height: 340px;
+}
+
+
+.menu-title {
+  font-size: 1rem;
+  font-weight: 750;
+  margin: 0;
+  padding-bottom: 13%;
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  column-gap: 15%;
+  color: $footer-menu-item;
+  font-weight: 400;
+  line-height: 190%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: 87%;
+  max-height: 280px;
+}
+
+.menu-link {
+  color: $footer-menu-item;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 200%;
+  text-decoration: none;
+}
+
+.footer-icon {
+  max-width: 460px;
+  max-height: 195px;
+
+  &__social-media-btn {
+    background-color: transparent;
+    border: none;
+    max-width: 40px;
+  }
+
+  &__change-country-dropdown {
+    color: $black;
+
+  }
+
+  &__subscription-club-btn {
+    background-color: transparent;
+    border: 1px solid $button_gray;
+    padding: 0.5rem 1.1rem;
+  }
+
+  &__subscription-club-link {
+    color: $black;
+    letter-spacing: 0.5%;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .menu-title {
+    font-size: calc(1rem - 0.3vw);
+    padding-bottom: 13%;
+  }
+  
+  .menu-link {
+    font-size: calc(0.8rem - 0.3vw);
+  }
+}
+
+.footer-end {
+  background-color: $black;
+  color: $white;
+  line-height: 150%;
+
+  &__top-link {
+    color: $white;
+    text-decoration: underline;
+  }
+
+  &__middle-content {
+    max-width: 727px;
+    font-weight: 400;
+    font-size: 0.69rem;
+    line-height: 150%;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .footer-end {
+  
+    &__middle-content {
+      font-size: calc(0.69rem - 0.3vw);
+
+    }
+  }
+}

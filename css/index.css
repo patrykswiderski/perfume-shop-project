@@ -262,7 +262,7 @@ a {
   line-height: 0.4rem;
   margin: 0;
 }
-.navbar-middle__client-data__nav {
+.navbar-middle__client-data-nav {
   display: flex;
   justify-content: end;
   align-content: center;
@@ -270,13 +270,13 @@ a {
   padding: 0;
   margin: 0;
 }
-.navbar-middle__client-data__item {
+.navbar-middle__client-data-item {
   display: flex;
   align-content: center;
   max-height: 25px;
   gap: 0.4rem;
 }
-.navbar-middle__client-data__link {
+.navbar-middle__client-data-link {
   color: #000000;
   font-size: 90%;
   font-weight: 450;
@@ -314,10 +314,10 @@ a {
     top: 13%;
     right: 6%;
   }
-  .navbar-middle__client-data__nav {
+  .navbar-middle__client-data-nav {
     gap: 0.7rem;
   }
-  .navbar-middle__client-data__link {
+  .navbar-middle__client-data-link {
     padding-top: 4%;
   }
 }
