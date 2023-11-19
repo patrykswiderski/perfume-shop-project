@@ -1,25 +1,26 @@
-.navbar-first {
-  padding: 0;
-}
 
 .navbar-top {
   background-color: $primary;
   font-size: 100%;
   font-weight: 400;
   color: $white;
-  padding: 12px 27px;
+  padding: 12px 40px 12px 28px;
+  white-space: nowrap;
+
   
   &__nav {
   display: inline-flex;
-  gap: 1rem;
+  white-space: nowrap;
   padding: 0;
   margin: 0;
+  gap: 1.5rem;
   }
 
   &__item {
     display: inline-block;
   }
-  &__link {
+
+  &__item-name {
     display: inline-block;
     font-weight: 400;
     color: $white;
@@ -30,16 +31,17 @@
   }
 }
 
-.navbar-second {
-  padding: 0;
-  padding: 24px 27px;
-}
-
 .navbar-middle {
+  padding: 24px 40px 24px 28px;
+
   &__search {
     position: relative;
   }
   
+  &__hamburger {
+    display: none;
+  }
+
   &__search-input {
     width: 100%;
     height: 10vh;
@@ -59,7 +61,7 @@
     border: none;
     position: absolute;
     z-index: 1;
-    top: 20%;
+    top: 19%;
     right: 4%;
   }
   
@@ -68,15 +70,15 @@
   }
 
   &__logo-brand {
-    max-height: 38px;
-    padding-left: 1.5%;
+    max-height: 39px;
+    padding-left: 0.5%;
   }
 
   &__logo-name {
     font-family: $font-brand-main;
     color: $primary;
     font-size: 2rem;
-    line-height: 1.8rem;
+    line-height: 1.6rem;
     margin: 0;
   }
 
@@ -89,48 +91,43 @@
     font-family: $font-brand-since;
     color: #585858;
     font-size: 0.8rem;
-    line-height: 0.4rem;
+    line-height: 0.35rem;
     margin: 0;
   }
   
-    &__client-data-nav {
-  display: flex;
-  justify-content: end;
-  align-content: center;
-  gap: 1.5rem;
-  padding: 0;
-  margin: 0;
+  &__client-data-nav {
+    display: flex;
+    justify-content: end;
+    align-content: center;
+    gap: 1.5rem;
   }
 
   &__client-data-item {
-  display: flex;
-  align-content: center;
-  max-height: 25px;
-  gap: 0.4rem;
+    display: block;
+  }
+
+  &__client-data-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
   }
 
   &__client-data-link {
-  color: $black;
-  font-size: 90%;
-  font-weight: 450;
-  padding-top: 3%;
+    color: $black;
+    font-size: 90%;
+    font-weight: 450;
+    padding-top: 3%;
   }
-}
-
-.navbar-third {
-  padding: 0;
 }
 
 .navbar-bottom {
 
-  &__row {
-    margin: 0;
-  }
-  
   &__nav {
+      display: inline-flex;
+      justify-content: space-between;
       max-width: 1100px;
       gap: auto;
-      padding: 24px 26px;
+      padding: 22px 16px;
       margin: 0;
   }
 
@@ -142,10 +139,11 @@
     color: $black;
     font-size: 90%;
     font-weight: 450;
+    text-transform: uppercase;
   }
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (min-width: 1024px) and (max-width: 1200px){
   .navbar-middle {
     
     &__search-input {
@@ -168,26 +166,171 @@
   }
 }
 
-.offcanvas-parent {
-  position: relative;
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .navbar-top {
+    font-size: 0.7rem;
+    font-weight: 200;
+    padding: 8px 15px 8px 15px;
+    border-bottom: 1px solid $item-block-gender;
+    
+    &__nav {
+      gap: calc(1rem - 1.4vw);
+    }
+
+    &__item {
+      font-size: 0.7rem;
+    }
+
+    &__item-name {
+      font-weight: 300;
+    }
+
+    &__item-option {
+      font-size: 0.7rem;
+    }
+
+  }
+  
+  .navbar-middle {
+    background-color: $primary;
+    padding: 16px;
+    
+    &__search-input {
+      display: none;
+    }
+  
+    &__search-input:focus {
+      transition: none;
+    }
+  
+    &__hamburger {
+      padding: 0;
+      display: initial;
+      background-color: transparent;
+      border: none;
+      width: 10%;
+    }
+
+    &__hamburger-icon {
+      width: 100%;
+      padding-bottom: 3%;
+    }
+
+    &__search-button {
+      padding: 0;
+      position: static;
+      width: 12%;
+    }
+    
+    &__logo {
+        max-height: 27px;
+        gap: 1%;
+    }
+
+    &__logo-image {
+      width: 68%;
+    }
+  
+    &__logo-brand {
+      max-height: 27px;
+    }
+  
+    &__logo-name {
+      color: $white;
+      font-size: 1.2rem;
+      line-height: 1rem;
+    }
+  
+    &__logo-name-domain {
+      font-size: 0.6rem;
+      letter-spacing: 0.05rem;
+    }
+    
+    &__logo-since {
+      color: $white;
+      font-size: 0.5rem;
+      line-height: 0.35rem;
+    }
+
+    &__client-data-nav {
+      gap: calc(1.5rem - 2vw) ;
+    }
+
+    &__client-data-icon {
+      width: 80%;
+    }
+  
+    &__client-data-link {
+      display: none;
+    }
+  }
+
+  .navbar-bottom {
+
+    &__offcanvas {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: $primary;
+      color: $white;
+    }
+
+    &__offcanvas-image {
+      max-width: 7%;
+    }
+
+    &__offcanvas-title {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+    
+    &__nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      padding: 0;
+      background-color: rgb(236, 236, 236);
+    }
+        
+    &__link {
+      display: flex;
+      align-items: center;
+      height: 3rem;
+      width: 100%;
+      font-size: 100%;
+      font-weight: 600;
+      padding-inline: 16px;
+      color: $footer-menu-item;
+      background-color: $white;
+      border-bottom: 1px solid rgb(236, 236, 236);
+      text-transform: capitalize;
+    }
+
+    
+  }
+
 }
 
-.offcanvas-backdrop {
-  position: absolute;
-  top: 203px;
-}
+// .offcanvas-parent {
+//   position: relative;
+// }
 
-.offcanvas.offcanvas-top {
-  position: absolute;
-  top: 203px;
-  transform: translateY(-10%);
-  transition: visibility 0s linear 300ms, opacity 300ms
-}
+// // .offcanvas-backdrop {
+// //   position: absolute;
+// //   top: 203px;
+// // }
 
-.offcanvas.showing {
-  transition: visibility 0s linear 300ms, opacity 300ms;
-}
+// .offcanvas.offcanvas-top {
+//   position: absolute;
+//   top: 203px;
+//   transform: translateY(-10%);
+//   transition: visibility 0s linear 300ms, opacity 300ms
+// }
 
-.offcanvas.hiding {
-  transition: visibility 0s linear 300ms, opacity 300ms;
-}
+// .offcanvas.showing {
+//   transition: visibility 0s linear 300ms, opacity 300ms;
+// }
+
+// .offcanvas.hiding {
+//   transition: visibility 0s linear 300ms, opacity 300ms;
+// }

@@ -180,27 +180,25 @@ a {
     max-width: 1234px;
   }
 }
-.navbar-first {
-  padding: 0;
-}
-
 .navbar-top {
   background-color: #4d2952;
   font-size: 100%;
   font-weight: 400;
   color: #fff;
-  padding: 12px 27px;
+  padding: 12px 40px 12px 28px;
+  white-space: nowrap;
 }
 .navbar-top__nav {
   display: inline-flex;
-  gap: 1rem;
+  white-space: nowrap;
   padding: 0;
   margin: 0;
+  gap: 1.5rem;
 }
 .navbar-top__item {
   display: inline-block;
 }
-.navbar-top__link {
+.navbar-top__item-name {
   display: inline-block;
   font-weight: 400;
   color: #fff;
@@ -209,13 +207,14 @@ a {
   margin: 0;
 }
 
-.navbar-second {
-  padding: 0;
-  padding: 24px 27px;
+.navbar-middle {
+  padding: 24px 40px 24px 28px;
 }
-
 .navbar-middle__search {
   position: relative;
+}
+.navbar-middle__hamburger {
+  display: none;
 }
 .navbar-middle__search-input {
   width: 100%;
@@ -234,21 +233,21 @@ a {
   border: none;
   position: absolute;
   z-index: 1;
-  top: 20%;
+  top: 19%;
   right: 4%;
 }
 .navbar-middle__logo {
   max-height: 38px;
 }
 .navbar-middle__logo-brand {
-  max-height: 38px;
-  padding-left: 1.5%;
+  max-height: 39px;
+  padding-left: 0.5%;
 }
 .navbar-middle__logo-name {
   font-family: "Kodchasan", sans-serif;
   color: #4d2952;
   font-size: 2rem;
-  line-height: 1.8rem;
+  line-height: 1.6rem;
   margin: 0;
 }
 .navbar-middle__logo-name-domain {
@@ -259,7 +258,7 @@ a {
   font-family: "Almarai", sans-serif;
   color: #585858;
   font-size: 0.8rem;
-  line-height: 0.4rem;
+  line-height: 0.35rem;
   margin: 0;
 }
 .navbar-middle__client-data-nav {
@@ -267,14 +266,14 @@ a {
   justify-content: end;
   align-content: center;
   gap: 1.5rem;
-  padding: 0;
-  margin: 0;
 }
 .navbar-middle__client-data-item {
-  display: flex;
-  align-content: center;
-  max-height: 25px;
-  gap: 0.4rem;
+  display: block;
+}
+.navbar-middle__client-data-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
 }
 .navbar-middle__client-data-link {
   color: #000000;
@@ -283,17 +282,12 @@ a {
   padding-top: 3%;
 }
 
-.navbar-third {
-  padding: 0;
-}
-
-.navbar-bottom__row {
-  margin: 0;
-}
 .navbar-bottom__nav {
+  display: inline-flex;
+  justify-content: space-between;
   max-width: 1100px;
   gap: auto;
-  padding: 24px 26px;
+  padding: 22px 16px;
   margin: 0;
 }
 .navbar-bottom__item {
@@ -303,9 +297,10 @@ a {
   color: #000000;
   font-size: 90%;
   font-weight: 450;
+  text-transform: uppercase;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
   .navbar-middle__search-input {
     width: 100%;
     max-height: 36px;
@@ -321,30 +316,119 @@ a {
     padding-top: 4%;
   }
 }
-.offcanvas-parent {
-  position: relative;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .navbar-top {
+    font-size: 0.7rem;
+    font-weight: 200;
+    padding: 8px 15px 8px 15px;
+    border-bottom: 1px solid #774C7D;
+  }
+  .navbar-top__nav {
+    gap: calc(1rem - 1.4vw);
+  }
+  .navbar-top__item {
+    font-size: 0.7rem;
+  }
+  .navbar-top__item-name {
+    font-weight: 300;
+  }
+  .navbar-top__item-option {
+    font-size: 0.7rem;
+  }
+  .navbar-middle {
+    background-color: #4d2952;
+    padding: 16px;
+  }
+  .navbar-middle__search-input {
+    display: none;
+  }
+  .navbar-middle__search-input:focus {
+    transition: none;
+  }
+  .navbar-middle__hamburger {
+    padding: 0;
+    display: initial;
+    background-color: transparent;
+    border: none;
+    width: 10%;
+  }
+  .navbar-middle__hamburger-icon {
+    width: 100%;
+    padding-bottom: 3%;
+  }
+  .navbar-middle__search-button {
+    padding: 0;
+    position: static;
+    width: 12%;
+  }
+  .navbar-middle__logo {
+    max-height: 27px;
+    gap: 1%;
+  }
+  .navbar-middle__logo-image {
+    width: 68%;
+  }
+  .navbar-middle__logo-brand {
+    max-height: 27px;
+  }
+  .navbar-middle__logo-name {
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1rem;
+  }
+  .navbar-middle__logo-name-domain {
+    font-size: 0.6rem;
+    letter-spacing: 0.05rem;
+  }
+  .navbar-middle__logo-since {
+    color: #fff;
+    font-size: 0.5rem;
+    line-height: 0.35rem;
+  }
+  .navbar-middle__client-data-nav {
+    gap: calc(1.5rem - 2vw);
+  }
+  .navbar-middle__client-data-icon {
+    width: 80%;
+  }
+  .navbar-middle__client-data-link {
+    display: none;
+  }
+  .navbar-bottom__offcanvas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4d2952;
+    color: #fff;
+  }
+  .navbar-bottom__offcanvas-image {
+    max-width: 7%;
+  }
+  .navbar-bottom__offcanvas-title {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .navbar-bottom__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 0;
+    background-color: rgb(236, 236, 236);
+  }
+  .navbar-bottom__link {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    width: 100%;
+    font-size: 100%;
+    font-weight: 600;
+    padding-inline: 16px;
+    color: #383838;
+    background-color: #fff;
+    border-bottom: 1px solid rgb(236, 236, 236);
+    text-transform: capitalize;
+  }
 }
-
-.offcanvas-backdrop {
-  position: absolute;
-  top: 203px;
-}
-
-.offcanvas.offcanvas-top {
-  position: absolute;
-  top: 203px;
-  transform: translateY(-10%);
-  transition: visibility 0s linear 300ms, opacity 300ms;
-}
-
-.offcanvas.showing {
-  transition: visibility 0s linear 300ms, opacity 300ms;
-}
-
-.offcanvas.hiding {
-  transition: visibility 0s linear 300ms, opacity 300ms;
-}
-
 .special-offer {
   padding: 0;
   font-weight: 750;

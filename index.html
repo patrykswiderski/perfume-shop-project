@@ -15,23 +15,23 @@
 
         <!-- Start of the header section -->
     <header>
-      <div class="navbar-first container-fluid">
-        <div class="navbar-top row">
-          <div class="navbar-top__left col-4">
+      <div class="navbar-first container-fluid p-0">
+        <div class="navbar-top row mx-0 my-auto">
+          <div class="navbar-top__left col-4 p-0">
             <ul class="navbar-top__nav">
-              <li class="navbar-top__item dropdown">
+              <li class="navbar-top__item dropdown"> 
                 
-                <a href="#"" class="navbar-top__link dropdown-toggle" role="button" data-bs-toggle="dropdown">USD</a>
+                <a href="#"" class="navbar-top__item-name dropdown-toggle" role="button" data-bs-toggle="dropdown">USD</a>
                 
                 <ul class="navbar-top__currency dropdown-menu">
                   <li>
-                    <a href="#" class="dropdown-item">USD</a>
+                    <a href="#" class="navbar-top__item-option dropdown-item">USD</a>
                   </li>
                   <li>
-                    <a href="#" class="dropdown-item">PLN</a>
+                    <a href="#" class="navbar-top__item-option dropdown-item">PLN</a>
                   </li>
                   <li>
-                    <a href="#" class="dropdown-item">EUR</a>
+                    <a href="#" class="navbar-top__item-option dropdown-item">EUR</a>
                   </li>
                 </ul>
 
@@ -39,14 +39,14 @@
               
               <li class="navbar-top__item">  
                 
-                <a href="#" class="navbar-top__link dropdown-toggle" role="button" data-bs-toggle="dropdown">English</a>
+                <a href="#" class="navbar-top__item-name dropdown-toggle" role="button" data-bs-toggle="dropdown">English</a>
                 
                 <ul class="navbar-top__language dropdown-menu">
                   <li>
-                    <a href="#" class="dropdown-item">English</a>
+                    <a href="#" class="navbar-top__item-option dropdown-item">English</a>
                   </li>
                   <li>
-                    <a href="#" class="dropdown-item">Polish</a>
+                    <a href="#" class="navbar-top__item-option dropdown-item">Polish</a>
                   </li>
                 </ul>
                 
@@ -54,113 +54,150 @@
             </ul>    
           </div>
           
-          <div class="navbar-top__valentines col-4 text-center">
+          <div class="navbar-top__valentines col-4 p-0">
             <p class="navbar-top__valentines-content">&#128293 Only <span class="">11</span> days left until VALENTINE'S DAY! &#128293</p>
           </div>
 
-          <div class="navbar-top__right col-4 text-end">
-            <ul class="navbar-top__nav">
+          <div class="navbar-top__right col-4 text-end p-0">
+            <ul class="navbar-top__nav m-0">
               <li class="navbar-top__item">
-                <a href="#" class="navbar-top__link">Help & Information</a>
+                <a href="#" class="navbar-top__item-name">Help & Information</a>
               </li>
               <li class="navbar-top__item">
-                <a href="#" class="navbar-top__link">Connect with us</a>
+                <a href="#" class="navbar-top__item-name">Connect with us</a>
               </li>
             </ul> 
           </div>
         </div>
       </div>
 
-      <div class="navbar-second container-fluid">
-        <div class="navbar-middle row align-items-center">
-          <div class="navbar-middle__search col-4">
-            <input type="text" placeholder="Hey, what are you looking for?" class="navbar-middle__search-input">
-            <button class="navbar-middle__search-button">
-              <img class="navbar-middle__search-img" src="app\images\codicon_heart.svg" alt="">
-            </button>
-          </div>
+      <div class="navbar-middle row m-0">
+        <div class="navbar-middle__search col-4 my-auto p-0">
+          <button class="navbar-middle__hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-menu">
+            <img class="navbar-middle__hamburger-icon" src="app\images\burger-menu.svg">
+          </button>
+          <input type="text" placeholder="Hey, what are you looking for?" class="navbar-middle__search-input">
+          <button class="navbar-middle__search-button">
+            <picture class="text-end">
+              <source media="(min-width: 1024px)" srcset="app\images\codicon_heart.svg">
+              <source media="(max-width: 1024px)" srcset="app\images\codicon_heart-white.svg">
+              <img class="navbar-middle__logo-image" src="app\images\codicon_heart-white.svg">
+            </picture> 
+          </button>
+        </div>
 
-          <div class="navbar-middle__logo col-4 d-flex justify-content-center">
-            <img src="app\images\vector.svg" alt="">
-            <div class="navbar-middle__logo-brand">
-              <p class="navbar-middle__logo-name">PerfumeShop<span class="navbar-middle__logo-name-domain">.com</span></p>
-              <p class="navbar-middle__logo-since">TRUSTED ONLINE SINCE 1997</p>
-            </div>
+
+
+        <div class="navbar-middle__logo col-4 d-flex justify-content-center align-items-center p-0">
+          <picture class="text-end">
+            <source media="(min-width: 1024px)" srcset="app\images\vector.svg">
+            <source media="(max-width: 1024px)" srcset="app\images\vector-white.svg">
+            <img class="navbar-middle__logo-image" src="app\images\vector-white.svg">
+          </picture> 
+          <!-- <img class="navbar-middle__logo-image navbar-middle__filter-white" src="app\images\vector.svg" alt="">
+          <img class="navbar-middle__logo-image-white" src="app\images\vector-white.svg" alt=""> -->
+          <div class="navbar-middle__logo-brand">
+            <p class="navbar-middle__logo-name">PerfumeShop<span class="navbar-middle__logo-name-domain">.com</span></p>
+            <p class="navbar-middle__logo-since">TRUSTED ONLINE SINCE 1997</p>
           </div>
-          
-          <div class="navbar-middle__client-data col-4">
-            <ul class="navbar-middle__client-data-nav">
-              <li class="navbar-middle__client-data-item">
-                <img src="app\images\Account.png" alt="">
+        </div>
+        
+        <div class="navbar-middle__client-data col-4 p-0 my-auto">
+          <ul class="navbar-middle__client-data-nav p-0 m-0">
+            <li class="navbar-middle__client-data-item">
+              <button class="navbar-middle__client-data-button"> 
+                <picture >
+                  <source media="(min-width: 1024px)" srcset="app\images\Account.svg">
+                  <source media="(max-width: 1024px)" srcset="app\images\Account-white.svg">
+                  <img class="navbar-middle__client-data-icon" src="app\images\Account-white.svg">
+                </picture> 
                 <a href="#" class="navbar-middle__client-data-link">My Account</a>
-              <li class="navbar-middle__client-data-item">
-                <img src="app\images\Wishlist.png" alt="">
+              </button>
+            <li class="navbar-middle__client-data-item">
+              <button class="navbar-middle__client-data-button">
+                <picture>
+                  <source media="(min-width: 1024px)" srcset="app\images\Wishlist.svg">
+                  <source media="(max-width: 1024px)" srcset="app\images\Wishlist-white.svg">
+                  <img class="navbar-middle__client-data-icon" src="app\images\Wishlist-white.svg">
+                </picture> 
                 <a href="#" class="navbar-middle__client-data-link">Wishlist</a>
-              </li>
-              <li class="navbar-middle__client-data-item">
-                <img src="app\images\Card.png" alt="">
+              </button">
+            </li>
+            <li class="navbar-middle__client-data-item">
+              <button class="navbar-middle__client-data-button">
+                <picture>
+                  <source media="(min-width: 1024px)" srcset="app\images\Card.svg">
+                  <source media="(max-width: 1024px)" srcset="app\images\Card-white.svg">
+                  <img class="navbar-middle__client-data-icon" src="app\images\Card-white.svg">
+                </picture> 
                 <a href="#" class="navbar-middle__client-data-link"><span class="navbar-middle__client-cart-items">2</span> Items</a>
-              </li>
-            </ul>
-          </div>
+              </button">
+            </li>
+          </ul>
         </div>
       </div>
 
-      <div class="navbar-third container-fluid ">
-        <div class="navbar-bottom__row row justify-content-center offcanvas-parent">
-          <ul class="navbar-bottom__nav d-inline-flex justify-content-between">
-            <li class="navbar-bottom__item">
-              <a href="#offcanvas_menu" class="navbar-bottom__link" type="button" data-bs-toggle="offcanvas">PERFUMES</a>
+      <div class="navbar-third container-fluid p-0">
+        <div id="offcanvas-menu" class="navbar-bottom__row row justify-content-center m-0">
+          <div id="offcanvas-header" class="navbar-bottom__offcanvas d-none offcanvas-header">
+            <img class="navbar-bottom__offcanvas-image" src="app\images\burger-menu.svg" alt="">
+            <h1 class="navbar-bottom__offcanvas-title  offcanvas-title">Menu</h1>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+          </div>
+
+          <ul class="navbar-bottom__nav offcanvas-body ">
+            <li id="dropdownContainer" class="navbar-bottom__item dropdown dropend">
+              <a href="#" class="navbar-bottom__link">Perfumes</a>
             </li>
             <li class="navbar-bottom__item">
-              <a href="#" class="navbar-bottom__link">BRANDS</a>
+              <a href="#" class="navbar-bottom__link">Brands</a>
             </li>
             <li class="navbar-bottom__item">
-              <a href="#" class="navbar-bottom__link">SKINCARE</a>
+              <a href="#" class="navbar-bottom__link">Skincare</a>
             </li>
             <li class="navbar-bottom__item">
-              <a href="#" class="navbar-bottom__link">MAKEUP</a>
+              <a href="#" class="navbar-bottom__link">Makup</a>
             </li>
             <li class="navbar-bottom__item">
-              <a href="#" class="navbar-bottom__link">HAIRCARE</a>
+              <a href="#" class="navbar-bottom__link">Haircare</a>
             </li>
             <li class="navbar-bottom__item">
-              <a href="#" class="navbar-bottom__link">AROMATHERAPY</a>
+              <a href="#" class="navbar-bottom__link">Aromatherapy</a>
             </li>
             <li class="navbar-bottom__item">
-              <a href="#" class="navbar-bottom__link">CANDLES</a>
+              <a href="#" class="navbar-bottom__link">Candles</a>
             </li>
             <li class="navbar-bottom__item">
-              <a href="#" class="navbar-bottom__link">GIFTS</a>
+              <a href="#" class="navbar-bottom__link">Gifts</a>
             </li>
           </ul>
         </div>
         
-        <!-- <div id="offcanvas_menu" class="navbar-bottom__row row justify-content-center py-4 mx-auto offcanvas offcanvas-top">
-          <ul class="navbar-bottom__nav d-inline-flex justify-content-between">
-            <li class="navbar-bottom__item">
-              <a href="#" class="navbar-bottom__link collapsed">PERFUMES</a>
+        <!-- <div >
+          <ul id="originalDropdownMenu" class="dropdown-menu">
+            <li class="">
+              <a class="dropdown-item" href="#">PERFUMES</a>
             </li>
-            <li class="navbar-bottom__item">
-              <a href="#" class="navbar-bottom__link">BRANDS</a>
+            <li class="">
+              <a class="dropdown-item" href="#">BRANDS</a>
             </li>
-            <li class="navbar-bottom__item">
-              <a href="#" class="navbar-bottom__link">SKINCARE</a>
+            <li class="">
+              <a class="dropdown-item" href="#">SKINCARE</a>
             </li>
-            <li class="navbar-bottom__item">
-              <a href="#" class="navbar-bottom__link">MAKEUP</a>
+            <li class="">
+              <a class="dropdown-item" href="#">MAKEUP</a>
             </li>
-            <li class="navbar-bottom__item">
-              <a href="#" class="navbar-bottom__link">HAIRCARE</a>
+            <li class="">
+              <a class="dropdown-item" href="#">HAIRCARE</a>
             </li>
-            <li class="navbar-bottom__item">
-              <a href="#" class="navbar-bottom__link">AROMATHERAPY</a>
+            <li class="">
+              <a class="dropdown-item" href="#" >AROMATHERAPY</a>
             </li>
-            <li class="navbar-bottom__item">
-              <a href="#" class="navbar-bottom__link">CANDLES</a>
+            <li class="">
+              <a class="dropdown-item" href="#" >CANDLES</a>
             </li>
-            <li class="navbar-bottom__item">
-              <a href="#" class="navbar-bottom__link">GIFTS</a>
+            <li class="">
+              <a class="dropdown-item" href="#">GIFTS</a>
             </li>
           </ul>
         </div> -->
@@ -941,6 +978,45 @@
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script>
+      function updateClass() {
+        let element = document.getElementById('offcanvas-menu');
+        let element2 = document.getElementById('offcanvas-header');
+        // let element3 = document.getElementsByClassName('navbar-bottom__link')
+
+        if (window.innerWidth < 1024) {
+          element.classList.add('offcanvas', 'offcanvas-start');
+          element.classList.remove('navbar-bottom__row', 'row', 'justify-content-center');
+          element2.classList.remove('d-none');
+          // element3.classList.add('dropdown dropend')
+        } else {
+          element.classList.remove('offcanvas', 'offcanvas-start');
+          element.classList.add('navbar-bottom__row', 'row', 'justify-content-center');
+          element2.classList.add('d-none');
+          // element3.classList.remove('dropdown dropend')
+        }
+      }
+      
+      // Wywołaj funkcję updateClass przy załadowaniu strony
+      updateClass();
+
+      // Dodaj nasłuchiwanie na zdarzenie zmiany szerokości ekranu
+      window.addEventListener('resize', updateClass);
+    </script>
+
+    <!-- <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var originalDropdownMenu = document.getElementById('originalDropdownMenu');
+        var clonedDropdownMenu = originalDropdownMenu.cloneNode(true);
+
+        var dropdownContainer = document.getElementById('dropdownContainer');
+
+        dropdownContainer.appendChild(clonedDropdownMenu);
+        // clonedDropdownMenu.style.display = 'block';
+        // originalDropdownMenu.classList.add('d-none');
+      });
+    </script> -->
 
   </body>
 </html>
