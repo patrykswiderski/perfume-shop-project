@@ -270,14 +270,18 @@ a {
   justify-content: end;
   align-content: center;
   gap: 1.5rem;
-}
-.navbar-middle__client-data-item {
-  display: block;
+  list-style: none;
 }
 .navbar-middle__client-data-button {
   background-color: transparent;
   border: none;
   padding: 0;
+}
+.navbar-middle__client-cart-items {
+  color: #000000;
+  font-size: 90%;
+  font-weight: 450;
+  padding-top: 3%;
 }
 .navbar-middle__client-data-link {
   color: #000000;
@@ -427,6 +431,18 @@ a {
   }
   .navbar-middle__client-data-icon {
     width: 83%;
+  }
+  .navbar-middle__client-cart-items {
+    position: absolute;
+    display: block;
+    color: #fff;
+    background-color: #BE5B75;
+    padding: 2.9% 0 0 1%;
+    font-size: 70%;
+    width: 60%;
+    border-radius: 50%;
+    top: -10%;
+    right: -10%;
   }
   .navbar-middle__client-data-link {
     display: none;

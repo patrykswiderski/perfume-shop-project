@@ -105,16 +105,20 @@
     justify-content: end;
     align-content: center;
     gap: 1.5rem;
-  }
-
-  &__client-data-item {
-    display: block;
+    list-style: none;
   }
 
   &__client-data-button {
     background-color: transparent;
     border: none;
     padding: 0;
+  }
+
+  &__client-cart-items {
+    color: $black;
+    font-size: 90%;
+    font-weight: 450;
+    padding-top: 3%;
   }
 
   &__client-data-link {
@@ -303,7 +307,21 @@
     &__client-data-icon {
       width: 83%;
     }
-  
+
+    &__client-cart-items {
+      position: absolute;
+      display: block;
+      color: $white;
+      background-color: $dark-rose;
+      padding: 2.9% 0 0 1%;
+      font-size: 70%;
+      width: 60%;
+      border-radius: 50%;
+      top: -10%;
+      right: -10%;      
+
+    }
+
     &__client-data-link {
       display: none;
     }
@@ -335,7 +353,7 @@
       padding: 0;
       background-color: rgb(236, 236, 236);
     }
-        
+
     &__link {
       display: flex;
       align-items: center;
