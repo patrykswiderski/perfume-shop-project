@@ -227,6 +227,10 @@ a {
 }
 .navbar-middle__search-input:focus {
   transition: none;
+  outline: none;
+}
+.navbar-middle__search-input:focus::placeholder {
+  color: transparent;
 }
 .navbar-middle__search-button {
   background-color: transparent;
@@ -324,7 +328,7 @@ a {
     border-bottom: 1px solid #774C7D;
   }
   .navbar-top__nav {
-    gap: calc(1rem - 1.4vw);
+    gap: calc(1rem - 0.5vw);
   }
   .navbar-top__item {
     font-size: 0.7rem;
@@ -361,6 +365,38 @@ a {
     position: static;
     width: 12%;
   }
+  .navbar-middle__collapse-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    width: 98vw;
+    margin-left: -7%;
+    margin-top: 4%;
+    margin-bottom: -14px;
+    padding-bottom: 2.5%;
+    padding-top: 2%;
+    padding-inline: 6%;
+  }
+  .navbar-middle__collapse-menu-placeholder {
+    width: 70%;
+    height: 6%;
+    padding: 1% 0;
+    border: none;
+  }
+  .navbar-middle__collapse-menu-placeholder:focus {
+    transition: none;
+    outline: none;
+  }
+  .navbar-middle__collapse-menu-placeholder:focus::placeholder {
+    color: transparent;
+  }
+  .navbar-middle__collapse-menu-button {
+    background-color: #4d2952;
+    line-height: 0.9rem;
+    font-weight: 600;
+    padding: 1.3% 4% 1% 4%;
+  }
   .navbar-middle__logo {
     max-height: 27px;
     gap: 1%;
@@ -386,10 +422,11 @@ a {
     line-height: 0.35rem;
   }
   .navbar-middle__client-data-nav {
+    padding: 1.5% 0 0 0;
     gap: calc(1.5rem - 2vw);
   }
   .navbar-middle__client-data-icon {
-    width: 80%;
+    width: 83%;
   }
   .navbar-middle__client-data-link {
     display: none;
@@ -523,12 +560,12 @@ a {
   }
   .carousel-frame-top__btn-left {
     position: absolute;
-    top: 42%;
+    top: 35%;
     left: 1%;
   }
   .carousel-frame-top__btn-right {
     position: absolute;
-    top: 42%;
+    top: 35%;
     right: 1%;
   }
 }

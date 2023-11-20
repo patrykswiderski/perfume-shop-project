@@ -1,58 +1,57 @@
-
 .special-offer {
   padding: 0;
   font-weight: 750;
   letter-spacing: 0.05rem;
 
   &__flex {
-      background-color: $rose;
-      gap: 3.5rem;
+    background-color: $rose;
+    gap: 3.5rem;
   }
 
   &__link {
-      color: $black;
-      font-weight: 600;
-      text-decoration: underline;
-      letter-spacing: normal;
+    color: $black;
+    font-weight: 600;
+    text-decoration: underline;
+    letter-spacing: normal;
   }
 
   &__middle {
-      font-size: 0.8rem;
-      width: 2rem;
-      height: 2rem;
-      background-color: $white;
-      border-radius: 100%;
-      padding-top: 0.3%;
+    font-size: 0.8rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: $white;
+    border-radius: 100%;
+    padding-top: 0.3%;
   }
-  }
+}
 
   .carousel-frame {
   padding: 0;
 
   &__flex{
-      padding: 0.8% 0;
+    padding: 0.8% 0;
   }
-  }
+}
 
   .carousel-frame-top {
   justify-content: space-between;
   max-width: 1354px;
 
   &__carousel-image {
-      width: 93%;
-      max-width: 1234px;
-  }
+    width: 93%;
+    max-width: 1234px;
+}
 
   &__image {
-      max-width: 100%;
+    max-width: 100%;
   }
 
   &__btn-image {
-      color: $white;
-      background-color: $dark_rose;
-      left: 21.3%;
-      bottom: 16%;
-      }
+    color: $white;
+    background-color: $dark_rose;
+    left: 21.3%;
+    bottom: 16%;
+    }
   }
 
   .carousel-frame-bottom {
@@ -67,8 +66,8 @@
   }
 
   &__pagination-image {
-      width: 100%;
-      max-width: 39px;
+    width: 100%;
+    max-width: 39px;
   }
   }
 
@@ -86,38 +85,38 @@
   }
 
   &__btn-image {
-      background-color: $primary;
-      left: 7.8%;
-      bottom: 27%;
+    background-color: $primary;
+    left: 7.8%;
+    bottom: 27%;
   }
-  }
+}
 
   @media screen and (max-width: 1200px){
   .special-offer {
 
-      &__middle {
-      padding-top: 0.55%;
-      }
+    &__middle {
+    padding-top: 0.55%;
+    }
   }
 
   .carousel-frame-top {
-      justify-content: center;
-      max-width: 1234px;
+    justify-content: center;
+    max-width: 1234px;
 
-      &__carousel-image {
-      width: 100%;
-      }
+    &__carousel-image {
+    width: 100%;
+    }
 
-      &__btn-left {
-      position: absolute;
-      top: 42%;
-      left: 1%;    
-      }
+    &__btn-left {
+    position: absolute;
+    top: 35%;
+    left: 1%;    
+    }
 
-      &__btn-right {
-      position: absolute;
-      top: 42%;  
-      right: 1%;    
-      }
+    &__btn-right {
+    position: absolute;
+    top: 35%;  
+    right: 1%;    
+    }
   }
 }

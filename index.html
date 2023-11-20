@@ -76,19 +76,25 @@
           <button class="navbar-middle__hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-menu">
             <img class="navbar-middle__hamburger-icon" src="app\images\burger-menu.svg">
           </button>
-          <input type="text" placeholder="Hey, what are you looking for?" class="navbar-middle__search-input">
-          <button class="navbar-middle__search-button">
+
+          <input type="text" placeholder="Hey, what are you looking for?" class="navbar-middle__search-input" onfocus="this.value=''">
+
+          <button id="navbar-middle__collapse" class="navbar-middle__search-button">
             <picture class="text-end">
               <source media="(min-width: 1024px)" srcset="app\images\codicon_heart.svg">
               <source media="(max-width: 1024px)" srcset="app\images\codicon_heart-white.svg">
               <img class="navbar-middle__logo-image" src="app\images\codicon_heart-white.svg">
             </picture> 
           </button>
+          <div id="navbar-middle__collapse-menu" class="navbar-middle__collapse-menu collapse">
+            <input type="text" placeholder="Hey, what are you looking for?" class="navbar-middle__collapse-menu-placeholder">
+            <a href="#" class="navbar-middle__collapse-menu-button btn-common">Search</a>
+          </div>
         </div>
 
 
 
-        <div class="navbar-middle__logo col-4 d-flex justify-content-center align-items-center p-0">
+        <div class="navbar-middle__logo col-4 d-flex justify-content-center p-0">
           <picture class="text-end">
             <source media="(min-width: 1024px)" srcset="app\images\vector.svg">
             <source media="(max-width: 1024px)" srcset="app\images\vector-white.svg">
@@ -102,8 +108,8 @@
           </div>
         </div>
         
-        <div class="navbar-middle__client-data col-4 p-0 my-auto">
-          <ul class="navbar-middle__client-data-nav p-0 m-0">
+        <div class="navbar-middle__client-data col-4 p-0">
+          <ul class="navbar-middle__client-data-nav m-0">
             <li class="navbar-middle__client-data-item">
               <button class="navbar-middle__client-data-button"> 
                 <picture >
@@ -137,7 +143,7 @@
         </div>
       </div>
 
-      <div class="navbar-third container-fluid p-0">
+      <div class="navbar-bottom container-fluid p-0">
         <div id="offcanvas-menu" class="navbar-bottom__row row justify-content-center m-0">
           <div id="offcanvas-header" class="navbar-bottom__offcanvas d-none offcanvas-header">
             <img class="navbar-bottom__offcanvas-image" src="app\images\burger-menu.svg" alt="">
@@ -146,7 +152,7 @@
           </div>
 
           <ul class="navbar-bottom__nav offcanvas-body ">
-            <li id="dropdownContainer" class="navbar-bottom__item dropdown dropend">
+            <li class="navbar-bottom__item">
               <a href="#" class="navbar-bottom__link">Perfumes</a>
             </li>
             <li class="navbar-bottom__item">
@@ -228,13 +234,13 @@
       <div class="carousel-frame container-fluid">
         <div class="carousel-frame__flex d-flex flex-column justify-content-between align-items-center">
           
-          <div class="carousel-frame-top d-flex align-items-center flex-fill">
+          <div class="carousel-frame-top d-flex align-items-center flex-fill position-relative">
             <button class="carousel-frame-top__btn-left btn-next-product">
               <img src="app/images/Component 103.svg" alt="">
               <a href="#" class="carousel-frame-top__link "></a>
             </button>
 
-            <div class="carousel-frame-top__carousel-image position-relative">
+            <div class="carousel-frame-top__carousel-image ">
               <img class="carousel-frame-top__image" src="app/images/Frame 48a.jpg" alt="">
               <a href="#" class="carousel-frame-top__btn-image btn-common position-absolute">Shop Now</a>
             </div>
@@ -983,17 +989,22 @@
       function updateClass() {
         let element = document.getElementById('offcanvas-menu');
         let element2 = document.getElementById('offcanvas-header');
+        let elementCollapse = document.getElementById('navbar-middle__collapse')
         // let element3 = document.getElementsByClassName('navbar-bottom__link')
 
         if (window.innerWidth < 1024) {
           element.classList.add('offcanvas', 'offcanvas-start');
           element.classList.remove('navbar-bottom__row', 'row', 'justify-content-center');
           element2.classList.remove('d-none');
+          elementCollapse.setAttribute('data-bs-toggle', 'collapse')
+          elementCollapse.setAttribute('data-bs-target', '#navbar-middle__collapse-menu');
           // element3.classList.add('dropdown dropend')
         } else {
           element.classList.remove('offcanvas', 'offcanvas-start');
           element.classList.add('navbar-bottom__row', 'row', 'justify-content-center');
           element2.classList.add('d-none');
+          elementCollapse.removeAttribute('data-bs-toggle')
+          elementCollapse.removeAttribute('data-bs-target');
           // element3.classList.remove('dropdown dropend')
         }
       }
