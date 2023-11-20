@@ -1,9 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Almarai&family=K2D:wght@500&family=Kodchasan&family=Mulish:wght@500;600;700;800;900;1000&display=swap");
-body,
-html {
-  overflow-x: hidden;
-}
-
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 100%;
@@ -133,7 +128,7 @@ a {
   font-size: 0.75rem;
   font-weight: 400;
 }
-.item-block__content-brand-underline {
+.item-block__content-text-underline {
   text-decoration: underline;
 }
 .item-block__content-type {
