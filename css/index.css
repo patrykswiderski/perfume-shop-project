@@ -374,13 +374,14 @@ a {
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    width: 98vw;
+    width: 99vw;
     margin-left: -7%;
     margin-top: 4%;
-    margin-bottom: -14px;
+    margin-bottom: -16px;
     padding-bottom: 2.5%;
     padding-top: 2%;
     padding-inline: 6%;
+    border-bottom: 1px solid #4d2952;
   }
   .navbar-middle__collapse-menu-placeholder {
     width: 70%;
