@@ -230,8 +230,8 @@
 
     <!-- Start of the Promotions section -->
     <section>
-      <div class="special-offer container-fluid">
-        <div class="special-offer__flex d-flex justify-content-center align-items-center py-1">
+      <div class="special-offer container-fluid p-0">
+        <div class="special-offer__flex d-flex justify-content-center align-items-center">
           <div class="special-offer__left">
             25% OFF - SITEWIDE - 
             <a href="#" class="special-offer__link">click here</a>
@@ -248,12 +248,12 @@
         </div>  
       </div> 
 
-      <div class="carousel-frame container-fluid">
+      <div class="carousel-frame container-fluid p-0">
         <div class="carousel-frame__flex d-flex flex-column justify-content-between align-items-center">
           
-          <div class="carousel-frame-top d-flex align-items-center flex-fill position-relative">
+          <div class="carousel-frame-top d-flex align-items-center justify-content-between position-relative">
             <button class="carousel-frame-top__btn-left btn-next-product">
-              <img src="app/images/Component 103.svg" alt="">
+              <img class="carousel-frame-top__btn-sides-images" src="app/images/Component 103.svg" alt="">
               <a href="#" class="carousel-frame-top__link "></a>
             </button>
 
@@ -263,7 +263,7 @@
             </div>
 
             <button class="carousel-frame-top__btn-right btn-next-product">
-              <img src="app/images/Component 102.svg" alt="">
+              <img class="carousel-frame-top__btn-sides-images" src="app/images/Component 102.svg" alt="">
               <a href="#" class="carousel-frame-top__link"></a>
             </button>          
           </div>
@@ -271,27 +271,28 @@
           <div class="carousel-frame-bottom d-flex justify-content-center">
             <ul class="carousel-frame-bottom__pagination pagination">
               <li class="carousel-frame-bottom__pagination-item page-item">
-                <img class="carousel-frame-bottom__pagination-image" src="app/images/Frame 121.svg" alt="" class="page-item">
-                <a href="#" class="carousel-frame-bottom__pagination-dot--active page-item"></a>
+                <img class="carousel-frame-bottom__pagination-image" src="app/images/Frame 121.svg" alt="">
+                <a href="#" class="carousel-frame-bottom__pagination-dot--active"></a>
               </li>
               <li class="carousel-frame-bottom__pagination__item page-item">
                 <img class="carousel-frame-bottom__pagination-image" src="app/images/Frame 122.svg" alt="">
-                <a href="#" class="carousel-frame-bottom-pagination-dot page-item"></a>
+                <a href="#" class="carousel-frame-bottom-pagination-dot"></a>
               </li>
               <li class="carousel-frame-bottom__pagination-item page-item">
-                <img class="carousel-frame-bottom__pagination-image" src="app/images/Frame 122.svg" alt="">
-                <a href="#" class="carousel-frame-bottom__pagination-dot page-item"></a>
+                <img class="carousel-frame-bottom__pagination-image mx-auto" src="app/images/Frame 122.svg" alt="">
+                <a href="#" class="carousel-frame-bottom__pagination-dot"></a>
               </li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div class="search-for-brand container-fluid">
-        <div class="search-for-brand__flex d-flex justify-content-center position-relative mx-auto py-2">
-          <img class="search-for-brand__image" src="app/images/Frame 49a.jpg" alt="">
-          <a href="#" class="search-for-brand__btn-image btn-common position-absolute">Search for brand</a>
-        </div>
+      <div class="search-for-brand container-fluid p-0">
+          <div class="search-for-brand__flex d-flex justify-content-center position-relative text-center mx-auto">
+            <img class="search-for-brand__image" src="app/images/Frame 49a.jpg" alt="">
+            <a href="#" class="search-for-brand__btn-image btn-common position-absolute">Search for brand</a>
+          </div>
+
       </div>
     </section>
     <!-- End of the Promotions section -->
@@ -1041,7 +1042,7 @@
         var dropdownElement = document.getElementById('navbar-bottom__dropdown-element');
 
         dropdownElement.appendChild(clonedOffcanvasMenu);
-      };
+      });
 
       // function updateClass() {
       //   let classToRename = document.getElementsByClassName('item-block__content-brand-underline');

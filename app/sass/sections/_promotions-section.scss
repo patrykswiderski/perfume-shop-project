@@ -1,10 +1,10 @@
 .special-offer {
-  padding: 0;
   font-weight: 750;
   letter-spacing: 0.05rem;
 
   &__flex {
     background-color: $rose;
+    padding: 0.3% 0;
     gap: 3.5rem;
   }
 
@@ -25,16 +25,14 @@
   }
 }
 
-  .carousel-frame {
-  padding: 0;
+.carousel-frame {
 
   &__flex{
     padding: 0.8% 0;
   }
 }
 
-  .carousel-frame-top {
-  justify-content: space-between;
+.carousel-frame-top {
   max-width: 1354px;
 
   &__carousel-image {
@@ -51,17 +49,16 @@
     background-color: $dark_rose;
     left: 21.3%;
     bottom: 16%;
-    }
   }
+}
 
-  .carousel-frame-bottom {
-  width: 6.1%;
-  padding-top: 0.4%;
+.carousel-frame-bottom {
+width: 6.1%;
+padding-top: 0.4%;
 
   &__pagination {
   margin: 0;
   cursor: pointer;
-  width: 100%;
   max-width: 120px;
   }
 
@@ -69,25 +66,23 @@
     width: 100%;
     max-width: 39px;
   }
-  }
+}
 
-  .search-for-brand {
-  padding: 0;
-  margin: 0;
+.search-for-brand {
 
   &__flex {
-      max-width: 1234px;
+    max-width: 1234px;
   }
-
+  
   &__image {
-      width: 100%;
-      max-width: 1234px;
+    max-width: 100%;
+    max-height: 223px;
   }
 
   &__btn-image {
     background-color: $primary;
     left: 7.8%;
-    bottom: 27%;
+    bottom: 20%;
   }
 }
 
@@ -107,16 +102,54 @@
     width: 100%;
     }
 
+    &__btn-left, &__btn-right {
+      position: absolute;
+      top: 35%;
+    }
+
     &__btn-left {
-    position: absolute;
-    top: 35%;
-    left: 1%;    
+      left: 1%;    
     }
 
     &__btn-right {
-    position: absolute;
-    top: 35%;  
-    right: 1%;    
+      right: 1%;    
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .special-offer {
+
+    &__flex {
+      padding: 1.5% 0;
+    }
+
+    &__right {
+        line-height: 0.8rem;
+    }
+    
+    &__middle, &__right {
+      display: none;
+    }
+  }
+
+  .carousel-frame-top {
+  
+    &__btn-sides-images {
+      margin-top: 10%;
+      width: 60%;
+    }
+
+    &__btn-image {
+      left: 21.3%;
+      bottom: 16%;
+      }
+  }
+
+  .search-for-brand {
+
+    &__btn-image {
+      bottom: 15%;
     }
   }
 }

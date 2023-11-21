@@ -159,7 +159,7 @@
 
   &__offcanvas-menu-container {
     gap: 25%;
-    width: 60%;
+    width: 55%;
     max-width: 1100px;
     max-height: 65%;
     padding-top: 0.5%;
@@ -178,8 +178,8 @@
     left: 50vw;
     margin-left: -0.9%;
     background-color: $white;
-    width: 2%;
-    height: 12%;
+    width: 5%;
+    height: 15%;
     max-width: 40px;
     max-height: 40px;
     border-radius: 50%;
@@ -193,7 +193,8 @@
 
   .offcanvas.hiding, .offcanvas.showing, .offcanvas.show, .offcanvas-backdrop {
     position: absolute;
-    top: 205px;
+    top: 15%;
+    max-height: 23%;
   }
 
   .offcanvas.show {
@@ -222,6 +223,11 @@
     &__client-data-link {
     padding-top: 4%;
     }
+  }
+
+  .offcanvas.hiding, .offcanvas.showing, .offcanvas.show, .offcanvas-backdrop {
+    top: 13%;
+    max-height: 18%;
   }
 }
 
