@@ -20,17 +20,18 @@ a {
   padding: 1.2% 4%;
   z-index: 1;
   @media screen and (max-width: 1200px){
-    padding: 1.2% 3.5%;
+    padding: 1.2% 3%;
   }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
-    font-size: 0.75rem;
-    font-weight: 600;
+    font-size: 0.8rem;
+    font-weight: 800;
   }
 }
 
 .btn-common {
   @include btn-styles;
-  color: $white
+  color: $white;
+  text-transform: uppercase;
 }
 
 .btn-transparent {
@@ -53,11 +54,19 @@ a {
 }
 
 .title-text {
-  font-size: 175%;
+  font-size: 1.8rem;
   font-weight: 750;
   margin: 0;
 }
 
+
+@media screen and (max-width: 1024px){
+  .title-text {
+    font-size: 1.3rem;
+    font-weight: 750;
+    margin: 0;
+    }
+}
 
 @media screen and (max-width: 1200px){
   body {

@@ -1,6 +1,5 @@
 
 .our-collection {
-  padding: 0;
   max-width: 1234px;
 
   &__top {
@@ -11,30 +10,31 @@
     padding-bottom: 0.8%;
   }
 
+  &__content {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    padding-bottom: 3%;
+  }
+
   &__btn {
     color: $black;
     background-color: transparent;
   }
 
-  &__navigation {
-    padding: 0;
-  }
-
   &__navigation-row {
+    justify-content: space-between;
     padding: 1.5% 0;
     width: 100%;
-    height: 100vh;
     max-width: 1234px;
     max-height: 651px;
-    row-gap: 4%;
+    row-gap: 2rem;
   }
 
   &__navigation-block {
     position: relative;
     width: 32%;
     max-width: 391px;
-    height: 49%;
-    max-height: 316px;
+    aspect-ratio: 1.24/1;
     overflow: hidden;
   }
 
@@ -43,22 +43,28 @@
     width: 93%;
     max-width: 360px;
     right: -25%;
-    bottom: -20%;
+    bottom: -23%;
   }
 
   &__navigation-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
     width: 100%;
-    max-width: 100%;
     height: 100%;
-    max-height: 100%;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.4);
     color: $white;
     font-size: 1.6rem;
     letter-spacing: 0.2rem;
     font-weight: 600;
     position: absolute;
     z-index: 1;
-    padding-top: 34.3%;
+    padding-top: 34.5%;
+  }
+
+  &__navigation-text {
+    margin-bottom: 0;
+    margin-inline: auto; 
   }
 
   &__navigation-content-link {
@@ -66,23 +72,83 @@
     font-size: 0.9rem;
     text-decoration: underline;
     letter-spacing: normal;
+    margin-inline: auto; 
   }
 }
 
-
-  .recommended {
+.recommended {
   padding: 2% 0;
 
   &__top {
     padding: 1% 0;
   }
-  }
+}
 
-  @media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px){
   .recommended-middle {
 
     &__btn {
-    display: none;
+      display: none;
     }
   }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .our-collection {
+  
+    &__top {
+      padding: 3% 0;
+    }
+
+    &__content {
+      font-size: 0.85rem;
+      margin-bottom: 0;
+      padding-bottom: 3%;
+    }
+
+    &__btn {
+      border: 2px solid $button_gray;
+    }
+
+    &__navigation-row {
+      justify-content: space-around;
+      padding: 1.5%;
+      row-gap: 1.5rem;
+    }
+
+    &__navigation-block {
+      width: 48%;
+      max-width: 460px;
+      aspect-ratio: 2/1;
+    }
+
+    &__navigation-img {
+      width: 60%;
+      right: 19%;
+      bottom: -22%;
+    }
+
+    &__navigation-content {
+      justify-content: space-between;
+      text-align: center;
+      padding-top: 0;
+    }
+
+    &__navigation-text {
+      margin-bottom: 0;
+      margin-inline: auto; 
+      padding-top: 15%;
+      width: 45%;
+      font-size: 2.6vw;
+    }
+
+    &__navigation-content-link {
+      margin-inline: auto; 
+      padding-bottom: 12%;
+      font-size: 1.6vw;
+    }
+
+  }
+
+
 }

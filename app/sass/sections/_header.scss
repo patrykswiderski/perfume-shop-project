@@ -186,21 +186,20 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   .offcanvas {
     transition: 0s;
   }
 
   .offcanvas.hiding, .offcanvas.showing, .offcanvas.show, .offcanvas-backdrop {
     position: absolute;
-    top: 15%;
-    max-height: 23%;
+    top: 210px;
+    height: 300px;
   }
 
   .offcanvas.show {
     transform: translateY(0);
   }
-
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1200px){
@@ -226,8 +225,8 @@
   }
 
   .offcanvas.hiding, .offcanvas.showing, .offcanvas.show, .offcanvas-backdrop {
-    top: 13%;
-    max-height: 18%;
+    top: 180px;
+    max-height: 250px;
   }
 }
 
