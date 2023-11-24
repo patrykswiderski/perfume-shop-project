@@ -1,11 +1,13 @@
 .security-row {
+  flex-direction: row;
   width: 100%;
   height: 100%;
-  gap: 6%;
+  gap: 5.5%;
   background-color: $primary;
   margin-top: 3%;
+  padding: 0.4% 0;
 
-  &__delivery {
+  &__info {
     max-width: 100%;
     max-height: 100%;
   }
@@ -23,17 +25,9 @@
   }
 
   &__content {
+    text-align: center;
     margin: 0;
     font-size: 0.9rem;
-  }
-}
-
-@media screen and (max-width: 1200px){
-  .security-box {
-
-    &__content {
-      font-size: calc(0.9rem - 0.4vw);
-    }
   }
 }
 
@@ -54,28 +48,29 @@
   }
 
   &__input {
-
     color: $button_gray;
   }
 
   &__input-data {
     width: 40%;
-    max-width: 286px;
+    max-width: 300px;
     border: none;
     border-bottom: 2px solid $black;
     padding: 0.5rem 0 0.5rem 0.5rem;
     max-height: 48px;
   }
 
+  &__input-btn-first {
+    padding: 0.6rem 3.2rem;
+  }
 
-  &__input-btn {
-    max-height: 42px;
-    line-height: 0.8rem;
+  &__input-btn-second {
+    display: none;
   }
 
   &__content {
     max-width: 760px;
-    font-size: 0.67rem;
+    font-size: 0.7rem;
     margin: 0;
   }
 
@@ -96,7 +91,102 @@
   }
   
   &__bottom-content {
+    color: $footer-menu-item;
     text-transform: uppercase;
     margin: 0;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .security-box {
+  
+    &__content {
+      font-size: 0.8rem;
+    }
+  }
+
+  .sign-up {
+    border-bottom: 1px solid #CCCCCC;
+    max-height: max-content;
+  }
+
+  .sign-up-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px solid #CCCCCC;
+  
+    &__title-disable {
+      display: none;
+    }
+
+    &__input-data {
+      width: 49%;
+      max-width: 380px;
+      border-bottom: 3px groove $black;
+      padding: 0.5rem 0 0.5rem 0.5rem;
+      max-height: 48px;
+    }
+  
+    &__input-btn-first {
+      display: none;
+    }
+  
+    &__input-btn-second {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      margin: 0 auto 0.8rem 0;
+      padding: 0.6rem 2.5rem;
+      border: 3px groove black ;
+    }
+
+    &__content {
+      font-size: 0.7rem;
+      max-width: 770px;
+      line-height: 200%;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .security-row {
+    height: 7rem;
+    align-content: space-between;
+    flex-wrap: wrap;
+    gap: 8%;
+    padding: 2.7% 5%;
+  }
+
+  .security-box {
+    gap: 8%;
+    &__content {
+      font-size: 0.8rem;
+    }
+  }
+
+  .sign-up-left {
+    border-right: 1px solid #CCCCCC;
+    padding: 2.4% 4.8%;
+  
+    &__title {
+      font-size: 1rem;
+      font-weight: 750;
+      margin: 0;
+    }
+    
+    &__input-btn {
+      padding: 0.6rem 3.2rem;
+    }
+  }
+
+  .sign-up-right {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+  
+    &__title {
+      padding-bottom: 0.8rem;
+    }
   }
 }

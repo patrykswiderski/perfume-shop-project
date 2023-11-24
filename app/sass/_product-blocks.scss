@@ -1,6 +1,7 @@
 @mixin flex-between {
   display: flex;
   justify-content: space-between;
+  align-items: center
 }
 
 .products-box-style {
@@ -37,15 +38,13 @@
   &__top-gender {
     text-align: center;
     margin: 0;
-    padding: 1% 2.5%;
+    padding: 1% 2.5% 1.1% 2.5%;
     max-height: 20px;
-    text-align: center;
     font-family: $font-item-block;
     font-size: 0.6rem;
     font-weight: 900;
     color: $white;
     background-color: $item-block-gender;
-
   }
 
   &__img {
@@ -54,12 +53,15 @@
   }
 
   &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-
   }
 
   &__content-name {
-    margin: 0;
+    text-align: center;
+    margin: 0 auto;
     font-size: 0.8rem;
     font-weight: 750;
   }
@@ -101,7 +103,7 @@
   &__add {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 90%;
     max-width: 252px;
   }
 
@@ -122,5 +124,44 @@
 @media screen and (max-width: 1200px){
   .products-box-style {
     max-width: 1234px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .item-block {
+    width: 24%;
+    max-width: 294px;
+  
+    &__top {
+      width: 86%;
+      max-width: 252px;
+    }
+  
+    &__top-gender {
+      padding: 3% 2.5% 2.6% 2.5%;
+      font-size: 0.5rem;
+      font-weight: 800;
+      line-height: 100%;
+    }
+  
+    &__content-name {
+      width: 85%;
+    }
+  
+    &__content-price {
+      padding-bottom: 0.5rem;
+    }
+  
+    &__content-price-bold{
+      font-size: 1rem;
+    }
+  
+    &__add {
+      width: 55%;
+    }
+  
+    &__add-btn {
+      padding: 12% 30%;
+    }
   }
 }
