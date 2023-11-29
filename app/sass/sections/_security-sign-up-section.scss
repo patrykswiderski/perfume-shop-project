@@ -33,12 +33,12 @@
 
 .sign-up {
   background-color: $sign-up;
-  border-bottom: 1px solid #CCCCCC;
   max-height: 264px;
 }
 
 .sign-up-left {
   border-right: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC;
   padding: 2.4% 4.8%;
 
   &__title {
@@ -82,6 +82,7 @@
 
 .sign-up-right {
   padding: 2.4% 4.8%;
+  border-bottom: 1px solid #CCCCCC;
 
   &__title {
     font-size: 1rem;
@@ -106,7 +107,6 @@
   }
 
   .sign-up {
-    border-bottom: 1px solid #CCCCCC;
     max-height: max-content;
   }
 
@@ -114,7 +114,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-bottom: 1px solid #CCCCCC;
   
     &__title-disable {
       display: none;
@@ -166,7 +165,7 @@
   }
 
   .sign-up-left {
-    border-right: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
     padding: 2.4% 4.8%;
   
     &__title {

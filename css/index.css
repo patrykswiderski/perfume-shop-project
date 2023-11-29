@@ -924,12 +924,12 @@ a {
 
 .sign-up {
   background-color: #F5F6F6;
-  border-bottom: 1px solid #CCCCCC;
   max-height: 264px;
 }
 
 .sign-up-left {
   border-right: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC;
   padding: 2.4% 4.8%;
 }
 .sign-up-left__title {
@@ -966,6 +966,7 @@ a {
 
 .sign-up-right {
   padding: 2.4% 4.8%;
+  border-bottom: 1px solid #CCCCCC;
 }
 .sign-up-right__title {
   font-size: 1rem;
@@ -984,14 +985,12 @@ a {
     font-size: 0.8rem;
   }
   .sign-up {
-    border-bottom: 1px solid #CCCCCC;
     max-height: max-content;
   }
   .sign-up-left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-bottom: 1px solid #CCCCCC;
   }
   .sign-up-left__title-disable {
     display: none;
@@ -1035,7 +1034,7 @@ a {
     font-size: 0.8rem;
   }
   .sign-up-left {
-    border-right: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
     padding: 2.4% 4.8%;
   }
   .sign-up-left__title {
@@ -1056,12 +1055,16 @@ a {
   }
 }
 .footer-top-row {
+  display: flex;
+  flex-direction: row;
   width: 100%;
+  height: 100%;
   padding: 3% 4.3%;
   gap: 6%;
 }
 
 .footer-top-left {
+  justify-content: space-between;
   max-width: 905px;
   height: 45vh;
   max-height: 340px;
@@ -1079,33 +1082,45 @@ a {
   flex-direction: column;
   flex-wrap: wrap;
   column-gap: 15%;
+  height: 87%;
+  max-height: 280px;
   color: #383838;
   font-weight: 400;
   line-height: 190%;
   list-style-type: none;
   padding: 0;
   margin: 0;
-  height: 87%;
-  max-height: 280px;
-  width: auto;
 }
 
 .menu-link {
   color: #383838;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 400;
   line-height: 200%;
   text-decoration: none;
 }
 
 .footer-icon {
-  max-width: 460px;
-  max-height: 195px;
+  flex-direction: column;
+  gap: 10%;
+  max-width: 600px;
+}
+.footer-icon__social-media {
+  flex-direction: row;
+  justify-content: space-between;
 }
 .footer-icon__social-media-btn {
+  display: flex;
+  padding: 0;
   background-color: transparent;
   border: none;
   max-width: 40px;
+}
+.footer-icon__social-media-image {
+  width: 100%;
+}
+.footer-icon__change-country {
+  gap: 4%;
 }
 .footer-icon__change-country-dropdown {
   color: #000000;
@@ -1120,19 +1135,16 @@ a {
   letter-spacing: 0.5%;
 }
 
-@media screen and (max-width: 1200px) {
-  .menu-title {
-    font-size: calc(1rem - 0.3vw);
-    padding-bottom: 13%;
-  }
-  .menu-link {
-    font-size: calc(0.8rem - 0.3vw);
-  }
-}
 .footer-end {
   background-color: #000000;
   color: #fff;
   line-height: 150%;
+}
+.footer-end__top {
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
 .footer-end__top-link {
   color: #fff;
@@ -1145,8 +1157,86 @@ a {
   line-height: 150%;
 }
 
+@media screen and (max-width: 1350px) {
+  .footer-top-row {
+    gap: 3%;
+  }
+  .menu-links {
+    column-gap: 7%;
+  }
+  .menu-link {
+    font-size: 0.7rem;
+  }
+}
 @media screen and (max-width: 1200px) {
-  .footer-end__middle-content {
-    font-size: calc(0.69rem - 0.3vw);
+  .footer-top-row {
+    flex-direction: column;
+  }
+  .menu-title {
+    font-size: 1rem;
+    padding-bottom: 13%;
+  }
+  .menu-links {
+    column-gap: 20%;
+  }
+  .menu-link {
+    font-size: 0.8rem;
+  }
+  .footer-icon {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100vw;
+  }
+  .footer-icon__social-media {
+    width: 100vw;
+    padding: 3% 5%;
+    border-bottom: 2px solid #CCC;
+    margin-bottom: 3%;
+  }
+  .footer-icon__social-media-btn {
+    max-width: 35px;
+  }
+  .footer-icon__change-country {
+    gap: 10%;
+  }
+  .footer-icon__subscription-club {
+    margin-left: auto;
+  }
+  .footer-icon__subscription-club-btn {
+    border: 1px solid #CCC;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .footer-top-row {
+    flex-direction: column;
+  }
+  .footer-top-left {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-height: max-content;
+    max-width: max-content;
+    gap: 5%;
+    padding-bottom: 3%;
+  }
+  .footer-top-left__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .menu-title {
+    font-size: 1.1rem;
+    padding-bottom: 10%;
+  }
+  .menu-links {
+    align-items: stretch;
+    max-height: 290px;
+    column-gap: 15%;
+  }
+  .menu-link {
+    font-size: 0.9rem;
+    line-height: 220%;
+  }
+  .footer-end__top {
+    margin: 0 10%;
   }
 }
