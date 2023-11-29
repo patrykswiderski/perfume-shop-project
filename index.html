@@ -17,7 +17,7 @@
     <header>
       <div class="navbar-first container-fluid p-0">
         <div class="navbar-top row mx-0 my-auto">
-          <div class="navbar-top__left col-4 p-0">
+          <div class="navbar-top__left col-md-4 p-0">
             <ul class="navbar-top__nav m-0 p-0">
               <li class="navbar-top__item dropdown"> 
                 
@@ -51,11 +51,11 @@
             </ul>    
           </div>
           
-          <div class="navbar-top__valentines col-4 p-0 text-center">
+          <div class="navbar-top__valentines col-md-4 p-0 text-center">
             <p class="navbar-top__valentines-content m-0">&#128293 Only <span class="">11</span> days left until VALENTINE'S DAY! &#128293</p>
           </div>
 
-          <div class="navbar-top__right col-4 text-end p-0">
+          <div class="navbar-top__right col-md-4 text-end p-0">
             <ul class="navbar-top__nav m-0">
               <li class="navbar-top__item">
                 <a href="#" class="navbar-top__items-name">Help & Information</a>
@@ -69,7 +69,7 @@
       </div>
 
       <div class="navbar-middle row m-0">
-        <div class="navbar-middle__search col-4 my-auto p-0">
+        <div class="navbar-middle__search col-md-4 col-3 my-auto p-0">
           <button class="navbar-middle__hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-menu">
             <img class="navbar-middle__hamburger-icon" src="app\images\burger-menu.svg">
           </button>
@@ -80,7 +80,7 @@
             <picture class="text-end">
               <source media="(min-width: 1024px)" srcset="app\images\codicon_heart.svg">
               <source media="(max-width: 1024px)" srcset="app\images\codicon_heart-white.svg">
-              <img class="navbar-middle__logo-image" src="app\images\codicon_heart-white.svg">
+              <img class="navbar-middle__search-image" src="app\images\codicon_heart-white.svg">
             </picture> 
           </button>
           
@@ -90,7 +90,7 @@
           </div>
         </div>
 
-        <div class="navbar-middle__logo col-4 d-flex justify-content-center p-0">
+        <div class="navbar-middle__logo col-md-4 col-6 d-flex justify-content-center p-0">
           <picture class="text-end">
             <source media="(min-width: 1024px)" srcset="app\images\vector.svg">
             <source media="(max-width: 1024px)" srcset="app\images\vector-white.svg">
@@ -99,11 +99,11 @@
 
           <div class="navbar-middle__logo-brand">
             <p class="navbar-middle__logo-name m-0">PerfumeShop<span class="navbar-middle__logo-name-domain">.com</span></p>
-            <p class="navbar-middle__logo-since m-">TRUSTED ONLINE SINCE 1997</p>
+            <p class="navbar-middle__logo-since m-0">TRUSTED ONLINE SINCE 1997</p>
           </div>
         </div>
         
-        <div class="navbar-middle__client-data col-4 p-0">
+        <div class="navbar-middle__client-data col-md-4 col-3 p-0">
           <ul class="navbar-middle__client-data-nav m-0">
             <li class="navbar-middle__client-data-item">
               <button class="navbar-middle__client-data-button"> 
@@ -1044,7 +1044,7 @@
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         var originalOffcanvasMenu = document.getElementById('navbar-bottom__offcanvas-menu');
-        var clonedOffcanvasMenu = navbar-bottom__offcanvas-menu.cloneNode(true);
+        var clonedOffcanvasMenu = originalOffcanvasMenu.cloneNode(true);
 
         var dropdownElement = document.getElementById('navbar-bottom__dropdown-element');
 

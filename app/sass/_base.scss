@@ -23,10 +23,16 @@ a {
     font-size: 0.8rem;
     padding: 1rem 2.8rem;
   }
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+  @media screen and (max-width: 1024px) {
     font-size: 0.7rem;
     font-weight: 700;
     padding: 0.6rem 1.4rem;
+    border-radius: 2px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 0.6rem;
+    font-weight: 600;
+    padding: 0.5rem 1.2rem;
   }
 }
 
@@ -70,6 +76,11 @@ a {
   margin: 0;
 }
 
+@media screen and (max-width: 1200px){
+  body {
+    font-size: 80%;
+  }
+}
 
 @media screen and (max-width: 1024px){
   .title-text {
@@ -79,11 +90,12 @@ a {
     }
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 768px){
   body {
-    font-size: 80%;
+    font-size: 60%;
   }
 }
+
 
 
 
