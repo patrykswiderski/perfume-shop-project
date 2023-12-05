@@ -52,7 +52,7 @@
           </div>
           
           <div class="navbar-top__valentines col-md-4 p-0 text-center">
-            <p class="navbar-top__valentines-content m-0">&#128293 Only <span class="">11</span> days left until VALENTINE'S DAY! &#128293</p>
+            <p class="navbar-top__valentines-content m-0">&#128293 Only <span id="daysCountdown"></span> days left until VALENTINE'S DAY! &#128293</p>
           </div>
 
           <div class="navbar-top__right col-md-4 text-end p-0">
@@ -1023,7 +1023,7 @@
         let elementOffcanvas = document.getElementById('offcanvas-menu');
         let elementOffcanvas2 = document.getElementById('offcanvas-header');
         let elementCollapse = document.getElementById('navbar-middle__collapse');
-        let elementoffcanvas3 = document.getElementById        ('navbar-bottom__offcanvas-button');
+        let elementoffcanvas3 = document.getElementById('navbar-bottom__offcanvas-button');
 
         if (window.innerWidth < 1024) {
           elementOffcanvas.classList.add('offcanvas', 'offcanvas-start');
@@ -1086,13 +1086,14 @@
         }
       }
       
-      // Wywołanie funkcji updateClass
+
       updateClass();
+      window.addEventListener('resize', updateClass);
 
       updateClassFooter();
+      window.addEventListener('resize', updateClassFooter);
 
-      // Nasłuchiwanie na zdarzenie zmiany szerokości ekranu
-      window.addEventListener('resize', updateClass);
+
 
     </script>
 
@@ -1105,7 +1106,34 @@
 
         dropdownElement.appendChild(clonedOffcanvasMenu);
       });
+    </script>
 
+    <script>
+      function calculateDaysUntilNextValentines() {
+        const currentDate = new Date();
+        let nextValentinesYear = currentDate.getFullYear();
+
+        if (currentDate.getMonth() > 1 || (currentDate.getMonth() === 1 && currentDate.getDate() > 14)) {
+          nextValentinesYear++;
+        }
+
+        const valentinesDate = new Date(nextValentinesYear, 1, 14);
+        const timeDifference = valentinesDate - currentDate;
+        const daysUntilValentines = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+
+        return daysUntilValentines;
+      }
+
+      function updateDaysCountdown() {
+        const daysCountdownElement = document.getElementById('daysCountdown');
+        const daysUntilValentines = calculateDaysUntilNextValentines();
+
+        daysCountdownElement.textContent = daysUntilValentines;
+      }
+
+      window.onload = function () {
+        updateDaysCountdown();
+      };
     </script>
 
   </body>
