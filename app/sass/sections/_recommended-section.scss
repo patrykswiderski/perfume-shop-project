@@ -1,0 +1,14 @@
+.recommended {
+  padding: 0;
+
+  &__title {
+    padding: 2% 0;
+  }
+}
+
+@media screen and (max-width: 1200px){
+
+  .recommended {
+    padding: 0 1rem;
+  }
+}

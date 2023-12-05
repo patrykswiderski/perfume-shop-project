@@ -299,11 +299,11 @@
 
     <!-- Start of the Shop Our Collection section -->
     <section>
-      <div class="our-collection container-fluid p-0 mh-auto">
+      <div class="our-collection container-fluid mh-auto">
         <div class="our-collection__top text-center">
           <p class="our-collection__title title-text ">SHOP OUR COLLECTION</p>
           
-          <p class="our-collection__content">Our Delicious, limited-edition collection</p>
+          <p class="our-collection__content">Our Delicious, Limited-Edition Collection</p>
           
           <a href="#" class="our-collection__btn btn-transparent">SHOP ALL</a>
         </div>
@@ -322,7 +322,7 @@
             <img class="our-collection__navigation-img" src="app/images/Rectangle 1154.png" alt="">
             <div class="our-collection__navigation-content">
               <p class="our-collection__navigation-text">MEN'S COLOGNE</p>
-              <a href="#" class="our-collection__navigation-content-link">Shop Now</a>
+              <a type="button" href="#" class="our-collection__navigation-content-link">Shop Now</a>
             </div>
           </div>
 
@@ -630,19 +630,28 @@
     <!-- Start of the Subscription section -->
     <section>
       <div class="subscription container-fluid">
-        <div class="subscription-top row position-relative py-2 mx-auto">
-          <img src="app/images/Frame 50.jpg" alt="" class="subscription-top__image">
-          <a href="#" class="subscription-top__btn btn-transparent position-absolute">GET A GIFT CERTIFICATE</a>
+        <div class="subscription-top row position-relative mx-auto">
+          <picture class="p-0">
+            <source media="(min-width: 768px)" srcset="app\images\frame 50.jpg">
+            <source media="(max-width: 768px)" srcset="app\images\image_78.jpg">
+            <img class="subscription-top__image" src="app\images\frame 50.jpg">
+          </picture>
+
+          <p class="subscription-top__content">GIFT CERTIFICATES</p> 
+
+          <button class="subscription-top__btn ">
+            <a href="#" class="subscription-top__btn-link btn-transparent">GET A GIFT CERTIFICATE</a>
+          </button>
         </div>
 
         <div class="subscription-bottom row py-2 mb-4 mx-auto">
 
-          <div class="subscription-bottom__left col-6 position-relative">
+          <div class="subscription-bottom__left col-md-6 col-12 position-relative">
             <img src="app/images/Frame 51a.jpg" alt="" class="subscription-bottom__image">
             <a href="#" class="subscription-bottom__left-btn btn-common position-absolute">LEARN MORE</a>
           </div>
 
-          <div class="subscription-bottom__right col-6 position-relative">
+          <div class="subscription-bottom__right col-md-6 col-12 position-relative">
             <img src="app/images/Frame 51b.jpg" alt="" class="subscription-bottom__image">
             <a href="#" class="subscription-bottom__right-btn btn-common position-absolute">LEARN MORE</a>
           </div>
@@ -783,8 +792,8 @@
 
     <!-- Start of the Security & Sign up section -->
     <section> 
-      <div class="security container-fluid p-0">
-        <div class="security-row d-flex flex-row justify-content-center align-items-center">
+      <div class="security container-fluid px-0">
+        <div class="security-row d-flex">
           <div class="security-row__info security-box">
             <img class="security-box__image" src="app/images/Component 110.png" alt="">
             <p class="security-box__content">Free Delivery & Returns*</p>
@@ -807,7 +816,7 @@
 
           <div class="security-row__info security-box">
             <img class="security-box__image" src="app/images/Group 1651.png" alt="">
-            <p class="security-box__content">100% authentic products</p>
+            <p class="security-box__content">100% Authentic Products</p>
           </div>
         </div>
       </div>
@@ -816,7 +825,7 @@
         <div class="sign-up-left col-lg-6 col-12">
           <p class="sign-up-left__title">SIGN UP FOR SPECIAL OFFERS <span class="sign-up-left__title-disable">AND PROMOTIONS</span></p>
 
-          <div class="sign-up-left__input d-flex align-items-center py-3 gap-3">
+          <div class="sign-up-left__input d-flex py-3 gap-3">
             <input type="text" placeholder="Your Email" class="sign-up-left__input-data">
             <input type="text" placeholder="Your Mobile" class="sign-up-left__input-data">
             <a href="#" class="sign-up-left__input-btn-first btn-transparent">SIGN UP</a>
@@ -848,11 +857,10 @@
     <footer>
       <div class="footer-top container-fluid px-0">
         <div class="footer-top-row">
-          <div class="footer-top-left d-flex flex-fill">
-            <div class="footer-top-left__menu">
-              <p class="footer-top-left__menu-title menu-title">SHOP BY DEPARTMENT</p>
-
-              <ul class="footer-top-left__menu-links menu-links ">
+          <div id="accordion" class="footer-top__left d-flex flex-fill">
+            <div class="footer-top__menu">
+              <a id="footer__menu-first" class="footer-top__menu-title menu-title" href="#menu-first">SHOP BY DEPARTMENT</a>
+              <ul id="menu-first" class="footer-top__menu-links menu-links ">
                 <li class="menu-item"><a class="menu-link" href="#">Perfumes</a></li>
                 <li class="menu-item"><a class="menu-link" href="#">Men's Cologne</a></li>
                 <li class="menu-item"><a class="menu-link" href="#">Boutiques </a></li>
@@ -873,10 +881,10 @@
               </ul>
             </div>
 
-            <div class="footer-top-middle__menu">
-              <p class="footer-top-middle__menu-title menu-title">CUSTOMER SUPPORT</p>
+            <div class="footer-top__menu">
+              <a id="footer__menu-second" class="footer-top__menu-title menu-title" href="#menu-second">CUSTOMER SUPPORT</a>
 
-              <ul class="footer-top-middle__menu-links menu-links">
+              <ul id="menu-second" class="footer-top__menu-links menu-links">
                 <li class="menu-item"><a class="menu-link" href="#">Gift Certificates</a></li>
                 <li class="menu-item"><a class="menu-link" href="#">Gift Certificate Balance</a></li>
                 <li class="menu-item"><a class="menu-link" href="#">Accessibility Policy</a></li>
@@ -893,16 +901,16 @@
               </ul>
             </div>
 
-            <div class="footer-top-right__menu">
-              <p class="footer-top-right__menu-title menu-title">MY ACCOUNT</p>
+            <div class="footer-top__menu">
+              <a id="footer__menu-third" class="footer-top__menu-title menu-title" href="#menu-third">MY ACCOUNT</a>
 
-              <div class="footer-top-right__menu-links menu-links">
+              <ul id="menu-third" class="footer-top__menu-links menu-links">
                 <li class="menu-item"><a class="menu-link" href="#">My Account</a></li>
                 <li class="menu-item"><a class="menu-link" href="#">Register Now</a></li>
                 <li class="menu-item"><a class="menu-link" href="#">Order Status</a></li>
                 <li class="menu-item"><a class="menu-link" href="#">Reminder Club</a></li>
                 <li class="menu-item"><a class="menu-link" href="#">Sign In</a></li>
-              </div>
+              </ul>
             </div>
           </div>
 
@@ -958,8 +966,8 @@
             </div>
 
             <div class="footer-icon__subscription-club">
-              <button class="footer-icon__subscription-club-btn d-flex justify-content-between align-items-center gap-3">
-                <img src="app/images/Group 2488.svg" alt="">
+              <button class="footer-icon__subscription-club-btn d-flex justify-content-between align-items-center">
+                <img class="footer-icon__subscription-club-image" src="app/images/Group 2488.svg" alt="">
                 <a href="#" class="footer-icon__subscription-club-link">SUBSCRIPTION CLUB</a>
               </button>
             </div>
@@ -969,7 +977,7 @@
       </div>
 
 
-      <div class="footer-end d-flex flex-column justify-content-center align-items-center gap-4 py-5">
+      <div class="footer-end d-flex flex-column justify-content-center align-items-center gap-4">
         <div class="footer-end__top d-flex gap-4">
           <p class="footer-end__top-content my-0">Customer Service Code: 0A</p>
           
@@ -981,7 +989,7 @@
             <a href="#" class="footer-end__top-link">CA Privacy Notice</a>
           </div>
 
-          <p class="footer-end__top-content my-0">Entire contents Copyright © 1997-2023. PerfumeShop.com, Inc.</p>
+          <p class="footer-end__top-content my-0 mx-auto">Entire contents Copyright © 1997-2023. PerfumeShop.com, Inc.</p>
         </div>
 
         <p class="footer-end__middle-content text-center my-0">
@@ -990,20 +998,20 @@
 
         <p class="footer-end__middle-content text-center my-0">All Rights Reserved.</p>
 
-        <div class="footer-end__bottom-payment-method d-flex mx-auto gap-3">
-          <img src="app/images/american-express.svg" alt="" class="footer-end__bottom-payment-method__img">
+        <div class="footer-end__bottom-payment-method d-flex justify-content-between">
+          <img src="app/images/american-express.svg" alt="" class="footer-end__bottom-payment-method-img">
 
-          <img src="app/images/visa.svg" alt="" class="footer-end__bottom-payment-method__img">
+          <img src="app/images/visa.svg" alt="" class="footer-end__bottom-payment-method-img">
 
-          <img src="app/images/mastercard.svg" alt="" class="footer-end__bottom-payment-method__img">
+          <img src="app/images/mastercard.svg" alt="" class="footer-end__bottom-payment-method-img">
 
-          <img src="app/images/discover.svg" alt="" class="footer-end__bottom-payment-method__img">
+          <img src="app/images/discover.svg" alt="" class="footer-end__bottom-payment-method-img">
 
-          <img src="app/images/paypal.svg" alt="" class="footer-end__bottom-payment-method__img">
+          <img src="app/images/paypal.svg" alt="" class="footer-end__bottom-payment-method-img">
 
-          <img src="app/images/afterpay-lockup-blackonmint 1.svg" alt="" class="footer-end__bottom-payment-method__img">
+          <img src="app/images/afterpay-lockup-blackonmint 1.svg" alt="" class="footer-end__bottom-payment-method-img">
 
-          <img src="app/images/Group.svg" alt="" class="footer-end__bottom-payment-method__img">
+          <img src="app/images/Group.svg" alt="" class="footer-end__bottom-payment-method-img">
         </div>
       </div>
     </footer>
@@ -1015,7 +1023,7 @@
         let elementOffcanvas = document.getElementById('offcanvas-menu');
         let elementOffcanvas2 = document.getElementById('offcanvas-header');
         let elementCollapse = document.getElementById('navbar-middle__collapse');
-        let elementoffcanvas3 = document.getElementById('navbar-bottom__offcanvas-button');
+        let elementoffcanvas3 = document.getElementById        ('navbar-bottom__offcanvas-button');
 
         if (window.innerWidth < 1024) {
           elementOffcanvas.classList.add('offcanvas', 'offcanvas-start');
@@ -1033,12 +1041,59 @@
           elementoffcanvas3.addAttribute('data-bs-toggle', 'offcanvas');
         }
       }
+
+      function updateClassFooter() {
+        let elementCollapseFooterButtonFirst = document.getElementById('footer__menu-first');
+        let elementCollapseFooterButtonSecond = document.getElementById('footer__menu-second');
+        let elementCollapseFooterButtonThird = document.getElementById('footer__menu-third');
+        let elementCollapseFooterMenuFirst = document.getElementById('menu-first');
+        let elementCollapseFooterMenuSecond = document.getElementById('menu-second');
+        let elementCollapseFooterMenuThird = document.getElementById('menu-third');
+
+
+        if (window.innerWidth < 768) {
+          elementCollapseFooterButtonFirst.setAttribute('data-bs-toggle', 'collapse');
+
+          elementCollapseFooterButtonSecond.setAttribute('data-bs-toggle', 'collapse');
+
+          elementCollapseFooterButtonThird.setAttribute('data-bs-toggle', 'collapse');
+
+          elementCollapseFooterMenuFirst.setAttribute('data-bs-parent', '#accordion');
+          elementCollapseFooterMenuFirst.classList.add('collapse', 'show');
+
+          elementCollapseFooterMenuSecond.setAttribute('data-bs-parent', '#accordion');
+          elementCollapseFooterMenuSecond.classList.add('collapse');
+
+          elementCollapseFooterMenuThird.setAttribute('data-bs-parent', '#accordion');
+          elementCollapseFooterMenuThird.classList.add('collapse');
+        } else {
+          elementCollapseFooterButtonFirst.removeAttribute('data-bs-toggle');
+
+          elementCollapseFooterButtonSecond.setAttribute('data-bs-toggle');
+          elementCollapseFooterButtonSecond.classList.removed('collapsed');
+
+          elementCollapseFooterButtonThird.setAttribute('data-bs-toggle');
+          elementCollapseFooterButtonThird.classList.remove('collapsed');
+
+          elementCollapseFooterMenuFirst.removeAttribute('data-bs-parent');
+          elementCollapseFooterMenuFirst.classList.remove('collapse');
+
+          elementCollapseFooterMenuSecond.removeAttribute('data-bs-parent');
+          elementCollapseFooterMenuSecond.classList.remove('collapse');
+
+          elementCollapseFooterMenuThird.removeAttribute('data-bs-parent');
+          elementCollapseFooterMenuThird.classList.remove('collapse');
+        }
+      }
       
       // Wywołanie funkcji updateClass
       updateClass();
 
+      updateClassFooter();
+
       // Nasłuchiwanie na zdarzenie zmiany szerokości ekranu
       window.addEventListener('resize', updateClass);
+
     </script>
 
     <script>
@@ -1050,16 +1105,6 @@
 
         dropdownElement.appendChild(clonedOffcanvasMenu);
       });
-
-      // function updateClass() {
-      //   let classToRename = document.getElementsByClassName('item-block__content-brand-underline');
-
-      //   classToRename.classList.remove('item-block__content-brand-underline');
-
-      //   classToRename.classList.add('item-block__content-text-underline');
-      // };
-
-      // updateClass();
 
     </script>
 

@@ -16,12 +16,14 @@
   }
 
   &__middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 0.8rem;
     width: 2rem;
     height: 2rem;
     background-color: $white;
     border-radius: 100%;
-    padding-top: 0.3%;
   }
 }
 
@@ -38,7 +40,7 @@
   &__carousel-image {
     width: 93%;
     max-width: 1234px;
-}
+  }
 
   &__image {
     max-width: 100%;
@@ -53,8 +55,8 @@
 }
 
 .carousel-frame-bottom {
-width: 6.1%;
-padding-top: 0.4%;
+  width: 6.1%;
+  padding-top: 0.4%;
 
   &__pagination {
   margin: 0;
@@ -86,13 +88,7 @@ padding-top: 0.4%;
   }
 }
 
-  @media screen and (max-width: 1200px){
-  .special-offer {
-
-    &__middle {
-    padding-top: 0.55%;
-    }
-  }
+@media screen and (max-width: 1200px){
 
   .carousel-frame-top {
     justify-content: center;
@@ -102,9 +98,14 @@ padding-top: 0.4%;
     width: 100%;
     }
 
+    &__btn-image {
+      left: 21%;
+    }
+
     &__btn-left, &__btn-right {
       position: absolute;
-      top: 35%;
+      margin: auto 0;
+      max-width: 5%;
     }
 
     &__btn-left {
@@ -117,7 +118,7 @@ padding-top: 0.4%;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px){
+@media screen and (max-width: 1024px){
   .special-offer {
 
     &__flex {
@@ -125,7 +126,7 @@ padding-top: 0.4%;
     }
 
     &__right {
-        line-height: 0.8rem;
+      line-height: 0.8rem;
     }
     
     &__middle, &__right {
@@ -136,8 +137,7 @@ padding-top: 0.4%;
   .carousel-frame-top {
   
     &__btn-sides-images {
-      margin-top: 10%;
-      width: 60%;
+      max-width: 70%;
     }
 
     &__btn-image {
@@ -152,4 +152,42 @@ padding-top: 0.4%;
       bottom: 15%;
     }
   }
+
+  .carousel-frame-bottom {
+    width: 10%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .special-offer {
+
+    &__flex {
+      padding: 1.7% 0;
+    }
+  }
+
+  .carousel-frame-top {
+
+    &__carousel-image {
+      padding: 1.5% 0;
+    }
+    
+    &__btn-left {
+      left: 0.5%;    
+    }
+
+    &__btn-right {
+      right: 0.5%;    
+    }
+
+    &__btn-sides-images {
+      max-width: 100%;
+    }
+  }
+
+  .carousel-frame-bottom {
+    width: 15%;
+    padding-top: 0;
+    padding-bottom: 2%;
+  } 
 }

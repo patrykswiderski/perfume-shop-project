@@ -19,20 +19,29 @@ a {
   font-weight: 750;
   padding: 1.1rem 3.2rem;
   z-index: 1;
+
   @media screen and (max-width: 1200px){
     font-size: 0.8rem;
     padding: 1rem 2.8rem;
+    border-radius: 2px;
   }
+
   @media screen and (max-width: 1024px) {
     font-size: 0.7rem;
     font-weight: 700;
     padding: 0.6rem 1.4rem;
-    border-radius: 2px;
   }
-  @media screen and (max-width: 768px) {
-    font-size: 0.6rem;
-    font-weight: 600;
-    padding: 0.5rem 1.2rem;
+
+  @media screen and (max-width: 576px) {
+    font-size: 0.4rem;
+    line-height: 0.5rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  @media screen and (max-width: 375px) {
+    font-size: 0.3rem;
+    line-height: 0.5rem;
+    padding: 0.2rem 0.4rem;
   }
 }
 
@@ -46,21 +55,13 @@ a {
   @include btn-styles;
   color: $black;
   background-color: transparent;
-  border: 2px solid $button_gray;
+  border: 2px groove $button_gray;
 }
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .btn-transparent {
-    font-weight: 850;
-    border: 3px solid $button_gray;
-    border-radius: 3%;
-  }
-}
-
 
 .btn-next-product {
   border: none;
   background-color: transparent;
+  padding: 0;
   z-index: 2;
 }
 
@@ -83,20 +84,58 @@ a {
 }
 
 @media screen and (max-width: 1024px){
+  
+  .btn-transparent {
+    font-weight: 850;
+    border: 3px groove $button_gray;
+  }
+
   .title-text {
     font-size: 1.3rem;
-    font-weight: 750;
-    margin: 0;
     }
 }
 
 @media screen and (max-width: 768px){
   body {
-    font-size: 60%;
+    font-size: 75%;
   }
 }
 
+@media screen and (max-width: 576px){
+  body {
+    font-size: 60%;
+  }
 
+  .title-text {
+    font-size: 1.1rem;
+    font-weight: 750;
+    }
+
+  .btn-transparent {
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 0.6rem 1.2rem;
+    border: 2px groove $button_gray;
+  }
+}
+
+@media screen and (max-width: 375px){
+  body {
+    font-size: 50%;
+  }
+
+  .title-text {
+    font-size: 0.9rem;
+    font-weight: 750;
+  }
+
+  .btn-transparent {
+    font-size: 0.5rem;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border: 1px groove $button_gray;
+  }
+}
 
 
 

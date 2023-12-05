@@ -4,7 +4,7 @@
 
 .subscription-top {
   max-width: 1234px;
-  padding: 0;
+  padding: 1% 0;
 
   &__image {
     padding: 0;
@@ -12,12 +12,23 @@
     max-width: 1234px;
   }
 
+  &__content {
+    display: none;
+  }
+
   &__btn {
-    border: 2px solid $black;
-    left: 7%;
-    bottom: 23%;
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    left: 7.5%;
+    bottom: 30%;
     width: initial;
-    padding: 0.7rem 1.5rem;
+  }
+
+  &__btn-link {
+    border: 2px solid $black;
+    padding: 0.8rem 1.5rem;
   }
 }
 
@@ -47,5 +58,77 @@
     background-color: $primary;
     left: 8.8%;
     bottom: 14%;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .subscription-top {
+
+    &__content {
+      display: flex;
+      justify-content: center;
+      margin-inline: auto;
+      margin-top: -28%;
+      font-size: 6.5vw;
+      font-weight: 800;
+    }
+
+    &__btn {
+      position: initial;
+      margin-inline: auto;
+      margin-top: -21%;
+    }
+
+    &__btn-link {
+      font-size: 3vw;
+    }
+  }
+
+  .subscription-bottom {
+  
+    &__left {
+      padding: 0 0 3% 0;
+    }
+
+    &__left-btn, &__right-btn {
+      font-size: 2.5vw;
+      padding: 1.2rem 3.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 576px){
+  .subscription-top {
+
+    &__btn-link {
+      font-size: 3vw;
+      padding: 0.6rem 1.1rem;
+    }
+  }
+
+  .subscription-bottom {
+
+    &__left-btn, &__right-btn {
+      font-size: 3vw;
+      padding: 0.8rem 1.5rem;
+    }
+  }
+} 
+
+@media screen and (max-width: 375px){
+  .subscription-top {
+
+    &__btn-link {
+      font-size: 3vw;
+      padding: 0.5rem 1.1rem;
+    }
+  }
+
+  .subscription-bottom {
+
+    &__left-btn, &__right-btn {
+      font-size: 3vw;
+      padding: 0.5rem 1rem;
+    }
   }
 }

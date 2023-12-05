@@ -1,8 +1,17 @@
+.best-sellers {
+  padding: 0;
+}
+
 .best-sellers-top {
   padding: 2% 0;
 }
 
 @media screen and (max-width: 1200px){
+
+  .best-sellers {
+    padding: 0 1rem;
+  }
+
   .best-sellers-middle {
 
     &__btn {

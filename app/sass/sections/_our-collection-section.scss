@@ -1,6 +1,7 @@
 
 .our-collection {
   max-width: 1234px;
+  padding: 0 1rem;
 
   &__top {
     padding: 4% 0;
@@ -84,7 +85,7 @@
   }
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
   .recommended-middle {
 
     &__btn {
@@ -93,7 +94,7 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   .our-collection {
   
     &__top {
@@ -143,8 +144,70 @@
       padding-bottom: 12%;
       font-size: 1.6vw;
     }
-
   }
+}
 
+@media screen and (max-width: 768px) {
+  .our-collection {
+  
+    &__top {
+      padding: 3% 0;
+    }
 
+    &__title {
+      line-height: 100%;
+      padding: 0;
+    }
+
+    &__content {
+      padding: 2% 0;
+    }
+
+    &__btn {
+      display: inline-flex;
+    }
+
+    &__navigation-row {
+      padding: 0;
+      row-gap: 1.5rem;
+    }
+
+    &__navigation-block {
+      margin: 0 auto;
+      width: 90%;
+      max-width: 100%;
+      aspect-ratio: 1.9/1;
+    }
+
+    &__navigation-text {
+      padding-top: 13%;
+      font-size: 5.5vw;
+      letter-spacing: 0.3vw;
+    }
+
+    &__navigation-content-link {
+      padding-bottom: 11%;
+      font-size: 3vw;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .our-collection {
+    padding: 4% 0;
+
+    &__top {
+      padding: 6% 0;
+    }
+
+    &__content {
+      font-size: 0.7rem;
+      padding: 4% 0;
+    }
+
+    &__navigation-row {
+      padding: 0;
+      row-gap: 1rem;
+    }
+  }
 }
