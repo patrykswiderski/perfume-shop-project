@@ -1,0 +1,20 @@
+.new-arrivals {
+  padding: 0;
+}
+
+.new-arrivals-top {
+  padding: 1% 0;
+}
+
+@media screen and (max-width: 1200px){
+  .new-arrivals {
+    padding: 0 1rem;
+  }
+
+  .new-arrivals-middle {
+
+    &__btn {
+      display: none;
+    }
+  }
+}

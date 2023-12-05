@@ -15,123 +15,212 @@
 
         <!-- Start of the header section -->
     <header>
-      <div class="navbar-first container-fluid">
-        <div class="navbar-top row px-5 py-2 flex-fill"> <!--Nie mam pojęcia dlaczego bez klasy flex-fill, wiersz nie wypełnia całej szerokości ekranu -->
-          <div class="navbar-top__left col-lg-3">
-            <ul class="navbar-top__nav">
-              <li class="navbar-top__item dropdown">
+      <div class="navbar-first container-fluid p-0">
+        <div class="navbar-top row mx-0 my-auto">
+          <div class="navbar-top__left col-md-4 p-0">
+            <ul class="navbar-top__nav m-0 p-0">
+              <li class="navbar-top__item dropdown"> 
                 
-                <a href="#"" class="navbar-top__link dropdown-toggle" role="button" data-bs-toggle="dropdown">USD</a>
+                <a href="#"" class="navbar-top__items-name dropdown-toggle" role="button" data-bs-toggle="dropdown">USD</a>
                 
-                <ul class="navbar-top__currency dropdown-menu">
-                  <li>
-                    <a href="#" class="dropdown-item">USD</a>
+                <ul class="navbar-top__dropdown-menu dropdown-menu">
+                  <li class="navbar-top__menu-item">
+                    <a href="#" class="navbar-top__menu-link dropdown-item">USD</a>
                   </li>
-                  <li>
-                    <a href="#" class="dropdown-item">PLN</a>
+                  <li class="navbar-top__menu-item">
+                    <a href="#" class="navbar-top__menu-link dropdown-item">PLN</a>
                   </li>
-                  <li>
-                    <a href="#" class="dropdown-item">EUR</a>
+                  <li class="navbar-top__menu-item">
+                    <a href="#" class="navbar-top__menu-link dropdown-item">EUR</a>
                   </li>
                 </ul>
-
               </li>
               
               <li class="navbar-top__item">  
-                
-                <a href="#" class="navbar-top__link dropdown-toggle" role="button" data-bs-toggle="dropdown">English</a>
-                
-                <ul class="navbar-top__language dropdown-menu">
-                  <li>
-                    <a href="#" class="dropdown-item">English</a>
+                <a href="#" class="navbar-top__items-name dropdown-toggle" role="button" data-bs-toggle="dropdown">English</a>
+
+                <ul class="navbar-top__dropdown-menu dropdown-menu">
+                  <li class="navbar-top__menu-item">
+                    <a href="#" class="navbar-top__menu-link dropdown-item">English</a>
                   </li>
-                  <li>
-                    <a href="#" class="dropdown-item">Polish</a>
+                  <li class="navbar-top__menu-item">
+                    <a href="#" class="navbar-top__menu-link dropdown-item">Polish</a>
                   </li>
                 </ul>
-                
               </li>
             </ul>    
           </div>
           
-          <div class="navbar-top__valentines col-lg-6 text-center">
-            <p class="navbar-top__valentines-content">&#128293 Only <span class="">11</span> days left until VALENTINE'S DAY! &#128293</p>
+          <div class="navbar-top__valentines col-md-4 p-0 text-center">
+            <p class="navbar-top__valentines-content m-0">&#128293 Only <span class="">11</span> days left until VALENTINE'S DAY! &#128293</p>
           </div>
 
-          <div class="navbar-top__right col-lg-3 text-end">
-            <ul class="navbar-top__nav">
+          <div class="navbar-top__right col-md-4 text-end p-0">
+            <ul class="navbar-top__nav m-0">
               <li class="navbar-top__item">
-                <a href="#" class="navbar-top__link">Help & Information</a>
+                <a href="#" class="navbar-top__items-name">Help & Information</a>
               </li>
               <li class="navbar-top__item">
-                <a href="#" class="navbar-top__link">Connect with us</a>
+                <a href="#" class="navbar-top__items-name">Connect with us</a>
               </li>
             </ul> 
           </div>
         </div>
       </div>
 
-      <div class="navbar-second container-fluid">
-        <div class="navbar-middle row flex-fill px-5 py-4">
-          <div class="navbar-middle__search col-4">
-            <input type="text" placeholder="Hey, what are you looking for?" class="navbar-middle__search-input">
-            <button class="navbar-middle__search-button">
-              <img class="navbar-middle__search-img" src="app\images\codicon_heart.svg" alt="">
-            </button>
-          </div>
+      <div class="navbar-middle row m-0">
+        <div class="navbar-middle__search col-md-4 col-3 my-auto p-0">
+          <button class="navbar-middle__hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-menu">
+            <img class="navbar-middle__hamburger-icon" src="app\images\burger-menu.svg">
+          </button>
 
-          <div class="navbar-middle__logo col-4 d-flex justify-content-center">
-            <img src="app\images\vector.svg" alt="">
-            <div class="navbar-middle__logo-brand">
-              <p class="navbar-middle__logo-name">PerfumeShop<span class="navbar-middle__logo-name-domain">.com</span></p>
-              <p class="navbar-middle__logo-since">TRUSTED ONLINE SINCE 1997</p>
-            </div>
-          </div>
+          <input type="text" placeholder="Hey, what are you looking for?" class="navbar-middle__search-input">
+
+          <button id="navbar-middle__collapse" class="navbar-middle__search-button">
+            <picture class="text-end">
+              <source media="(min-width: 1024px)" srcset="app\images\codicon_heart.svg">
+              <source media="(max-width: 1024px)" srcset="app\images\codicon_heart-white.svg">
+              <img class="navbar-middle__search-image" src="app\images\codicon_heart-white.svg">
+            </picture> 
+          </button>
           
-          <div class="navbar-middle__client-data col-4 text-end">
-            <ul class="navbar-middle__client-data__nav">
-              <li class="navbar-middle__client-data__item">
-                <img src="app\images\Account.png" alt="">
-                <a href="#" class="navbar-middle__client-data__link">My Account</a>
-              <li class="navbar-middle__client-data__item">
-                <img src="app\images\Wishlist.png" alt="">
-                <a href="#" class="navbar-middle__client-data__link">Wishlist</a>
-              </li>
-              <li class="navbar-middle__client-data__item">
-                <img src="app\images\Card.png" alt="">
-                <a href="#" class="navbar-middle__client-data__link">2 Items</a>
-              </li>
-            </ul>
+          <div id="navbar-middle__collapse-menu" class="navbar-middle__collapse-menu collapse">
+            <input type="text" placeholder="Hey, what are you looking for?" class="navbar-middle__collapse-menu-placeholder">
+            <a href="#" class="navbar-middle__collapse-menu-button btn-common">Search</a>
           </div>
+        </div>
+
+        <div class="navbar-middle__logo col-md-4 col-6 d-flex justify-content-center p-0">
+          <picture class="text-end">
+            <source media="(min-width: 1024px)" srcset="app\images\vector.svg">
+            <source media="(max-width: 1024px)" srcset="app\images\vector-white.svg">
+            <img class="navbar-middle__logo-image" src="app\images\vector-white.svg">
+          </picture> 
+
+          <div class="navbar-middle__logo-brand">
+            <p class="navbar-middle__logo-name m-0">PerfumeShop<span class="navbar-middle__logo-name-domain">.com</span></p>
+            <p class="navbar-middle__logo-since m-0">TRUSTED ONLINE SINCE 1997</p>
+          </div>
+        </div>
+        
+        <div class="navbar-middle__client-data col-md-4 col-3 p-0">
+          <ul class="navbar-middle__client-data-nav m-0">
+            <li class="navbar-middle__client-data-item">
+              <button class="navbar-middle__client-data-button"> 
+                <picture >
+                  <source media="(min-width: 1024px)" srcset="app\images\Account.svg">
+                  <source media="(max-width: 1024px)" srcset="app\images\Account-white.svg">
+                  <img class="navbar-middle__client-data-icon" src="app\images\Account-white.svg">
+                </picture> 
+                <a href="#" class="navbar-middle__client-data-link">My Account</a>
+              </button>
+            </li>  
+
+            <li class="navbar-middle__client-data-item">
+              <button class="navbar-middle__client-data-button">
+                <picture>
+                  <source media="(min-width: 1024px)" srcset="app\images\Wishlist.svg">
+                  <source media="(max-width: 1024px)" srcset="app\images\Wishlist-white.svg">
+                  <img class="navbar-middle__client-data-icon" src="app\images\Wishlist-white.svg">
+                </picture> 
+                <a href="#" class="navbar-middle__client-data-link">Wishlist</a>
+              </button">
+            </li>
+
+            <li class="navbar-middle__client-data-item ">
+              <button class="navbar-middle__client-data-button d-flex justify-content-between align-items-center gap-1 position-relative">
+                <picture>
+                  <source media="(min-width: 1024px)" srcset="app\images\Card.svg">
+                  <source media="(max-width: 1024px)" srcset="app\images\Card-white.svg">
+                  <img class="navbar-middle__client-data-icon" src="app\images\Card-white.svg">
+                </picture>
+                <div class="navbar-middle__client-cart-items">2</div> 
+                <a href="#" class="navbar-middle__client-data-link">Items</a>
+              </button">
+            </li>
+          </ul>
         </div>
       </div>
 
-      <div class="navbar-third container-fluid">
-        <div class="navbar-bottom__row row flex-fill justify-content-center py-4">
-          <ul class="navbar-bottom__nav d-inline-flex justify-content-between">
+      <div class="navbar-bottom container-fluid p-0">
+        <div id="offcanvas-menu" class="navbar-bottom__row row justify-content-center m-0">
+          <div id="offcanvas-header" class="navbar-bottom__offcanvas d-none offcanvas-header">
+            <img class="navbar-bottom__offcanvas-image" src="app\images\burger-menu.svg" alt="">
+            <h1 class="navbar-bottom__offcanvas-title  offcanvas-title">Menu</h1>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+          </div>
+
+          <ul class="navbar-bottom__nav offcanvas-body m-0">
             <li class="navbar-bottom__item">
-              <a href="#" class="navbar-bottom__link">PERFUMES</a>
+              <a id="navbar-bottom__offcanvas-button" href="#navbar-bottom__offcanvas-menu" class="navbar-bottom__link" data-bs-toggle="offcanvas">Perfumes</a>
+
+              <div id="navbar-bottom__offcanvas-menu" class="navbar-bottom__offcanvas-menu offcanvas offcanvas-top">
+                <div class="navbar-bottom__offcanvas-menu-container d-flex flex-row mx-auto">
+                  <div class="navbar-bottom__offcanvas-menu">
+                    <p class="navbar-bottom__offcanvas-menu-title menu-title">Women</p>
+
+                    <ul class="navbar-bottom__offcanvas-menu-links  menu-links">
+                      <li class="menu-items"><a class="menu-link" href="#">Perfume</a></li>
+                      <li class="menu-items"><a class="menu-link" href="#">Bath & Body</a></li>
+                      <li class="menu-items"><a class="menu-link" href="#">Gift Sets</a></li>
+                      <li class="menu-items"><a class="menu-link" href="#">Unboxed/Testers</a></li>
+                      <li class="menu-items"><a class="menu-link" href="#">Perfume Samples</a></li>
+                    </ul>
+                  </div>
+  
+                  <div class="navbar-bottom__offcanvas-menu">
+                    <p class="navbar-bottom__offcanvas-menu-title menu-title">Men</p>
+
+                    <ul class="navbar-bottom__offcanvas-menu-links menu-links">
+                      <li class="menu-items"><a class="menu-link" href="#">Cologne</a></li>
+                      <li class="menu-items"><a class="menu-link" href="#">Bath & Body</a></li>
+                      <li class="menu-items"><a class="menu-link" href="#">Aftershave</a></li>
+                      <li class="menu-items"><a class="menu-link" href="#">Gift Sets</a></li>
+                      <li class="menu-items"><a class="menu-link" href="#">Unboxed/Testers</a></li>
+                    </ul>
+                  </div>
+  
+                  <div class="navbar-bottom__offcanvas-menu">
+                    <p class="navbar-bottom__offcanvas-menu-title menu-title">Shop</p>
+
+                    <ul class="navbar-bottom__offcanvas-menu-links menu-links">
+                      <li class="menu-items"><a class="menu-link" href="#">Best Sellers</a></li>
+                      <li class="menu-items"><a class="menu-link" href="#">New Arrivals</a></li>
+                      <li class="menu-items"><a class="menu-link" href="#">Gift Sets</a></li>
+                      <li class="menu-items"><a class="menu-link" href="#">Samples</a></li>
+                      <li class="menu-items"><a class="menu-link" href="#">Mini Perfumes</a></li>
+                      <li class="menu-items"><a class="menu-link" href="#">50% OFF Specials</a></li>
+                      <li class="menu-items"><a class="menu-link" href="#">Celebrity Scents</a></li>
+                      <li class="menu-items"><a class="menu-link" href="#">Travel Sprays</a></li>
+                    </ul>
+                  </div>
+                </div>  
+                
+                <a href="#" class="navbar-bottom__offcanvas-menu-button btn-transparent">SHOP ALL</a>
+
+                <button type="button" class="navbar-bottom__offcanvas-menu-close-btn btn-close" data-bs-dismiss="offcanvas"></button>
+              </div>
             </li>
-            <li class="navbar-bottom__item">
-              <a href="#" class="navbar-bottom__link">BRANDS</a>
+            <li id="navbar-bottom__dropdown-element" class="navbar-bottom__item">
+              <a id="navbar-bottom__dropdown-button" href="#navbar-bottom__offcanvas-menu" class="navbar-bottom__link" data-bs-toggle="offcanvas">Brands</a>
             </li>
-            <li class="navbar-bottom__item">
-              <a href="#" class="navbar-bottom__link">SKINCARE</a>
+            <li id="navbar-bottom__dropdown-element" class="navbar-bottom__item">
+              <a id="navbar-bottom__dropdown-button" href="#navbar-bottom__offcanvas-menu" class="navbar-bottom__link" data-bs-toggle="offcanvas">Skincare</a>
             </li>
-            <li class="navbar-bottom__item">
-              <a href="#" class="navbar-bottom__link">MAKEUP</a>
+            <li id="navbar-bottom__dropdown-element" class="navbar-bottom__item">
+              <a id="navbar-bottom__dropdown-button" href="#navbar-bottom__offcanvas-menu" class="navbar-bottom__link" data-bs-toggle="offcanvas">Makup</a>
             </li>
-            <li class="navbar-bottom__item">
-              <a href="#" class="navbar-bottom__link">HAIRCARE</a>
+            <li id="navbar-bottom__dropdown-element" class="navbar-bottom__item">
+              <a id="navbar-bottom__dropdown-button" href="#navbar-bottom__offcanvas-menu" class="navbar-bottom__link" data-bs-toggle="offcanvas">Haircare</a>
             </li>
-            <li class="navbar-bottom__item">
-              <a href="#" class="navbar-bottom__link">AROMATHERAPY</a>
+            <li id="navbar-bottom__dropdown-element" class="navbar-bottom__item">
+              <a id="navbar-bottom__dropdown-button" href="#navbar-bottom__offcanvas-menu" class="navbar-bottom__link" data-bs-toggle="offcanvas">Aromatherapy</a>
             </li>
-            <li class="navbar-bottom__item">
-              <a href="#" class="navbar-bottom__link">CANDLES</a>
+            <li id="navbar-bottom__dropdown-element" class="navbar-bottom__item">
+              <a id="navbar-bottom__dropdown-button" href="#navbar-bottom__offcanvas-menu" class="navbar-bottom__link" data-bs-toggle="offcanvas">Candles</a>
             </li>
-            <li class="navbar-bottom__item">
-              <a href="#" class="navbar-bottom__link">GIFTS</a>
+            <li id="navbar-bottom__dropdown-element" class="navbar-bottom__item">
+              <a id="navbar-bottom__dropdown-button" href="#navbar-bottom__offcanvas-menu" class="navbar-bottom__link" data-bs-toggle="offcanvas">Gifts</a>
             </li>
           </ul>
         </div>
@@ -141,392 +230,883 @@
 
     <!-- Start of the Promotions section -->
     <section>
-      <div class="special-offer">
-        <div class="special-offer__left">
-          25% OFF - SITEWIDE - 
-          <a href="#" class="special-offer__left-link">click here</a>
-        </div>
+      <div class="special-offer container-fluid p-0">
+        <div class="special-offer__flex d-flex justify-content-center align-items-center">
+          <div class="special-offer__left">
+            25% OFF - SITEWIDE - 
+            <a href="#" class="special-offer__link">click here</a>
+          </div>
 
-        <div class="special-offer__middle">
-          OR
-        </div>
+          <div class="special-offer__middle text-center">
+            OR
+          </div>
 
-        <div class="special-offer__right">
           <div class="special-offer__right">
             FREE SHIPPING $100 min - 
-            <a href="#" class="special-offer__right-link">click here</a>
+            <a href="#" class="special-offer__link">click here</a>
           </div>
-        </div>   
-      </div>  
+        </div>  
+      </div> 
 
-      <div class="carousel-frame">
-        <div class="carousel-frame__top">
-          <a href="#" class="carousel-frame__top-left__btn"> < </a>
+      <div class="carousel-frame container-fluid p-0">
+        <div class="carousel-frame__flex d-flex flex-column justify-content-between align-items-center">
+          
+          <div class="carousel-frame-top d-flex align-items-center justify-content-between position-relative">
+            <button class="carousel-frame-top__btn-left btn-next-product">
+              <img class="carousel-frame-top__btn-sides-images" src="app/images/Component 103.svg" alt="">
+              <a href="#" class="carousel-frame-top__link "></a>
+            </button>
 
-          <div class="carousel-frame__top-middle-image">
-            <img src="images/Frame 48a.jpg" alt="">
-            <a href="#" class="carousel-frame__middle-image__btn">Shop Now</a>
+            <div class="carousel-frame-top__carousel-image ">
+              <img class="carousel-frame-top__image" src="app/images/Frame 48a.jpg" alt="">
+              <a href="#" class="carousel-frame-top__btn-image btn-common position-absolute">Shop Now</a>
+            </div>
+
+            <button class="carousel-frame-top__btn-right btn-next-product">
+              <img class="carousel-frame-top__btn-sides-images" src="app/images/Component 102.svg" alt="">
+              <a href="#" class="carousel-frame-top__link"></a>
+            </button>          
           </div>
 
-          <a href="#" class="carousel-frame__top-right__btn"> > </a>
-        </div>
-
-        <div class="carousel-frame__bottom-pagination">
-          <a href="#" class="carousel-frame__bottom-pagination__dot--active">o</a>
-          <a href="#" class="carousel-frame__bottom-pagination__dot">o</a>
-          <a href="#" class="carousel-frame__bottom-pagination__dot">o</a>
+          <div class="carousel-frame-bottom d-flex justify-content-center">
+            <ul class="carousel-frame-bottom__pagination pagination">
+              <li class="carousel-frame-bottom__pagination-item page-item">
+                <img class="carousel-frame-bottom__pagination-image" src="app/images/Frame 121.svg" alt="">
+                <a href="#" class="carousel-frame-bottom__pagination-dot--active"></a>
+              </li>
+              <li class="carousel-frame-bottom__pagination__item page-item">
+                <img class="carousel-frame-bottom__pagination-image" src="app/images/Frame 122.svg" alt="">
+                <a href="#" class="carousel-frame-bottom-pagination-dot"></a>
+              </li>
+              <li class="carousel-frame-bottom__pagination-item page-item">
+                <img class="carousel-frame-bottom__pagination-image mx-auto" src="app/images/Frame 122.svg" alt="">
+                <a href="#" class="carousel-frame-bottom__pagination-dot"></a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="search-for-brand">
-        <img src="images/Frame 49a.jpg" alt="">
-        <a href="#" class="carousel-frame__middle-image__btn">Shop Now</a>
+      <div class="search-for-brand container-fluid p-0">
+          <div class="search-for-brand__flex d-flex justify-content-center position-relative text-center mx-auto">
+            <img class="search-for-brand__image" src="app/images/Frame 49a.jpg" alt="">
+            <a href="#" class="search-for-brand__btn-image btn-common position-absolute">Search for brand</a>
+          </div>
+
       </div>
     </section>
-
     <!-- End of the Promotions section -->
 
+    <!-- Start of the Shop Our Collection section -->
     <section>
-      <div class="our-collection">
-        <p class="our-collection__title">SHOP OUR COLLECTION</p>
-        
-        <p class="our-collection__content">Our delicious, limited-edition collection</p>
-        
-        <a href="#" class="our-collection__btn">SHOP ALL</a>
-        
-        <div class="our-collection__navigation">
+      <div class="our-collection container-fluid mh-auto">
+        <div class="our-collection__top text-center">
+          <p class="our-collection__title title-text ">SHOP OUR COLLECTION</p>
+          
+          <p class="our-collection__content">Our Delicious, Limited-Edition Collection</p>
+          
+          <a href="#" class="our-collection__btn btn-transparent">SHOP ALL</a>
+        </div>
+
+        <div class="our-collection__navigation-row d-flex flex-row flex-wrap mh-100">
+
           <div class="our-collection__navigation-block">
-            <img src="images/Component 28.jpg" alt="">
-            <p class="">WOMEN'S PERFUMES</p>
-            <a href="#" class="">Shop Now</a>
+            <img class="our-collection__navigation-img" src="app/images/Rectangle 11544.png" alt="">
+            <div class="our-collection__navigation-content">
+              <p class="our-collection__navigation-text">WOMEN'S PERFUME</p>
+              <a href="#" class="our-collection__navigation-content-link mx-auto">Shop Now</a>
+            </div>
           </div>
+
+          <div class="our-collection__navigation-block">
+            <img class="our-collection__navigation-img" src="app/images/Rectangle 1154.png" alt="">
+            <div class="our-collection__navigation-content">
+              <p class="our-collection__navigation-text">MEN'S COLOGNE</p>
+              <a type="button" href="#" class="our-collection__navigation-content-link">Shop Now</a>
+            </div>
+          </div>
+
+          <div class="our-collection__navigation-block">
+            <img class="our-collection__navigation-img" src="app/images/Rectangle 11542.png" alt="">
+            <div class="our-collection__navigation-content ">
+              <p class="our-collection__navigation-text">HAIRCARE</p>
+              <a href="#" class="our-collection__navigation-content-link">Shop Now</a>
+            </div>
+          </div>
+
+          <div class="our-collection__navigation-block">
+            <img class="our-collection__navigation-img" src="app/images/Rectangle 11543.png" alt="">
+            <div class="our-collection__navigation-content">
+              <p class="our-collection__navigation-text">SKINVARE</p>
+              <a href="#" class="our-collection__navigation-content-link">Shop Now</a>
+            </div>
+          </div>
+
+          <div class="our-collection__navigation-block">
+            <img class="our-collection__navigation-img" src="app/images/Rectangle 11541.png" alt="">
+            <div class="our-collection__navigation-content">
+              <p class="our-collection__navigation-text">GIFT SETS</p>
+              <a href="#" class="our-collection__navigation-content-link">Shop Now</a>
+            </div>
+          </div>
+          
+          <div class="our-collection__navigation-block">
+            <img class="our-collection__navigation-img" src="app/images/Rectangle 11545.png" alt="">
+            <div class="our-collection__navigation-content text-center">
+              <p class="our-collection__navigation-text my-0 mx-auto">BEST SELLERS</p>
+              <a href="#" class="our-collection__navigation-content-link">Shop Now</a>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
-
     <!-- End of the Our Collection section -->
 
+    <!-- Start of the Recommended For You section -->
     <section>
-      <div class="recommended">
-        <p class="recommended__title">RECOMMENDED FOR YOU</p>
+      <div class="recommended container-fluid">
+        <div class="recommended__top text-center">
+          <p class="recommended__title title-text">RECOMMENDED FOR YOU</p>
+        </div>
+      
+        <div class="recommended-middle products-box-style">
 
-        <div class="recommended__products">
-          <div class="recommended__products-item item-block">
-            <div class="">
-              <p>WOMEN</p>
-              <a href="#">heart</a>
+          <div class="recommended-middle__btn btn-next-product">
+            <img class="ecommended-middle__btn-image" src="app/images/Component 103.svg" alt="">
+            <a href="#" class="ecommended-middle__btn-left"></a>
+          </div>
+
+          <div class="recommended-middle__products products-middle-style flex-fill py-4">
+
+            <div class="recommended-products__item item-block">
+              <div class="item-block__top">
+                <p class="item-block__top-gender">WOMEN</p>
+                
+                <button class="item-block__top-wishlist-btn btn-wishlist">
+                  <img src="app/images/heart_wishlist.svg" alt="" class="item-block__top-wishlist-img btn-wishlist">
+                  <a class="item-block__top-wishlist" href="#"></a>
+                </button>  
+              </div>
+
+              <div class="item-block__bootom">
+                <img class="item-block__img" src="app/images/Rectangle 1142-00.jpg" alt="">
+              </div>
+
+              <div class="item-block__content">
+                <p class="item-block__content-name">JO MALONE VETIVER & GO...</p>
+                <p class="item-block__content-brand">by <span class="item-block__content-text-underline">Ipsa</span></p>
+                <p class="item-block__content-type">Luminizing Clay</p>
+                <p class="item-block__content-price">from <span class="item-block__content-price-bold"> $51.74</span></p>
+              </div>
+
+              <div class="item-block__add">
+                <a href="#" class="item-block__add-btn">ADD TO BAG</a>
+              </div>
             </div>
 
-            <img src="images/Rectangle 1142-00.jpg" alt="">
-            <p class="">JO MALONE VETIVER & GO...</p>
-            <p class="">by Ipsa</p>
-            <p class="">Luminizing Clay</p>
-            <p class="">from $51.74</p>
+            <div class="recommended-products__item item-block">
+              <div class="item-block__top">
+                <p class="item-block__top-gender">WOMEN</p>
+                
+                <button class="item-block__top-wishlist-btn btn-wishlist">
+                  <img src="app/images/heart_wishlist.svg" alt="" class="item-block__top-wishlist-img btn-wishlist">
+                  <a class="item-block__top-wishlist" href="#"></a>
+                </button>  
+              </div>
 
-            <a href="#" class="">ADD TO BAG</a>
+              <div class="item-block__bootom">
+                <img class="item-block__img" src="app/images/Rectangle 1142-00.jpg" alt="">
+              </div>
+
+              <div class="item-block__content">
+                <p class="item-block__content-name">JO MALONE VETIVER & GO...</p>
+                <p class="item-block__content-brand">by <span class="item-block__content-text-underline">Ipsa</span></p>
+                <p class="item-block__content-type">Luminizing Clay</p>
+                <p class="item-block__content-price">from <span class="item-block__content-price-bold"> $51.74</span></p>
+              </div>
+
+              <div class="item-block__add">
+                <a href="#" class="item-block__add-btn">ADD TO BAG</a>
+              </div>
+            </div>
+
+            <div class="recommended-products__item item-block">
+              <div class="item-block__top">
+                <p class="item-block__top-gender">WOMEN</p>
+                
+                <button class="item-block__top-wishlist-btn btn-wishlist">
+                  <img src="app/images/heart_wishlist.svg" alt="" class="item-block__top-wishlist-img btn-wishlist">
+                  <a class="item-block__top-wishlist" href="#"></a>
+                </button>  
+              </div>
+
+              <div class="item-block__bootom">
+                <img class="item-block__img" src="app/images/Rectangle 1142-00.jpg" alt="">
+              </div>
+
+              <div class="item-block__content">
+                <p class="item-block__content-name">JO MALONE VETIVER & GO...</p>
+                <p class="item-block__content-brand">by <span class="item-block__content-text-underline">Ipsa</span></p>
+                <p class="item-block__content-type">Luminizing Clay</p>
+                <p class="item-block__content-price">from <span class="item-block__content-price-bold"> $51.74</span></p>
+              </div>
+
+              <div class="item-block__add">
+                <a href="#" class="item-block__add-btn">ADD TO BAG</a>
+              </div>
+            </div>
+
+            <div class="recommended-products__item item-block">
+              <div class="item-block__top">
+                <p class="item-block__top-gender">WOMEN</p>
+                
+                <button class="item-block__top-wishlist-btn btn-wishlist">
+                  <img src="app/images/heart_wishlist.svg" alt="" class="item-block__top-wishlist-img btn-wishlist">
+                  <a class="item-block__top-wishlist" href="#"></a>
+                </button>  
+              </div>
+
+              <div class="item-block__bootom">
+                <img class="item-block__img" src="app/images/Rectangle 1142-00.jpg" alt="">
+              </div>
+
+              <div class="item-block__content">
+                <p class="item-block__content-name">JO MALONE VETIVER & GO...</p>
+                <p class="item-block__content-brand">by <span class="item-block__content-text-underline">Ipsa</span></p>
+                <p class="item-block__content-type">Luminizing Clay</p>
+                <p class="item-block__content-price">from <span class="item-block__content-price-bold"> $51.74</span></p>
+              </div>
+
+              <div class="item-block__add">
+                <a href="#" class="item-block__add-btn">ADD TO BAG</a>
+              </div>
+            </div>
           </div>
+
+          <button class="recommended-middle__btn btn-next-product">
+            <img src="app/images/Component 102.svg" alt="">
+            <a href="#" class="ecommended-middle__btn-right"></a>
+          </button>
+          
         </div>
 
-        <a href="#" class="">SHOP MORE</a>
+        <div class="recommended-bottom text-center py-4">
+          <a href="#" class="btn-transparent">SHOP MORE</a>
+        </div>
       </div>
     </section>
-
     <!-- End of the Recommended section -->
 
+    <!-- Start of the New Arrivals section -->
     <section>
-      <div class="new-arrivals">
-        <p class="new-arrivals__title">NEW ARRIVALS!</p>
+      <div class="new-arrivals container-fluid ">
+        <div class="new-arrivals-top text-center">
+          <p class="new-arrivals-title title-text">NEW ARRIVALS!</p>
+        </div>
 
-        <div class="new-arrivals__products">
-          <div class="new-arrivals__products-item item-block">
-            <div class="">
-              <p>WOMEN</p>
-              <a href="#">heart</a>
+        <div class="new-arrivals-middle products-box-style mb-5">
+
+          <button class="new-arrivals-middle__btn btn-next-product">
+            <img src="app/images/Component 103.svg" alt="">
+            <a href="#" class="new-arrivals-middle__btn-left"></a>
+          </button>
+
+          <div class="new-arrivals-middle__products products-middle-style flex-fill py-4">
+            <div class="new-arrivals__item item-block">
+              <div class="item-block__top">
+                <p class="item-block__top-gender">WOMEN</p>
+                
+                <button class="item-block__top-wishlist-btn btn-wishlist">
+                  <img src="app/images/heart_wishlist.svg" alt="" class="item-block__top-wishlist-img btn-wishlist">
+                  <a class="item-block__top-wishlist" href="#"></a>
+                </button>  
+              </div>
+
+              <div class="item-block__bootom">
+                <img class="item-block__img" src="app/images/Rectangle 1142-0.jpg" alt="">
+              </div>
+
+              <div class="item-block__content">
+                <p class="item-block__content-name">JO MALONE VETIVER & GO...</p>
+                <p class="item-block__content-brand">by <span class="item-block__content-text-underline">Ipsa</span></p>
+                <p class="item-block__content-type">Luminizing Clay</p>
+                <p class="item-block__content-price">from <span class="item-block__content-price-bold"> $51.74</span></p>
+              </div>
+
+              <div class="item-block__add">
+                <a href="#" class="item-block__add-btn">ADD TO BAG</a>
+              </div>
             </div>
 
-            <img src="images/Rectangle 1142-0.jpg" alt="">
-            <p class="">JO MALONE VETIVER & GO...</p>
-            <p class="">by Ipsa</p>
-            <p class="">Luminizing Clay</p>
-            <p class="">from <span>$51.74</span></p>
+            <div class="new-arrivals__item item-block">
+              <div class="item-block__top">
+                <p class="item-block__top-gender">WOMEN</p>
+                
+                <button class="item-block__top-wishlist-btn btn-wishlist">
+                  <img src="app/images/heart_wishlist.svg" alt="" class="item-block__top-wishlist-img btn-wishlist">
+                  <a class="item-block__top-wishlist" href="#"></a>
+                </button>  
+              </div>
 
-            <a href="#" class="">ADD TO BAG</a>
+              <div class="item-block__bootom">
+                <img class="item-block__img" src="app/images/Rectangle 1142-0.jpg" alt="">
+              </div>
+
+              <div class="item-block__content">
+                <p class="item-block__content-name">JO MALONE VETIVER & GO...</p>
+                <p class="item-block__content-brand">by <span class="item-block__content-text-underline">Ipsa</span></p>
+                <p class="item-block__content-type">Luminizing Clay</p>
+                <p class="item-block__content-price">from <span class="item-block__content-price-bold"> $51.74</span></p>
+              </div>
+
+              <div class="item-block__add">
+                <a href="#" class="item-block__add-btn">ADD TO BAG</a>
+              </div>
+            </div>
+            
+            <div class="new-arrivals__item item-block">
+              <div class="item-block__top">
+                <p class="item-block__top-gender">WOMEN</p>
+                
+                <button class="item-block__top-wishlist-btn btn-wishlist">
+                  <img src="app/images/heart_wishlist.svg" alt="" class="item-block__top-wishlist-img btn-wishlist">
+                  <a class="item-block__top-wishlist" href="#"></a>
+                </button>  
+              </div>
+
+              <div class="item-block__bootom">
+                <img class="item-block__img" src="app/images/Rectangle 1142-0.jpg" alt="">
+              </div>
+
+              <div class="item-block__content">
+                <p class="item-block__content-name">JO MALONE VETIVER & GO...</p>
+                <p class="item-block__content-brand">by <span class="item-block__content-text-underline">Ipsa</span></p>
+                <p class="item-block__content-type">Luminizing Clay</p>
+                <p class="item-block__content-price">from <span class="item-block__content-price-bold"> $51.74</span></p>
+              </div>
+
+              <div class="item-block__add">
+                <a href="#" class="item-block__add-btn">ADD TO BAG</a>
+              </div>
+            </div>
+
+            <div class="new-arrivals__item item-block">
+              <div class="item-block__top">
+                <p class="item-block__top-gender">WOMEN</p>
+                
+                <button class="item-block__top-wishlist-btn btn-wishlist">
+                  <img src="app/images/heart_wishlist.svg" alt="" class="item-block__top-wishlist-img btn-wishlist">
+                  <a class="item-block__top-wishlist" href="#"></a>
+                </button>  
+              </div>
+
+              <div class="item-block__bootom">
+                <img class="item-block__img" src="app/images/Rectangle 1142-0.jpg" alt="">
+              </div>
+
+              <div class="item-block__content">
+                <p class="item-block__content-name">JO MALONE VETIVER & GO...</p>
+                <p class="item-block__content-brand">by <span class="item-block__content-text-underline">Ipsa</span></p>
+                <p class="item-block__content-type">Luminizing Clay</p>
+                <p class="item-block__content-price">from <span class="item-block__content-price-bold"> $51.74</span></p>
+              </div>
+
+              <div class="item-block__add">
+                <a href="#" class="item-block__add-btn">ADD TO BAG</a>
+              </div>
+            </div>
           </div>
-        </div>
+
+          <button class="new-arrivals-middle__btn btn-next-product">
+            <img src="app/images/Component 102.svg" alt="">
+            <a href="#" class="new-arrivals-middle__btn-right"></a>
+          </button>   
+        </div>       
       </div>
     </section>
-
     <!-- End of the New Arrivals section -->
 
+    <!-- Start of the Subscription section -->
     <section>
-      <div class="subscription">
-        <div class="subscription__top">
-          <img src="images/Frame 50.jpg" alt="" class="subscription__top__img">
-          <a href="#" class="subscription__top__btn">GET A GIFT CERTIFICATE</a>
+      <div class="subscription container-fluid">
+        <div class="subscription-top row position-relative mx-auto">
+          <picture class="p-0">
+            <source media="(min-width: 768px)" srcset="app\images\frame 50.jpg">
+            <source media="(max-width: 768px)" srcset="app\images\image_78.jpg">
+            <img class="subscription-top__image" src="app\images\frame 50.jpg">
+          </picture>
+
+          <p class="subscription-top__content">GIFT CERTIFICATES</p> 
+
+          <button class="subscription-top__btn ">
+            <a href="#" class="subscription-top__btn-link btn-transparent">GET A GIFT CERTIFICATE</a>
+          </button>
         </div>
 
-        <div class="subscription__bottom">
-          <div class="subscription__bottom-left">
-            <img src="images/Frame 51a.jpg" alt="" class="subscription__bottom-left__img">
-            <a href="#" class="subscription__bottom-left__btn">LEARN MORE</a>
+        <div class="subscription-bottom row py-2 mb-4 mx-auto">
+
+          <div class="subscription-bottom__left col-md-6 col-12 position-relative">
+            <img src="app/images/Frame 51a.jpg" alt="" class="subscription-bottom__image">
+            <a href="#" class="subscription-bottom__left-btn btn-common position-absolute">LEARN MORE</a>
           </div>
 
-          <div class="subscription__bottom-right">
-            <img src="images/Frame 51b.jpg" alt="" class="subscription__bottom-right__img">
-            <a href="#" class="subscription__bottom-right__btn">LEARN MORE</a>
+          <div class="subscription-bottom__right col-md-6 col-12 position-relative">
+            <img src="app/images/Frame 51b.jpg" alt="" class="subscription-bottom__image">
+            <a href="#" class="subscription-bottom__right-btn btn-common position-absolute">LEARN MORE</a>
           </div>
         </div>
 
       </div>
     </section>
-
     <!-- End of the Subscription section -->
+    
+    <!-- Start of the Best Sellers section -->
+    <section>
+      <div class="best-sellers container-fluid">
+        <div class="best-sellers-top text-center">
+          <p class="best-sellers-title title-text">BEST SELLERS</p>
+        </div>
 
-  <section>
-      <div class="best-sellers">
-        <p class="best-sellers__title">BEST SELLERS</p>
+        <div class="best-sellers-middle products-box-style">
+        
+          <button class="best-sellers-middle__btn btn-next-product">
+            <img src="app/images/Component 103.svg" alt="">
+            <a href="#" class="best-sellers-middle__btn-left"></a>
+          </button>
 
-        <div class="best-sellers__products">
-          <div class="best-sellers__products-item item-block">
-            <div class="">
-              <p>WOMEN</p>
-              <a href="#">heart</a>
+          <div class="best-sellers__products products-middle-style flex-fill py-4">
+            <div class="new-arrivals__item item-block">
+              <div class="item-block__top">
+                <p class="item-block__top-gender">WOMEN</p>
+                
+                <button class="item-block__top-wishlist-btn btn-wishlist">
+                  <img src="app/images/heart_wishlist.svg" alt="" class="item-block__top-wishlist-img btn-wishlist">
+                  <a class="item-block__top-wishlist" href="#"></a>
+                </button>  
+              </div>
+
+              <div class="item-block__bootom">
+                <img class="item-block__img" src="app/images/Rectangle 1142-001.jpg" alt="">
+              </div>
+
+              <div class="item-block__content">
+                <p class="item-block__content-name">JO MALONE VETIVER & GO...</p>
+                <p class="item-block__content-brand">by Ipsa <span class="item-block__content-text-underline">Ipsa</span></p>
+                <p class="item-block__content-type">Luminizing Clay</p>
+                <p class="item-block__content-price">from <span class="item-block__content-price-bold"> $51.74</span></p>
+              </div>
+
+              <div class="item-block__add">
+                <a href="#" class="item-block__add-btn">ADD TO BAG</a>
+              </div>
+            </div>
+            
+            <div class="new-arrivals__item item-block">
+              <div class="item-block__top">
+                <p class="item-block__top-gender">WOMEN</p>
+                
+                <button class="item-block__top-wishlist-btn btn-wishlist">
+                  <img src="app/images/heart_wishlist.svg" alt="" class="item-block__top-wishlist-img btn-wishlist">
+                  <a class="item-block__top-wishlist" href="#"></a>
+                </button>  
+              </div>
+
+              <div class="item-block__bootom">
+                <img class="item-block__img" src="app/images/Rectangle 1142-001.jpg" alt="">
+              </div>
+
+              <div class="item-block__content">
+                <p class="item-block__content-name">JO MALONE VETIVER & GO...</p>
+                <p class="item-block__content-brand">by Ipsa <span class="item-block__content-text-underline">Ipsa</span></p>
+                <p class="item-block__content-type">Luminizing Clay</p>
+                <p class="item-block__content-price">from <span class="item-block__content-price-bold"> $51.74</span></p>
+              </div>
+
+              <div class="item-block__add">
+                <a href="#" class="item-block__add-btn">ADD TO BAG</a>
+              </div>
             </div>
 
-            <img src="images/Rectangle 1142-001.jpg" alt="">
-            <p class="">JO MALONE VETIVER & GO...</p>
-            <p class="">by Ipsa</p>
-            <p class="">Luminizing Clay</p>
-            <p class="">from <span>$51.74</span></p>
+            <div class="new-arrivals__item item-block">
+              <div class="item-block__top">
+                <p class="item-block__top-gender">WOMEN</p>
+                
+                <button class="item-block__top-wishlist-btn btn-wishlist">
+                  <img src="app/images/heart_wishlist.svg" alt="" class="item-block__top-wishlist-img btn-wishlist">
+                  <a class="item-block__top-wishlist" href="#"></a>
+                </button>  
+              </div>
 
-            <a href="#" class="">ADD TO BAG</a>
+              <div class="item-block__bootom">
+                <img class="item-block__img" src="app/images/Rectangle 1142-001.jpg" alt="">
+              </div>
+
+              <div class="item-block__content">
+                <p class="item-block__content-name">JO MALONE VETIVER & GO...</p>
+                <p class="item-block__content-brand">by Ipsa <span class="item-block__content-text-underline">Ipsa</span></p>
+                <p class="item-block__content-type">Luminizing Clay</p>
+                <p class="item-block__content-price">from <span class="item-block__content-price-bold"> $51.74</span></p>
+              </div>
+
+              <div class="item-block__add">
+                <a href="#" class="item-block__add-btn">ADD TO BAG</a>
+              </div>
+            </div>
+
+            <div class="new-arrivals__item item-block">
+              <div class="item-block__top">
+                <p class="item-block__top-gender">WOMEN</p>
+                
+                <button class="item-block__top-wishlist-btn btn-wishlist">
+                  <img src="app/images/heart_wishlist.svg" alt="" class="item-block__top-wishlist-img btn-wishlist">
+                  <a class="item-block__top-wishlist" href="#"></a>
+                </button>  
+              </div>
+
+              <div class="item-block__bootom">
+                <img class="item-block__img" src="app/images/Rectangle 1142-001.jpg" alt="">
+              </div>
+
+              <div class="item-block__content">
+                <p class="item-block__content-name">JO MALONE VETIVER & GO...</p>
+                <p class="item-block__content-brand">by Ipsa <span class="item-block__content-text-underline">Ipsa</span></p>
+                <p class="item-block__content-type">Luminizing Clay</p>
+                <p class="item-block__content-price">from <span class="item-block__content-price-bold"> $51.74</span></p>
+              </div>
+
+              <div class="item-block__add">
+                <a href="#" class="item-block__add-btn">ADD TO BAG</a>
+              </div>
+            </div>
           </div>
+
+          <button class="best-sellers-middle__btn btn-next-product">
+            <img src="app/images/Component 102.svg" alt="">
+            <a href="#" class="best-sellers-middle__btn-right"></a>
+          </button>  
         </div>
       </div>
     </section>
-
     <!-- End of the Best Sellers section -->
 
-    <section>
-      <div class="security">
-        <div class="security-delivery">
-          <img src="images/Component 110.png" alt="">
-          <p>Free Delivery & Returns*</p>
-        </div>
+    <!-- Start of the Security & Sign up section -->
+    <section> 
+      <div class="security container-fluid px-0">
+        <div class="security-row d-flex">
+          <div class="security-row__info security-box">
+            <img class="security-box__image" src="app/images/Component 110.png" alt="">
+            <p class="security-box__content">Free Delivery & Returns*</p>
+          </div>
 
-        <div class="security-service">
-          <img src="images/Component 108.png" alt="">
-          <p>Online Self-Service</p>
-        </div>
+          <div class="security-row__info security-box">
+            <img class="security-box__image" src="app/images/Component 108.png" alt="">
+            <p class="security-box__content">Online Self-Service</p>
+          </div>
 
-        <div class="security-geniue">
-          <img src="images/Component 106.png" alt="">
-          <p>100% Genuine Guaranteed</p>  
-        </div>
+          <div class="security-row__info security-box">
+            <img class="security-box__image" src="app/images/Component 106.png" alt="">
+            <p class="security-box__content">100% Genuine Guaranteed</p>  
+          </div>
 
-        <div class="security-secure">
-          <img src="images/Component 104.png" alt="">
-          <p>Secure Payment</p>
-        </div>
+          <div class="security-row__info security-box">
+            <img class="security-box__image" src="app/images/Component 104.png" alt="">
+            <p class="security-box__content">Secure Payment</p>
+          </div>
 
-        <div class="security-authentic">
-          <img src="images/Component 102.png" alt="">
-          <p>100% authentic products</p>
+          <div class="security-row__info security-box">
+            <img class="security-box__image" src="app/images/Group 1651.png" alt="">
+            <p class="security-box__content">100% Authentic Products</p>
+          </div>
         </div>
       </div>
 
-      <div class="sign-up">
-        <div class="sign-up-left">
-          <p class="sign-up-left__title">SIGN UP FOR SPECIAL OFFERS AND PROMOTIONS</p>
+      <div class="sign-up row">
+        <div class="sign-up-left col-lg-6 col-12">
+          <p class="sign-up-left__title">SIGN UP FOR SPECIAL OFFERS <span class="sign-up-left__title-disable">AND PROMOTIONS</span></p>
 
-          <div class="sign-up-left__sign-up">
-            <input type="text" placeholder="Your Email" class="sign-up-left__sign-up__email">
-            <input type="text" placeholder="Your Mobile" class="sign-up-left__sign-up__phone">
-            <a href="#" class="sign-up-left__sign-up__btn">SIGN UP</a>
+          <div class="sign-up-left__input d-flex py-3 gap-3">
+            <input type="text" placeholder="Your Email" class="sign-up-left__input-data">
+            <input type="text" placeholder="Your Mobile" class="sign-up-left__input-data">
+            <a href="#" class="sign-up-left__input-btn-first btn-transparent">SIGN UP</a>
           </div>
 
+          <a href="#" class="sign-up-left__input-btn-second btn-transparent">SUBSCRIBE</a>
+
           <p class="sign-up-left__content">
-            By entering your email and clicking “subscribe”, you consent to receive marketing emails from e.l.f. You can unsubscribe at any time through the unsubscribe link in each email. See our <span>Privacy Notice</span> for more details, including how your personal information is used and shared.
+            By entering your email and clicking “subscribe”, you consent to receive marketing emails from e.l.f. You can unsubscribe at any time through the unsubscribe link in each email. See our <a href="#" class="sign-up-left__content-underline">Privacy Notice</a> for more details, including how your personal information is used and shared.
           </p>
         </div>
 
+        <div class="sign-up-right col-lg-6 col-12">
+          <div class="sign-up-right__top">
+            <p class="sign-up-right__title">NEED HELP?</p>
+            <p class="sign-up-right__top-content">info@perfumeshop.com</p>
+          </div>
 
-        <div class="sign-up-right">
-          <p class="sign-up-right__top-title">NEED HELP?</p>
-          <p class="sign-up-right__top-content">info@perfumeshop.com</p>
-
-          <p class="sign-up-right__bottom-title">VISIT US</p>
-          <p class="sign-up-right__bottom-content">PerfumeShop, Inc.<br>789 Ocean Ave.<br>Coral City, CA 90210</p> 
+          <div class="sign-up-right__bottom">
+            <p class="sign-up-right__title">VISIT US</p>
+            <p class="sign-up-right__bottom-content">PerfumeShop, Inc.<br>789 Ocean Ave.<br>Coral City, CA 90210</p> 
+          </div>
         </div>
       </div>
     </section>
-
     <!-- End of the Security & Sign up section -->
 
-
+    <!-- Start of the Footer section -->
     <footer>
-      <div class="footer-top">
-        <div class="footer-top__left-menu">
-          <p class="footer-top__left-menu__title">SHOP BY DEPARTMENT</p>
+      <div class="footer-top container-fluid px-0">
+        <div class="footer-top-row">
+          <div id="accordion" class="footer-top__left d-flex flex-fill">
+            <div class="footer-top__menu">
+              <a id="footer__menu-first" class="footer-top__menu-title menu-title" href="#menu-first">SHOP BY DEPARTMENT</a>
+              <ul id="menu-first" class="footer-top__menu-links menu-links ">
+                <li class="menu-item"><a class="menu-link" href="#">Perfumes</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Men's Cologne</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Boutiques </a></li>
+                <li class="menu-item"><a class="menu-link" href="#">50% Off</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Samples </a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Women's Perfume</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Skincare </a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Haircare</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Aromatherapy</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Best Sellers</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Clearance </a></li>
+                <li class="menu-item"><a class="menu-link" href="#">For Kids</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Makeup </a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Candles </a></li>
+                <li class="menu-item"><a class="menu-link" href="#">New Arrivals</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Mini</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Hard to Find</a></li>
+              </ul>
+            </div>
 
-          <div class="footer-top__left-menu__links">
-            <a href="#">Perfumes</a>
-            <a href="#">Women's Perfume</a>
-            <a href="#">Men's Cologne</a>
-            <a href="#">Haircare</a>
-            <a href="#">Boutiques </a>
-            <a href="#">50% Off</a>
-            <a href="#">Samples </a>
-            <a href="#">Skincare </a>
-            <a href="#">Aromatherapy</a>
-            <a href="#">Best Sellers</a>
-            <a href="#">Clearance </a>
-            <a href="#">For Kids</a>
-            <a href="#">Makeup </a>
-            <a href="#">Candles </a>
-            <a href="#">New Arrivals</a>
-            <a href="#">Mini</a>
-            <a href="#">Hard to Find</a>
-          </div>
-        </div>
+            <div class="footer-top__menu">
+              <a id="footer__menu-second" class="footer-top__menu-title menu-title" href="#menu-second">CUSTOMER SUPPORT</a>
 
-        <div class="footer-top__middle-menu">
-          <p class="footer-top__middle-menu__title">CUSTOMER SUPPORT</p>
+              <ul id="menu-second" class="footer-top__menu-links menu-links">
+                <li class="menu-item"><a class="menu-link" href="#">Gift Certificates</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Gift Certificate Balance</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Accessibility Policy</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Return Policy</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Security Pledge</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Terms of Use</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Shipping Rates</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">100% Genuine</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Wholesale Information</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Affiliate Program</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Sitemap</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Perfume Coupons</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Careers</a></li>
+              </ul>
+            </div>
 
-          <div class="footer-top__middle-menu__links">
-            <a href="#">Gift Certificates</a>
-            <a href="#">Gift Certificate Balance</a>
-            <a href="#">Accessibility Policy</a>
-            <a href="#">Return Policy</a>
-            <a href="#">Security Pledge</a>
-            <a href="#">Terms of Use</a>
-            <a href="#">Shipping Rates</a>
-            <a href="#">100% Genuine</a>
-            <a href="#">Wholesale Information</a>
-            <a href="#">Affiliate Program</a>
-            <a href="#">Sitemap</a>
-            <a href="#">Perfume Coupons</a>
-            <a href="#">Careers</a>
-          </div>
-        </div>
+            <div class="footer-top__menu">
+              <a id="footer__menu-third" class="footer-top__menu-title menu-title" href="#menu-third">MY ACCOUNT</a>
 
-        <div class="footer-top__right-menu">
-          <p class="footer-top__right-menu__title">MY ACCOUNT</p>
-
-          <div class="footer-top__right-menu__links">
-            <a href="#">My Account</a>
-            <a href="#">Register Now</a>
-            <a href="#">Order Status</a>
-            <a href="#">Reminder Club</a>
-            <a href="#">Sign In</a>
-          </div>
-        </div>
-
-        <div class="footer-top__icon-links">
-          <div class="footer-top__icon-links__social-media">
-            <button class="footer-top__icon-links__social-media__btn">
-              <img src="images/image 63.png" alt="footer-top__icon-links__social-media__img">
-              <a href="#" class=""></a>
-            </button>
-
-            <button class="footer-top__icon-links__social-media__btn">
-              <img src="images/image 64.png" alt="footer-top__icon-links__social-media__img">
-              <a href="#" class=""></a>
-            </button>
-
-            <button class="footer-top__icon-links__social-media__btn">
-              <img src="images/image 65.png" alt="footer-top__icon-links__social-media__img">
-              <a href="#" class=""></a>
-            </button>
-
-            <button class="footer-top__icon-links__social-media__btn">
-              <img src="images/image 66.png" alt="footer-top__icon-links__social-media__img">
-              <a href="#" class=""></a>
-            </button>
-
-            <button class="footer-top__icon-links__social-media__btn">
-              <img src="images/image 67.png" alt="footer-top__icon-links__social-media__img">
-              <a href="#" class=""></a>
-            </button>
-
-            <button class="footer-top__icon-links__social-media__btn">
-              <img src="images/image 68.png" alt="footer-top__icon-links__social-media__img">
-              <a href="#" class=""></a>
-            </button>
-
-            <button class="footer-top__icon-links__social-media__btn">
-              <img src="images/image 63.png" alt="footer-top__icon-links__social-media__img">
-              <a href="#" class=""></a>
-            </button>
-
-            <button class="footer-top__icon-links__social-media__btn">
-              <img src="images/image 69.png" alt="footer-top__icon-links__social-media__img">
-              <a href="#" class=""></a>
-            </button>
-          </div>
-
-          <div class="footer-top__icon-links__change-country">
-            <img src="images/Frame.svg" alt="" class="footer-top__icon-links__change-country__img">
-            
-            <button class="footer-top__icon-links__change-country">USD
-              <i class=""></i>
-            </button>
-            
-            <div class="ooter-top__icon-links__change-country--dropdown">
-              <a href="#" class="">US</a>
-              <a href="#" class="">PL</a>
+              <ul id="menu-third" class="footer-top__menu-links menu-links">
+                <li class="menu-item"><a class="menu-link" href="#">My Account</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Register Now</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Order Status</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Reminder Club</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Sign In</a></li>
+              </ul>
             </div>
           </div>
 
-          <div class="footer-top__icon-links__subscription-club">
-            <button class="footer-top__icon-links__subscription-club__btn">
-              <img src="images/Group 2488.svg" alt="footer-top__icon-links__subscription-club__img">
-              <a href="#" class="">SUBSCRIPTION CLUB</a>
-            </button>
+          <div class="footer-icon d-flex flex-fill">
+            <div class="footer-icon__social-media d-flex" >
+              <button class="footer-icon__social-media-btn">
+                <img class="footer-icon__social-media-image" src="app/images/image 63.png" alt="footer-top__icon-links__social-media__img">
+                <a href="#" class=""></a>
+              </button>
+
+              <button class="footer-icon__social-media-btn">
+                <img class="footer-icon__social-media-image" src="app/images/image 64.png" alt="footer-top__icon-links__social-media__img">
+                <a href="#" class=""></a>
+              </button>
+
+              <button class="footer-icon__social-media-btn">
+                <img class="footer-icon__social-media-image" src="app/images/image 65.png" alt="footer-top__icon-links__social-media__img">
+                <a href="#" class=""></a>
+              </button>
+
+              <button class="footer-icon__social-media-btn">
+                <img class="footer-icon__social-media-image" src="app/images/image 66.png" alt="footer-top__icon-links__social-media__img">
+                <a href="#" class=""></a>
+              </button>
+
+              <button class="footer-icon__social-media-btn">
+                <img class="footer-icon__social-media-image" src="app/images/image 67.png" alt="footer-top__icon-links__social-media__img">
+                <a href="#" class=""></a>
+              </button>
+
+              <button class="footer-icon__social-media-btn">
+                <img class="footer-icon__social-media-image" src="app/images/image 68.png" alt="footer-top__icon-links__social-media__img">
+                <a href="#" class=""></a>
+              </button>
+
+              <button class="footer-icon__social-media-btn">
+                <img class="footer-icon__social-media-image" src="app/images/image 69.png" alt="footer-top__icon-links__social-media__img">
+                <a href="#" class=""></a>
+              </button>
+            </div>
+
+            <div class="footer-icon__change-country d-flex align-items-center">
+              <img src="app/images/Frame.svg" alt="" class="footer-icon__change-country-image">
+              
+              <a class="footer-icon__change-country-dropdown dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                Change Country
+              </a>
+
+              <ul class="footer-icon__change-country-dropdown-menu dropdown-menu">
+                <li class=""><a href="#" class="footer-icon__change-country-dropdown-link dropdown-item">US</a></li>
+                <li class=""><a href="#" class="footer-icon__change-country-dropdown-link dropdown-item">PL</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-icon__subscription-club">
+              <button class="footer-icon__subscription-club-btn d-flex justify-content-between align-items-center">
+                <img class="footer-icon__subscription-club-image" src="app/images/Group 2488.svg" alt="">
+                <a href="#" class="footer-icon__subscription-club-link">SUBSCRIPTION CLUB</a>
+              </button>
+            </div>
+
           </div>
         </div>
       </div>
 
-      <div class="footer-end">
-        <div class="footer-end__top">
-          <p class="footer-end__top-content">Customer Service Code: 0A</p>
+
+      <div class="footer-end d-flex flex-column justify-content-center align-items-center gap-4">
+        <div class="footer-end__top d-flex gap-4">
+          <p class="footer-end__top-content my-0">Customer Service Code: 0A</p>
           
-          <div class="footer-end__top-links">
+          <div class="footer-end__top-links d-flex gap-2">
             <a href="#" class="footer-end__top-link">Privacy Policy</a>
 
-            <p class="footer-end__top-content">|</p>
+            <p class="footer-end__top-content my-0">|</p>
 
             <a href="#" class="footer-end__top-link">CA Privacy Notice</a>
           </div>
 
-          <p class="footer-end__top-content">Entire contents Copyright © 1997-2023. PerfumeShop.com, Inc.</p>
+          <p class="footer-end__top-content my-0 mx-auto">Entire contents Copyright © 1997-2023. PerfumeShop.com, Inc.</p>
         </div>
 
-        <p class="footer-end__middle-content">
+        <p class="footer-end__middle-content text-center my-0">
           PerfumeShop.com is an independent retailer carrying genuine brand name Perfumes, skincare, haircare, candles and makeup. PerfumeShop and PerfumeShop.com are trademarks of PerfumeShop, Inc. and are Registered in the US Patent & Trademark Office.
         </p>
 
-        <p class="footer-end__middle-content">All Rights Reserved.</p>
+        <p class="footer-end__middle-content text-center my-0">All Rights Reserved.</p>
 
-        <div class="footer-end__bottom-payment-method">
-          <img src="images/american-express.svg" alt="" class="footer-end__bottom-payment-method__img">
+        <div class="footer-end__bottom-payment-method d-flex justify-content-between">
+          <img src="app/images/american-express.svg" alt="" class="footer-end__bottom-payment-method-img">
 
-          <img src="images/visa.svg" alt="" class="footer-end__bottom-payment-method__img">
+          <img src="app/images/visa.svg" alt="" class="footer-end__bottom-payment-method-img">
 
-          <img src="images/mastercard.svg" alt="" class="footer-end__bottom-payment-method__img">
+          <img src="app/images/mastercard.svg" alt="" class="footer-end__bottom-payment-method-img">
 
-          <img src="images/discover.svg" alt="" class="footer-end__bottom-payment-method__img">
+          <img src="app/images/discover.svg" alt="" class="footer-end__bottom-payment-method-img">
 
-          <img src="images/paypal.svg" alt="" class="footer-end__bottom-payment-method__img">
+          <img src="app/images/paypal.svg" alt="" class="footer-end__bottom-payment-method-img">
 
-          <img src="images/afterpay-lockup-blackonmint 1.svg" alt="" class="footer-end__bottom-payment-method__img">
+          <img src="app/images/afterpay-lockup-blackonmint 1.svg" alt="" class="footer-end__bottom-payment-method-img">
 
-          <img src="images/Group.svg" alt="" class="footer-end__bottom-payment-method__img">
+          <img src="app/images/Group.svg" alt="" class="footer-end__bottom-payment-method-img">
         </div>
       </div>
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script>
+      function updateClass() {
+        let elementOffcanvas = document.getElementById('offcanvas-menu');
+        let elementOffcanvas2 = document.getElementById('offcanvas-header');
+        let elementCollapse = document.getElementById('navbar-middle__collapse');
+        let elementoffcanvas3 = document.getElementById        ('navbar-bottom__offcanvas-button');
+
+        if (window.innerWidth < 1024) {
+          elementOffcanvas.classList.add('offcanvas', 'offcanvas-start');
+          elementOffcanvas.classList.remove('navbar-bottom__row', 'row', 'justify-content-center');
+          elementOffcanvas2.classList.remove('d-none');
+          elementCollapse.setAttribute('data-bs-toggle', 'collapse')
+          elementCollapse.setAttribute('data-bs-target', '#navbar-middle__collapse-menu');
+          elementoffcanvas3.removeAttribute('data-bs-toggle');
+        } else {
+          elementOffcanvas.classList.remove('offcanvas', 'offcanvas-start');
+          elementOffcanvas.classList.add('navbar-bottom__row', 'row', 'justify-content-center');
+          elementOffcanvas2.classList.add('d-none');
+          elementCollapse.removeAttribute('data-bs-toggle')
+          elementCollapse.removeAttribute('data-bs-target');
+          elementoffcanvas3.addAttribute('data-bs-toggle', 'offcanvas');
+        }
+      }
+
+      function updateClassFooter() {
+        let elementCollapseFooterButtonFirst = document.getElementById('footer__menu-first');
+        let elementCollapseFooterButtonSecond = document.getElementById('footer__menu-second');
+        let elementCollapseFooterButtonThird = document.getElementById('footer__menu-third');
+        let elementCollapseFooterMenuFirst = document.getElementById('menu-first');
+        let elementCollapseFooterMenuSecond = document.getElementById('menu-second');
+        let elementCollapseFooterMenuThird = document.getElementById('menu-third');
+
+
+        if (window.innerWidth < 768) {
+          elementCollapseFooterButtonFirst.setAttribute('data-bs-toggle', 'collapse');
+
+          elementCollapseFooterButtonSecond.setAttribute('data-bs-toggle', 'collapse');
+
+          elementCollapseFooterButtonThird.setAttribute('data-bs-toggle', 'collapse');
+
+          elementCollapseFooterMenuFirst.setAttribute('data-bs-parent', '#accordion');
+          elementCollapseFooterMenuFirst.classList.add('collapse', 'show');
+
+          elementCollapseFooterMenuSecond.setAttribute('data-bs-parent', '#accordion');
+          elementCollapseFooterMenuSecond.classList.add('collapse');
+
+          elementCollapseFooterMenuThird.setAttribute('data-bs-parent', '#accordion');
+          elementCollapseFooterMenuThird.classList.add('collapse');
+        } else {
+          elementCollapseFooterButtonFirst.removeAttribute('data-bs-toggle');
+
+          elementCollapseFooterButtonSecond.setAttribute('data-bs-toggle');
+          elementCollapseFooterButtonSecond.classList.removed('collapsed');
+
+          elementCollapseFooterButtonThird.setAttribute('data-bs-toggle');
+          elementCollapseFooterButtonThird.classList.remove('collapsed');
+
+          elementCollapseFooterMenuFirst.removeAttribute('data-bs-parent');
+          elementCollapseFooterMenuFirst.classList.remove('collapse');
+
+          elementCollapseFooterMenuSecond.removeAttribute('data-bs-parent');
+          elementCollapseFooterMenuSecond.classList.remove('collapse');
+
+          elementCollapseFooterMenuThird.removeAttribute('data-bs-parent');
+          elementCollapseFooterMenuThird.classList.remove('collapse');
+        }
+      }
+      
+      // Wywołanie funkcji updateClass
+      updateClass();
+
+      updateClassFooter();
+
+      // Nasłuchiwanie na zdarzenie zmiany szerokości ekranu
+      window.addEventListener('resize', updateClass);
+
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var originalOffcanvasMenu = document.getElementById('navbar-bottom__offcanvas-menu');
+        var clonedOffcanvasMenu = originalOffcanvasMenu.cloneNode(true);
+
+        var dropdownElement = document.getElementById('navbar-bottom__dropdown-element');
+
+        dropdownElement.appendChild(clonedOffcanvasMenu);
+      });
+
+    </script>
 
   </body>
 </html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdown Menu z Odstępem</title>
+  <!-- Dodaj link do Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Dodaj niestandardowe style */
+   .dropdown-menu {
+      width: 100vw;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 50px; /* Odsunięcie od przycisku o 50px w dół */
+    }
+    
+  </style>
+</head>
+<body>
+
+  <div class="container mt-5">
+    <div class="dropdown fullscreen-dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown link
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Perfumes</a>
+        <a class="dropdown-item" href="#">Brands</a>
+        <a class="dropdown-item" href="#">Skincare</a>
+        <!-- Dodaj inne opcje, jeśli są potrzebne -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Dodaj link do Bootstrap JS i Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+// import google font
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Almarai&family=K2D:wght@500&family=Kodchasan&family=Mulish:wght@500;600;700;800;900;1000&display=swap");
+
+body {
+  font-family: $font-family;
+  font-size: 16px;
+  padding-right: 0 !important;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s all ease;
+}
+
+@mixin btn-styles {
+  white-space: nowrap;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 750;
+  padding: 1.1rem 3.2rem;
+  z-index: 1;
+
+  @media screen and (max-width: 1200px){
+    font-size: 0.8rem;
+    padding: 1rem 2.8rem;
+    border-radius: 2px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.6rem 1.4rem;
+  }
+
+  @media screen and (max-width: 576px) {
+    font-size: 0.4rem;
+    line-height: 0.5rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  @media screen and (max-width: 375px) {
+    font-size: 0.3rem;
+    line-height: 0.5rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
+
+.btn-common {
+  @include btn-styles;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.btn-transparent {
+  @include btn-styles;
+  color: $black;
+  background-color: transparent;
+  border: 2px groove $button_gray;
+}
+
+.btn-next-product {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  z-index: 2;
+}
+
+.btn-wishlist {
+  max-height: 16px;
+  background-color: transparent;
+  border: none;
+}
+
+.title-text {
+  font-size: 1.8rem;
+  font-weight: 750;
+  margin: 0;
+}
+
+@media screen and (max-width: 1200px){
+  body {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  
+  .btn-transparent {
+    font-weight: 850;
+    border: 3px groove $button_gray;
+  }
+
+  .title-text {
+    font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+  body {
+    font-size: 75%;
+  }
+}
+
+@media screen and (max-width: 576px){
+  body {
+    font-size: 60%;
+  }
+
+  .title-text {
+    font-size: 1.1rem;
+    font-weight: 750;
+    }
+
+  .btn-transparent {
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 0.6rem 1.2rem;
+    border: 2px groove $button_gray;
+  }
+}
+
+@media screen and (max-width: 375px){
+  body {
+    font-size: 50%;
+  }
+
+  .title-text {
+    font-size: 0.9rem;
+    font-weight: 750;
+  }
+
+  .btn-transparent {
+    font-size: 0.5rem;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border: 1px groove $button_gray;
+  }
+}
+
+
+
