@@ -19,11 +19,11 @@ a {
   font-weight: 750;
   padding: 1.1rem 3.2rem;
   z-index: 1;
+  border-radius: 2px;
 
   @media screen and (max-width: 1200px){
     font-size: 0.8rem;
     padding: 1rem 2.8rem;
-    border-radius: 2px;
   }
 
   @media screen and (max-width: 1024px) {

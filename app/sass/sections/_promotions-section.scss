@@ -117,7 +117,7 @@
   &__carousel-hearts-image:nth-child(9n) {
     left: 45%;
     transform: rotate(-40deg);
-    animation-delay: 4s;
+    animation-delay: 5s;
   }
 }
 
@@ -128,7 +128,7 @@
 
   75% {
     opacity: .5;
-    transform: rotate(15deg);
+    transform: rotate(-20deg);
   }
 
   50% {
@@ -138,12 +138,11 @@
 
   75% {
     opacity: .5;
-    transform: rotate(45deg);
+    transform: rotate(-20deg);
   }
 
   100% {
     opacity: 0;
-    transform: rotate(60deg);
     top: 100%;
   }
 }

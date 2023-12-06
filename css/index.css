@@ -17,6 +17,7 @@ a {
   font-weight: 750;
   padding: 1.1rem 3.2rem;
   z-index: 1;
+  border-radius: 2px;
   color: #fff;
   text-transform: uppercase;
 }
@@ -24,7 +25,6 @@ a {
   .btn-common {
     font-size: 0.8rem;
     padding: 1rem 2.8rem;
-    border-radius: 2px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -56,6 +56,7 @@ a {
   font-weight: 750;
   padding: 1.1rem 3.2rem;
   z-index: 1;
+  border-radius: 2px;
   color: #000000;
   background-color: transparent;
   border: 2px groove #898989;
@@ -64,7 +65,6 @@ a {
   .btn-transparent {
     font-size: 0.8rem;
     padding: 1rem 2.8rem;
-    border-radius: 2px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -198,10 +198,11 @@ a {
   justify-content: center;
   align-items: center;
   margin: 0;
-  padding: 1% 2.5%;
+  padding: 1.5% 2.5% 1.9% 2.5%;
   max-height: 20px;
   font-family: "Mulish", sans-serif;
   font-size: 0.6rem;
+  line-height: 0.6rem;
   font-weight: 900;
   color: #fff;
   background-color: #774C7D;
@@ -209,6 +210,7 @@ a {
 .item-block__img {
   width: 100%;
   max-width: 250px;
+  max-height: 220px;
 }
 .item-block__content {
   display: flex;
@@ -285,7 +287,7 @@ a {
     max-width: 252px;
   }
   .item-block__top-gender {
-    padding: 2.7% 3% 2.1% 3%;
+    padding: 1.3% 2% 1.6% 2%;
     font-size: 0.5rem;
     font-weight: 700;
     line-height: 0.45rem;
@@ -317,9 +319,9 @@ a {
     max-width: 350px;
   }
   .item-block__top-gender {
-    padding: 2% 2.5% 1.6% 2.5%;
+    padding: 1% 2%;
     font-size: 0.6rem;
-    line-height: 0.5rem;
+    line-height: 0.7rem;
   }
   .item-block__content-name {
     font-size: 1rem;
@@ -352,10 +354,10 @@ a {
     z-index: 1;
   }
   .item-block__top-gender {
-    padding: 2.3% 3% 1.5% 3%;
+    padding: 1.5% 2.5%;
     font-size: 0.45rem;
-    line-height: 0.4rem;
-    font-weight: 600;
+    line-height: 0.5rem;
+    font-weight: 700;
   }
   .item-block__content-name {
     font-size: 0.7rem;
@@ -381,8 +383,10 @@ a {
 }
 @media screen and (max-width: 375px) {
   .item-block__top-gender {
-    font-size: 0.3rem;
-    font-weight: 500;
+    font-size: 0.35rem;
+    line-height: 0.3rem;
+    font-weight: 600;
+    padding: 1% 2.5% 2% 2.5%;
   }
   .item-block__content-name {
     font-size: 0.6rem;
@@ -989,7 +993,7 @@ a {
 .carousel-frame-top__carousel-hearts-image:nth-child(9n) {
   left: 45%;
   transform: rotate(-40deg);
-  animation-delay: 4s;
+  animation-delay: 5s;
 }
 
 @keyframes heart {
@@ -998,7 +1002,7 @@ a {
   }
   75% {
     opacity: 0.5;
-    transform: rotate(15deg);
+    transform: rotate(-20deg);
   }
   50% {
     opacity: 1;
@@ -1006,11 +1010,10 @@ a {
   }
   75% {
     opacity: 0.5;
-    transform: rotate(45deg);
+    transform: rotate(-20deg);
   }
   100% {
     opacity: 0;
-    transform: rotate(60deg);
     top: 100%;
   }
 }
