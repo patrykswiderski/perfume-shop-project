@@ -92,7 +92,8 @@
 
     &__left-btn, &__right-btn {
       font-size: 2.5vw;
-      padding: 1.2rem 3.5rem;
+      padding: 1.2rem 3rem;
+      bottom: 15%;
     }
   }
 }
@@ -101,16 +102,7 @@
   .subscription-top {
 
     &__btn-link {
-      font-size: 3vw;
       padding: 0.6rem 1.1rem;
-    }
-  }
-
-  .subscription-bottom {
-
-    &__left-btn, &__right-btn {
-      font-size: 3vw;
-      padding: 0.8rem 1.5rem;
     }
   }
 } 
@@ -127,8 +119,8 @@
   .subscription-bottom {
 
     &__left-btn, &__right-btn {
-      font-size: 3vw;
-      padding: 0.5rem 1rem;
+      font-size: 2.8vw;
+      padding: 1rem 2rem;
     }
   }
 }

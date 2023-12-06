@@ -37,36 +37,102 @@
 .carousel-frame-top {
   max-width: 1354px;
 
-  &__carousel-image {
-    width: 93%;
-    max-width: 1234px;
-  }
-
   &__image {
     max-width: 100%;
   }
 
-  &__btn-image {
+  &__btn-image-first {
     color: $white;
     background-color: $dark_rose;
-    left: 24%;
+    left: 21%;
     bottom: 16%;
+  }
+  
+  &__btn-image-second {
+    color: $black;
+    background-color: $button_gray;
+    left: 21%;
+    bottom: 16%;
+  }
+
+  &__btn-left {
+    margin-left: -5%;
+  }
+
+  &__btn-right {
+    margin-right: -5%;
+  }
+
+  &__carousel-hearts-image {
+    position: absolute;
+    top: -22px;
+    left: 1%;
+    z-index: 2;
+    width: 2%;
+    animation: heart 5s linear infinite;
+  }
+
+  &__carousel-hearts-image:nth-child(2n) {
+    left: 5%;
+    transform: rotate(-25deg);
+    animation-delay: 1.5;
+  }
+
+  &__carousel-hearts-image:nth-child(3n) {
+    left: 10%;
+    transform: rotate(-30deg);
+    animation-delay: 3.5s;
+  }  
+  
+  &__carousel-hearts-image:nth-child(4n) {
+    left: 15%;
+    transform: rotate(-10deg);
+    animation-delay: 2.5s;
+  }  
+  
+  &__carousel-hearts-image:nth-child(5n) {
+    left: 20%;
+    transform: rotate(25deg);
+    animation-delay: 1s;
+  }
+
+  &__carousel-hearts-image:nth-child(6n) {
+    left: 25%;
+    transform: rotate(35deg);
+    animation-delay: 3s;
+  }  
+  
+  &__carousel-hearts-image:nth-child(7n) {
+    left: 35%;
+    transform: rotate(35deg);
+    animation-delay: 0.5s;
+  }
+
+  &__carousel-hearts-image:nth-child(8n) {
+    left: 40%;
+    transform: rotate(45deg);
+    animation-delay: 2s;
+  }
+
+  &__carousel-hearts-image:nth-child(9n) {
+    left: 45%;
+    transform: rotate(50deg);
+    animation-delay: 4s;
   }
 }
 
-.carousel-frame-bottom {
-  width: 6.1%;
-  padding-top: 0.4%;
-
-  &__pagination {
-  margin: 0;
-  cursor: pointer;
-  max-width: 120px;
+@keyframes heart {
+  0% {
+    opacity: 0;
   }
 
-  &__pagination-image {
-    width: 100%;
-    max-width: 39px;
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    top: 100%;
   }
 }
 
@@ -89,8 +155,8 @@
 }
 
 @media screen and (max-width: 1200px){
-
   .carousel-frame-top {
+
     justify-content: center;
     max-width: 1234px;
 
@@ -98,22 +164,8 @@
     width: 100%;
     }
 
-    &__btn-image {
+    &__btn-image-first, &__btn-image-second {
       left: 21%;
-    }
-
-    &__btn-left, &__btn-right {
-      position: absolute;
-      margin: auto 0;
-      max-width: 5%;
-    }
-
-    &__btn-left {
-      left: 1%;    
-    }
-
-    &__btn-right {
-      right: 1%;    
     }
   }
 }
@@ -140,10 +192,10 @@
       max-width: 70%;
     }
 
-    &__btn-image {
+    &__btn-image-first, &__btn-image-second  {
       left: 21.3%;
       bottom: 16%;
-      }
+    }
   }
 
   .search-for-brand {
@@ -151,10 +203,6 @@
     &__btn-image {
       bottom: 15%;
     }
-  }
-
-  .carousel-frame-bottom {
-    width: 10%;
   }
 }
 
@@ -168,26 +216,41 @@
 
   .carousel-frame-top {
 
-    &__carousel-image {
-      padding: 1.5% 0;
+    &__carousel-indicators {
+      margin-bottom: 0.5%;
+      margin-inline: auto;
     }
-    
+
+    &__carousel-indicator {
+      max-width: 20px;
+      max-height: 2px;
+    }
+
     &__btn-left {
-      left: 0.5%;    
+      margin-left: -3%;
     }
-
+  
     &__btn-right {
-      right: 0.5%;    
-    }
-
-    &__btn-sides-images {
-      max-width: 100%;
+      margin-right: -3%;
     }
   }
+}
 
-  .carousel-frame-bottom {
-    width: 15%;
-    padding-top: 0;
-    padding-bottom: 2%;
-  } 
+@media screen and (max-width: 375px) {
+  .carousel-frame-top {
+
+    &__carousel-indicators {
+      margin-bottom: 0.2%;
+    }
+
+    &__carousel-indicator {
+      max-width: 10px;
+      max-height: 2px;
+    }
+
+    &__btn-left, &__btn-right {
+      max-width: 5%;
+      margin: 0;
+    }
+  }
 }

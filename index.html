@@ -250,39 +250,48 @@
 
       <div class="carousel-frame container-fluid p-0">
         <div class="carousel-frame__flex d-flex flex-column justify-content-between align-items-center">
-          
-          <div class="carousel-frame-top d-flex align-items-center justify-content-between position-relative">
-            <button class="carousel-frame-top__btn-left btn-next-product">
-              <img class="carousel-frame-top__btn-sides-images" src="app/images/Component 103.svg" alt="">
-              <a href="#" class="carousel-frame-top__link "></a>
-            </button>
 
-            <div class="carousel-frame-top__carousel-image ">
-              <img class="carousel-frame-top__image" src="app/images/Frame 48a.jpg" alt="">
-              <a href="#" class="carousel-frame-top__btn-image btn-common position-absolute">Shop Now</a>
+          <div id="promotions-carousel" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-frame-top__carousel-indicators carousel-indicators">
+              <button type="button" data-bs-target="#promotions-carousel" data-bs-slide-to="0" class="carousel-frame-top__carousel-indicator active"></button>
+              <button type="button" data-bs-target="#promotions-carousel" data-bs-slide-to="1" class="carousel-frame-top__carousel-indicator"></button>
+              <button type="button" data-bs-target="#promotions-carousel" data-bs-slide-to="2" class="carousel-frame-top__carousel-indicator"></button>
             </div>
 
-            <button class="carousel-frame-top__btn-right btn-next-product">
-              <img class="carousel-frame-top__btn-sides-images" src="app/images/Component 102.svg" alt="">
-              <a href="#" class="carousel-frame-top__link"></a>
-            </button>          
-          </div>
+            <div class="carousel-inner position-relative">
+              <div class="carousel-item active">
+                <img src="app/images/Frame 48.jpg" alt="Los Angeles" class="carousel-frame-top__image d-block">
+                <a href="#" class="carousel-frame-top__btn-image-first btn-common position-absolute">Shop Now</a>
 
-          <div class="carousel-frame-bottom d-flex justify-content-center">
-            <ul class="carousel-frame-bottom__pagination pagination">
-              <li class="carousel-frame-bottom__pagination-item page-item">
-                <img class="carousel-frame-bottom__pagination-image" src="app/images/Frame 121.svg" alt="">
-                <a href="#" class="carousel-frame-bottom__pagination-dot--active"></a>
-              </li>
-              <li class="carousel-frame-bottom__pagination__item page-item">
-                <img class="carousel-frame-bottom__pagination-image" src="app/images/Frame 122.svg" alt="">
-                <a href="#" class="carousel-frame-bottom-pagination-dot"></a>
-              </li>
-              <li class="carousel-frame-bottom__pagination-item page-item">
-                <img class="carousel-frame-bottom__pagination-image mx-auto" src="app/images/Frame 122.svg" alt="">
-                <a href="#" class="carousel-frame-bottom__pagination-dot"></a>
-              </li>
-            </ul>
+                <img class="carousel-frame-top__carousel-hearts-image" src="app/images/heart_falling.png" alt="">
+                <img class="carousel-frame-top__carousel-hearts-image" src="app/images/heart_falling.png" alt="">
+                <img class="carousel-frame-top__carousel-hearts-image" src="app/images/heart_falling.png" alt="">
+                <img class="carousel-frame-top__carousel-hearts-image" src="app/images/heart_falling.png" alt="">
+                <img class="carousel-frame-top__carousel-hearts-image" src="app/images/heart_falling.png" alt="">
+                <img class="carousel-frame-top__carousel-hearts-image" src="app/images/heart_falling.png" alt="">
+                <img class="carousel-frame-top__carousel-hearts-image" src="app/images/heart_falling.png" alt="">
+                <img class="carousel-frame-top__carousel-hearts-image" src="app/images/heart_falling.png" alt="">
+                <img class="carousel-frame-top__carousel-hearts-image" src="app/images/heart_falling.png" alt="">
+                <img class="carousel-frame-top__carousel-hearts-image" src="app/images/heart_falling.png" alt="">
+
+              </div>
+              <div class="carousel-item">
+                <img src="app/images/Frame 48b.jpg" alt="Chicago" class="carousel-frame-top__image d-block">
+              </div>
+              <div class="carousel-item">
+                <img src="app/images/Frame 48c.jpg" alt="New York" class="carousel-frame-top__image d-block">
+                <a href="#" class="carousel-frame-top__btn-image-second btn-common position-absolute">Shop All</a>
+              </div>
+            </div>
+
+            <button class="carousel-frame-top__btn-left carousel-control-prev" type="button" data-bs-target="#promotions-carousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-frame-top__btn-right carousel-control-next" type="button" data-bs-target="#promotions-carousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+
           </div>
         </div>
       </div>
