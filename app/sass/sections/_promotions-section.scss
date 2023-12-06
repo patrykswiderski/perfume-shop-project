@@ -74,13 +74,13 @@
 
   &__carousel-hearts-image:nth-child(2n) {
     left: 5%;
-    transform: rotate(-25deg);
+    transform: rotate(20deg);
     animation-delay: 1.5;
   }
 
   &__carousel-hearts-image:nth-child(3n) {
     left: 10%;
-    transform: rotate(-30deg);
+    transform: rotate(50deg);
     animation-delay: 3.5s;
   }  
   
@@ -92,13 +92,13 @@
   
   &__carousel-hearts-image:nth-child(5n) {
     left: 20%;
-    transform: rotate(25deg);
+    transform: rotate(-25deg);
     animation-delay: 1s;
   }
 
   &__carousel-hearts-image:nth-child(6n) {
     left: 25%;
-    transform: rotate(35deg);
+    transform: rotate(-20deg);
     animation-delay: 3s;
   }  
   
@@ -116,7 +116,7 @@
 
   &__carousel-hearts-image:nth-child(9n) {
     left: 45%;
-    transform: rotate(50deg);
+    transform: rotate(-40deg);
     animation-delay: 4s;
   }
 }
@@ -126,12 +126,24 @@
     opacity: 0;
   }
 
+  75% {
+    opacity: .5;
+    transform: rotate(15deg);
+  }
+
   50% {
     opacity: 1;
+    transform: rotate(30deg);
+  }
+
+  75% {
+    opacity: .5;
+    transform: rotate(45deg);
   }
 
   100% {
     opacity: 0;
+    transform: rotate(60deg);
     top: 100%;
   }
 }
