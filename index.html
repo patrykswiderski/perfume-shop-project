@@ -151,8 +151,8 @@
           </div>
 
           <ul class="navbar-bottom__nav offcanvas-body m-0">
-            <li class="navbar-bottom__item">
-              <a id="navbar-bottom__offcanvas-button" href="#navbar-bottom__offcanvas-menu" class="navbar-bottom__link" data-bs-toggle="offcanvas">Perfumes</a>
+            <li id="navbar-bottom__dropdown-element" class="navbar-bottom__item">
+              <a id="navbar-bottom__dropdown-button" href="#navbar-bottom__offcanvas-menu" class="navbar-bottom__link" data-bs-toggle="offcanvas">Perfumes</a>
 
               <div id="navbar-bottom__offcanvas-menu" class="navbar-bottom__offcanvas-menu offcanvas offcanvas-top">
                 <div class="navbar-bottom__offcanvas-menu-container d-flex flex-row mx-auto">
@@ -1095,14 +1095,11 @@
         }
       }
       
-
       updateClass();
       window.addEventListener('resize', updateClass);
 
       updateClassFooter();
       window.addEventListener('resize', updateClassFooter);
-
-
 
     </script>
 

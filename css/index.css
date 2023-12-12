@@ -206,11 +206,12 @@ a {
   font-weight: 900;
   color: #fff;
   background-color: #774C7D;
+  text-transform: uppercase;
 }
 .item-block__img {
   width: 100%;
   max-width: 250px;
-  max-height: 220px;
+  height: 30%;
 }
 .item-block__content {
   display: flex;
@@ -223,6 +224,7 @@ a {
   margin: 0 auto;
   font-size: 0.8rem;
   font-weight: 750;
+  text-transform: uppercase;
 }
 .item-block__content-brand {
   margin: 0;

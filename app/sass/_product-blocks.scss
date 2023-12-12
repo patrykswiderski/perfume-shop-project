@@ -48,12 +48,13 @@
     font-weight: 900;
     color: $white;
     background-color: $item-block-gender;
+    text-transform: uppercase;
   }
 
   &__img {
     width: 100%;
     max-width: 250px;
-    max-height: 220px;
+    height: 30%;
   }
 
   &__content {
@@ -68,6 +69,7 @@
     margin: 0 auto;
     font-size: 0.8rem;
     font-weight: 750;
+    text-transform: uppercase;
   }
 
   &__content-brand {
