@@ -1047,7 +1047,7 @@
           elementOffcanvas2.classList.add('d-none');
           elementCollapse.removeAttribute('data-bs-toggle')
           elementCollapse.removeAttribute('data-bs-target');
-          elementoffcanvas3.addAttribute('data-bs-toggle', 'offcanvas');
+          elementoffcanvas3.setAttribute('data-bs-toggle', 'offcanvas');
         }
       }
 
@@ -1062,10 +1062,13 @@
 
         if (window.innerWidth < 768) {
           elementCollapseFooterButtonFirst.setAttribute('data-bs-toggle', 'collapse');
+          // elementCollapseFooterButtonFirst.classList.add('btn');
 
           elementCollapseFooterButtonSecond.setAttribute('data-bs-toggle', 'collapse');
+          elementCollapseFooterButtonSecond.classList.add('collapsed');
 
           elementCollapseFooterButtonThird.setAttribute('data-bs-toggle', 'collapse');
+          elementCollapseFooterButtonThird.classList.add('collapsed');
 
           elementCollapseFooterMenuFirst.setAttribute('data-bs-parent', '#accordion');
           elementCollapseFooterMenuFirst.classList.add('collapse', 'show');
@@ -1079,7 +1082,7 @@
           elementCollapseFooterButtonFirst.removeAttribute('data-bs-toggle');
 
           elementCollapseFooterButtonSecond.setAttribute('data-bs-toggle');
-          elementCollapseFooterButtonSecond.classList.removed('collapsed');
+          elementCollapseFooterButtonSecond.classList.remove('collapsed');
 
           elementCollapseFooterButtonThird.setAttribute('data-bs-toggle');
           elementCollapseFooterButtonThird.classList.remove('collapsed');
