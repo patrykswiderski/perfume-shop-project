@@ -27,7 +27,7 @@ function generateProductHTML(product) {
       </div>
 
       <div class="item-block__add">
-        <a href="#" class="item-block__add-btn">ADD TO BAG</a>
+        <a href="#" class="item-block__add-btn js-add-cart" data-product-id="${product.id}">ADD TO BAG</a>
       </div>
     </div>
   `;
@@ -45,3 +45,28 @@ document.querySelector('.js-new-products').innerHTML = newProductsHTML;
 const bestSellersProducts = products.sort((a, b) => b.numberPurchase - a.numberPurchase).slice(0, 4);
 const bestSellersProductsHTML = bestSellersProducts.map(generateProductHTML).join('');
 document.querySelector('.js-best-sellers-products').innerHTML = bestSellersProductsHTML;
+
+document.querySelectorAll('.js-add-cart')
+  .forEach((button) => {
+    button.addEventListener('click', () => {
+      const productId = button.dataset.productId;
+
+      let matchingItem;
+
+      cart.forEach((item) => {
+        if (productId === item.productId) {
+          matchingItem = item;
+        }
+      })
+
+      if (matchingItem) {
+        matchingItem.quantity += 1;
+      } else {
+        cart.push({
+          productId: productId,
+          quantity: 1,
+        })
+      }
+      console.log(cart);
+    })
+  });
