@@ -211,7 +211,7 @@ a {
 .item-block__img {
   width: 100%;
   max-width: 250px;
-  height: 30%;
+  max-height: 220px;
 }
 .item-block__content {
   display: flex;

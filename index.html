@@ -1032,7 +1032,7 @@
         let elementOffcanvas = document.getElementById('offcanvas-menu');
         let elementOffcanvas2 = document.getElementById('offcanvas-header');
         let elementCollapse = document.getElementById('navbar-middle__collapse');
-        let elementoffcanvas3 = document.getElementById('navbar-bottom__offcanvas-button');
+        // let elementoffcanvas3 = document.getElementById('navbar-bottom__offcanvas-button');
 
         if (window.innerWidth < 1024) {
           elementOffcanvas.classList.add('offcanvas', 'offcanvas-start');
@@ -1040,14 +1040,14 @@
           elementOffcanvas2.classList.remove('d-none');
           elementCollapse.setAttribute('data-bs-toggle', 'collapse')
           elementCollapse.setAttribute('data-bs-target', '#navbar-middle__collapse-menu');
-          elementoffcanvas3.removeAttribute('data-bs-toggle');
+          // elementoffcanvas3.removeAttribute('data-bs-toggle');
         } else {
           elementOffcanvas.classList.remove('offcanvas', 'offcanvas-start');
           elementOffcanvas.classList.add('navbar-bottom__row', 'row', 'justify-content-center');
           elementOffcanvas2.classList.add('d-none');
           elementCollapse.removeAttribute('data-bs-toggle')
           elementCollapse.removeAttribute('data-bs-target');
-          elementoffcanvas3.setAttribute('data-bs-toggle', 'offcanvas');
+          // elementoffcanvas3.setAttribute('data-bs-toggle', 'offcanvas');
         }
       }
 
@@ -1081,10 +1081,10 @@
         } else {
           elementCollapseFooterButtonFirst.removeAttribute('data-bs-toggle');
 
-          elementCollapseFooterButtonSecond.setAttribute('data-bs-toggle');
+          elementCollapseFooterButtonSecond.removeAttribute('data-bs-toggle');
           elementCollapseFooterButtonSecond.classList.remove('collapsed');
 
-          elementCollapseFooterButtonThird.setAttribute('data-bs-toggle');
+          elementCollapseFooterButtonThird.removeAttribute('data-bs-toggle');
           elementCollapseFooterButtonThird.classList.remove('collapsed');
 
           elementCollapseFooterMenuFirst.removeAttribute('data-bs-parent');

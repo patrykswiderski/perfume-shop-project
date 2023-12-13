@@ -186,7 +186,7 @@ function generateProductHTML(product) {
         <p class="item-block__content-name">${product.nameOfProduct}</p>
         <p class="item-block__content-brand">by <span class="item-block__content-text-underline">${product.brand}</span></p>
         <p class="item-block__content-type">${product.type}</p>
-        <p class="item-block__content-price">from <span class="item-block__content-price-bold">$${product.priceCents / 100}</span></p>
+        <p class="item-block__content-price">from <span class="item-block__content-price-bold">$${(product.priceCents / 100).toFixed(2)}</span></p>
       </div>
 
       <div class="item-block__add">
