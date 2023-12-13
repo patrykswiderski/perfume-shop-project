@@ -52,7 +52,7 @@
           </div>
           
           <div class="navbar-top__valentines col-md-4 p-0 text-center">
-            <p class="navbar-top__valentines-content m-0">&#128293 Only <span class="">11</span> days left until VALENTINE'S DAY! &#128293</p>
+            <p class="navbar-top__valentines-content m-0">&#128293 Only <span id="daysCountdown"></span> days left until VALENTINE'S DAY! &#128293</p>
           </div>
 
           <div class="navbar-top__right col-md-4 text-end p-0">
@@ -151,8 +151,8 @@
           </div>
 
           <ul class="navbar-bottom__nav offcanvas-body m-0">
-            <li class="navbar-bottom__item">
-              <a id="navbar-bottom__offcanvas-button" href="#navbar-bottom__offcanvas-menu" class="navbar-bottom__link" data-bs-toggle="offcanvas">Perfumes</a>
+            <li id="navbar-bottom__dropdown-element" class="navbar-bottom__item">
+              <a id="navbar-bottom__dropdown-button" href="#navbar-bottom__offcanvas-menu" class="navbar-bottom__link" data-bs-toggle="offcanvas">Perfumes</a>
 
               <div id="navbar-bottom__offcanvas-menu" class="navbar-bottom__offcanvas-menu offcanvas offcanvas-top">
                 <div class="navbar-bottom__offcanvas-menu-container d-flex flex-row mx-auto">
@@ -250,39 +250,48 @@
 
       <div class="carousel-frame container-fluid p-0">
         <div class="carousel-frame__flex d-flex flex-column justify-content-between align-items-center">
-          
-          <div class="carousel-frame-top d-flex align-items-center justify-content-between position-relative">
-            <button class="carousel-frame-top__btn-left btn-next-product">
-              <img class="carousel-frame-top__btn-sides-images" src="app/images/Component 103.svg" alt="">
-              <a href="#" class="carousel-frame-top__link "></a>
-            </button>
 
-            <div class="carousel-frame-top__carousel-image ">
-              <img class="carousel-frame-top__image" src="app/images/Frame 48a.jpg" alt="">
-              <a href="#" class="carousel-frame-top__btn-image btn-common position-absolute">Shop Now</a>
+          <div id="promotions-carousel" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-frame-top__carousel-indicators carousel-indicators">
+              <button type="button" data-bs-target="#promotions-carousel" data-bs-slide-to="0" class="carousel-frame-top__carousel-indicator active"></button>
+              <button type="button" data-bs-target="#promotions-carousel" data-bs-slide-to="1" class="carousel-frame-top__carousel-indicator"></button>
+              <button type="button" data-bs-target="#promotions-carousel" data-bs-slide-to="2" class="carousel-frame-top__carousel-indicator"></button>
             </div>
 
-            <button class="carousel-frame-top__btn-right btn-next-product">
-              <img class="carousel-frame-top__btn-sides-images" src="app/images/Component 102.svg" alt="">
-              <a href="#" class="carousel-frame-top__link"></a>
-            </button>          
-          </div>
+            <div class="carousel-inner position-relative">
+              <div class="carousel-item active">
+                <img src="app/images/Frame 48.jpg" alt="Los Angeles" class="carousel-frame-top__image d-block">
+                <a href="#" class="carousel-frame-top__btn-image-first btn-common position-absolute">Shop Now</a>
 
-          <div class="carousel-frame-bottom d-flex justify-content-center">
-            <ul class="carousel-frame-bottom__pagination pagination">
-              <li class="carousel-frame-bottom__pagination-item page-item">
-                <img class="carousel-frame-bottom__pagination-image" src="app/images/Frame 121.svg" alt="">
-                <a href="#" class="carousel-frame-bottom__pagination-dot--active"></a>
-              </li>
-              <li class="carousel-frame-bottom__pagination__item page-item">
-                <img class="carousel-frame-bottom__pagination-image" src="app/images/Frame 122.svg" alt="">
-                <a href="#" class="carousel-frame-bottom-pagination-dot"></a>
-              </li>
-              <li class="carousel-frame-bottom__pagination-item page-item">
-                <img class="carousel-frame-bottom__pagination-image mx-auto" src="app/images/Frame 122.svg" alt="">
-                <a href="#" class="carousel-frame-bottom__pagination-dot"></a>
-              </li>
-            </ul>
+                <img class="carousel-frame-top__carousel-hearts-image" src="app/images/heart_falling.png" alt="">
+                <img class="carousel-frame-top__carousel-hearts-image" src="app/images/heart_falling.png" alt="">
+                <img class="carousel-frame-top__carousel-hearts-image" src="app/images/heart_falling.png" alt="">
+                <img class="carousel-frame-top__carousel-hearts-image" src="app/images/heart_falling.png" alt="">
+                <img class="carousel-frame-top__carousel-hearts-image" src="app/images/heart_falling.png" alt="">
+                <img class="carousel-frame-top__carousel-hearts-image" src="app/images/heart_falling.png" alt="">
+                <img class="carousel-frame-top__carousel-hearts-image" src="app/images/heart_falling.png" alt="">
+                <img class="carousel-frame-top__carousel-hearts-image" src="app/images/heart_falling.png" alt="">
+                <img class="carousel-frame-top__carousel-hearts-image" src="app/images/heart_falling.png" alt="">
+                <img class="carousel-frame-top__carousel-hearts-image" src="app/images/heart_falling.png" alt="">
+
+              </div>
+              <div class="carousel-item">
+                <img src="app/images/Frame 48b.jpg" alt="Chicago" class="carousel-frame-top__image d-block">
+              </div>
+              <div class="carousel-item">
+                <img src="app/images/Frame 48c.jpg" alt="New York" class="carousel-frame-top__image d-block">
+                <a href="#" class="carousel-frame-top__btn-image-second btn-common position-absolute">Shop All</a>
+              </div>
+            </div>
+
+            <button class="carousel-frame-top__btn-left carousel-control-prev" type="button" data-bs-target="#promotions-carousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-frame-top__btn-right carousel-control-next" type="button" data-bs-target="#promotions-carousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+
           </div>
         </div>
       </div>
@@ -370,15 +379,15 @@
           <p class="recommended__title title-text">RECOMMENDED FOR YOU</p>
         </div>
       
-        <div class="recommended-middle products-box-style">
+        <div class="recommended-middle products-box-style ">
 
           <div class="recommended-middle__btn btn-next-product">
-            <img class="ecommended-middle__btn-image" src="app/images/Component 103.svg" alt="">
+            <img class="recommended-middle__btn-image" src="app/images/Component 103.svg" alt="">
             <a href="#" class="ecommended-middle__btn-left"></a>
           </div>
 
-          <div class="recommended-middle__products products-middle-style flex-fill py-4">
-
+          <div class="recommended-middle__products products-middle-style flex-fill py-4 js-recommended-products">
+<!-- 
             <div class="recommended-products__item item-block">
               <div class="item-block__top">
                 <p class="item-block__top-gender">WOMEN</p>
@@ -481,7 +490,7 @@
               <div class="item-block__add">
                 <a href="#" class="item-block__add-btn">ADD TO BAG</a>
               </div>
-            </div>
+            </div> -->
           </div>
 
           <button class="recommended-middle__btn btn-next-product">
@@ -512,8 +521,8 @@
             <a href="#" class="new-arrivals-middle__btn-left"></a>
           </button>
 
-          <div class="new-arrivals-middle__products products-middle-style flex-fill py-4">
-            <div class="new-arrivals__item item-block">
+          <div class="new-arrivals-middle__products products-middle-style flex-fill py-4 js-new-products">
+            <!-- <div class="new-arrivals__item item-block">
               <div class="item-block__top">
                 <p class="item-block__top-gender">WOMEN</p>
                 
@@ -615,7 +624,7 @@
               <div class="item-block__add">
                 <a href="#" class="item-block__add-btn">ADD TO BAG</a>
               </div>
-            </div>
+            </div> -->
           </div>
 
           <button class="new-arrivals-middle__btn btn-next-product">
@@ -675,8 +684,8 @@
             <a href="#" class="best-sellers-middle__btn-left"></a>
           </button>
 
-          <div class="best-sellers__products products-middle-style flex-fill py-4">
-            <div class="new-arrivals__item item-block">
+          <div class="best-sellers__products products-middle-style flex-fill py-4 js-best-sellers-products">
+            <!-- <div class="new-arrivals__item item-block">
               <div class="item-block__top">
                 <p class="item-block__top-gender">WOMEN</p>
                 
@@ -778,7 +787,7 @@
               <div class="item-block__add">
                 <a href="#" class="item-block__add-btn">ADD TO BAG</a>
               </div>
-            </div>
+            </div> -->
           </div>
 
           <button class="best-sellers-middle__btn btn-next-product">
@@ -1023,7 +1032,7 @@
         let elementOffcanvas = document.getElementById('offcanvas-menu');
         let elementOffcanvas2 = document.getElementById('offcanvas-header');
         let elementCollapse = document.getElementById('navbar-middle__collapse');
-        let elementoffcanvas3 = document.getElementById        ('navbar-bottom__offcanvas-button');
+        let elementoffcanvas3 = document.getElementById('navbar-bottom__offcanvas-button');
 
         if (window.innerWidth < 1024) {
           elementOffcanvas.classList.add('offcanvas', 'offcanvas-start');
@@ -1038,7 +1047,7 @@
           elementOffcanvas2.classList.add('d-none');
           elementCollapse.removeAttribute('data-bs-toggle')
           elementCollapse.removeAttribute('data-bs-target');
-          elementoffcanvas3.addAttribute('data-bs-toggle', 'offcanvas');
+          elementoffcanvas3.setAttribute('data-bs-toggle', 'offcanvas');
         }
       }
 
@@ -1053,10 +1062,13 @@
 
         if (window.innerWidth < 768) {
           elementCollapseFooterButtonFirst.setAttribute('data-bs-toggle', 'collapse');
+          // elementCollapseFooterButtonFirst.classList.add('btn');
 
           elementCollapseFooterButtonSecond.setAttribute('data-bs-toggle', 'collapse');
+          elementCollapseFooterButtonSecond.classList.add('collapsed');
 
           elementCollapseFooterButtonThird.setAttribute('data-bs-toggle', 'collapse');
+          elementCollapseFooterButtonThird.classList.add('collapsed');
 
           elementCollapseFooterMenuFirst.setAttribute('data-bs-parent', '#accordion');
           elementCollapseFooterMenuFirst.classList.add('collapse', 'show');
@@ -1070,7 +1082,7 @@
           elementCollapseFooterButtonFirst.removeAttribute('data-bs-toggle');
 
           elementCollapseFooterButtonSecond.setAttribute('data-bs-toggle');
-          elementCollapseFooterButtonSecond.classList.removed('collapsed');
+          elementCollapseFooterButtonSecond.classList.remove('collapsed');
 
           elementCollapseFooterButtonThird.setAttribute('data-bs-toggle');
           elementCollapseFooterButtonThird.classList.remove('collapsed');
@@ -1086,13 +1098,11 @@
         }
       }
       
-      // Wywołanie funkcji updateClass
       updateClass();
+      window.addEventListener('resize', updateClass);
 
       updateClassFooter();
-
-      // Nasłuchiwanie na zdarzenie zmiany szerokości ekranu
-      window.addEventListener('resize', updateClass);
+      window.addEventListener('resize', updateClassFooter);
 
     </script>
 
@@ -1105,8 +1115,37 @@
 
         dropdownElement.appendChild(clonedOffcanvasMenu);
       });
-
     </script>
+
+    <script>
+      function calculateDaysUntilNextValentines() {
+        const currentDate = new Date();
+        let nextValentinesYear = currentDate.getFullYear();
+
+        if (currentDate.getMonth() > 1 || (currentDate.getMonth() === 1 && currentDate.getDate() > 14)) {
+          nextValentinesYear++;
+        }
+
+        const valentinesDate = new Date(nextValentinesYear, 1, 14);
+        const timeDifference = valentinesDate - currentDate;
+        const daysUntilValentines = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+
+        return daysUntilValentines;
+      }
+
+      function updateDaysCountdown() {
+        const daysCountdownElement = document.getElementById('daysCountdown');
+        const daysUntilValentines = calculateDaysUntilNextValentines();
+
+        daysCountdownElement.textContent = daysUntilValentines;
+      }
+
+      window.onload = function () {
+        updateDaysCountdown();
+      };
+    </script>
+
+    <script src="./app/scripts/main.js"></script>
 
   </body>
 </html>
