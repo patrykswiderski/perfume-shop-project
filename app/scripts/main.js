@@ -9,8 +9,8 @@ function generateProductHTML(product) {
       <div class="item-block__top">
         <p class="item-block__top-gender">${product.gender}</p>
         
-        <button class="item-block__top-wishlist-btn btn-wishlist">
-          <img src="app/images/heart_wishlist.svg" alt="" class="item-block__top-wishlist-img btn-wishlist">
+        <button class="item-block__top-wishlist-btn btn-wishlist js-add-wishlist" data-product-id="${product.id}">
+          <img src="app/images/heart_wishlist.svg" alt="" class="item-block__top-wishlist-img btn-wishlist js-wishlist-icon-${product.id}">
           <a class="item-block__top-wishlist" href="#"></a>
         </button>  
       </div>
@@ -77,3 +77,34 @@ document.querySelectorAll('.js-add-cart').forEach((button) => {
     });
   });
 
+  document.querySelectorAll('.js-add-wishlist').forEach((button) => {
+    button.addEventListener('click', () => {
+      const productId = button.dataset.productId;
+
+      let matchingItemIndex = '0';
+
+      wishlist.forEach((item, index) => {
+        if (productId === item.productId) {
+          matchingItemIndex = index;
+        }
+      })
+
+      const imgElements = document.querySelectorAll(`.js-wishlist-icon-${button.dataset.productId}`);
+      const wishlistIcon = "app/images/heart_wishlist.svg";
+      const wishlistIconAdded = "app/images/heart_wishlist_full.svg";
+
+      if (matchingItemIndex !== '0') {
+        wishlist.splice(matchingItemIndex, 1);
+        imgElements.forEach((imgElement) => {
+          imgElement.src = wishlistIcon;
+        });
+      } else {
+        wishlist.push({
+          productId: productId,
+        });
+        imgElements.forEach((imgElement) => {
+          imgElement.src = wishlistIconAdded;
+        });
+      }
+    });
+  });
