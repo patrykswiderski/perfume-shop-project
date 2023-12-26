@@ -105,3 +105,21 @@ document.querySelectorAll('.js-add-wishlist').forEach((button) => {
     }
   });
 });
+
+(function(){
+
+  let inputContainer = document.querySelector(".shopping-cart-products__quantity-container");
+  let input = inputContainer.firstElementChild.nextElementSibling;
+  let minus = inputContainer.firstElementChild;
+  let plus = inputContainer.lastElementChild;
+
+  function changeNumber(e) {
+      if(e.target == minus && input.value > 0) {
+          input.value--;
+      } else if(e.target == plus) {
+          input.value++;
+      }
+  }
+
+  inputContainer.addEventListener("click", changeNumber);
+})();

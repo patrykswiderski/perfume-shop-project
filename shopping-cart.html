@@ -230,8 +230,178 @@
 
     <!-- Start of the Shopping Cart section -->
 
+    <section>
+      <div class="shopping-cart container-fluid p-0">
+        <div class="shopping-cart__top text-center">
+          <p class="shopping-cart__title title-text">SHOPPING CART</p>
+        </div>
 
-    
+        <div class="shopping-cart-products row m-0">
+          <div class="shopping-cart-products__product-list col-md-7 p-0">
+            <div class="shopping-cart-products__top row m-0">
+              <div class="shopping-cart-products__top-info d-flex justify-content-between align-items-center">
+                <img class="shopping-cart-products__top-info-icon" src="./app/images/circle-warning.svg" alt="">
+                <p class="shopping-cart-products__top-info-text">Return Items To Us By Post Within 14 Days Of Receipt. Items Should Be Unused, Unopened And Have Any Original Seals Intact. Please Read Our Return Help Section For More Information</p>
+              </div>
+            </div>
+
+            <div class="shopping-cart-products__columns row m-0">
+              <div class="shopping-cart-products__columns-name col-5 p-0">
+                <p class="shopping-cart-products__columns-name-text">Product</p>
+              </div>
+
+              <div class="shopping-cart-products__columns-name col-2 p-0">
+                <p class="shopping-cart-products__columns-name-text">Price</p>
+              </div>
+
+              <div class="shopping-cart-products__columns-name col-2 p-0">
+                <p class="shopping-cart-products__columns-name-text">Quantity</p>
+              </div>
+
+              <div class="shopping-cart-products__columns-name col-3 p-0">
+                <p class="shopping-cart-products__columns-name-text">Total</p>
+              </div>
+            </div>
+
+            <div class="shopping-cart-products__product row m-0">
+              <div class="shopping-cart-products__product-details col-5 p-0">
+                <div class="shopping-cart-products__product-details-row row m-0">
+                  <div class="shopping-cart-products__product-image col-4 p-0">
+                    <img class="item-block__img" src="app/images/Rectangle 1142-00.jpg" alt="">
+                  </div>
+
+                  <div class="shopping-cart-products__product-data col-7 p-0">
+                    <p class="shopping-cart-products__product-name">JO MALONE VETIVER & GO...</p>
+                    <p class="shopping-cart-products__product-brand">by Ipsa</p>
+                    <p class="shopping-cart-products__product-type">Luminizing Clay</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="shopping-cart-products__ col-2 p-0">
+                <p class="shopping-cart-products__product-price">$61.49</p>
+              </div>
+
+              <div class="shopping-cart-products__quantity col-2">
+                <div class="shopping-cart-products__quantity-container">
+                  <div id="minus" class="shopping-cart-products__quantity-minus">-</div>
+                  <input class="shopping-cart-products__quantity-picker" type="text" id="number" value="0">
+                  <div id="plus" class="shopping-cart-products__quantity-plus">+</div>
+                </div>
+              </div>
+
+              <div class="shopping-cart-products__total col-3 p-0">
+                <p class="shopping-cart-products__product-price">$61.49</p>
+                <button class="shopping-cart-products__trash-button">
+                  <img class="shopping-cart-products__trash-icon" src="./app/images/trash_can_icon.png" alt="">
+                </button>
+              </div>
+            </div>
+
+            <div class="shopping-cart-products__product row m-0">
+              <div class="shopping-cart-products__product-details col-5 p-0">
+                <div class="shopping-cart-products__product-details-row row m-0">
+                  <div class="shopping-cart-products__product-image col-4 p-0">
+                    <img class="item-block__img" src="app/images/Rectangle 1142-00.jpg" alt="">
+                  </div>
+
+                  <div class="shopping-cart-products__product-data col-7 p-0">
+                    <p class="shopping-cart-products__product-name">JO MALONE VETIVER & GO...</p>
+                    <p class="shopping-cart-products__product-brand">by Ipsa</p>
+                    <p class="shopping-cart-products__product-type">Luminizing Clay</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="shopping-cart-products__ col-2 p-0">
+                <p class="shopping-cart-products__product-price">$61.49</p>
+              </div>
+
+              <div class="shopping-cart-products__quantity col-2">
+                <div class="shopping-cart-products__quantity-container">
+                  <div id="minus" class="shopping-cart-products__quantity-minus">-</div>
+                  <input class="shopping-cart-products__quantity-picker" type="text" id="number" value="0">
+                  <div id="plus" class="shopping-cart-products__quantity-plus">+</div>
+                </div>
+              </div>
+
+              <div class="shopping-cart-products__total col-3 p-0">
+                <p class="shopping-cart-products__product-price">$61.49</p>
+                <button class="shopping-cart-products__trash-button">
+                  <img class="shopping-cart-products__trash-icon" src="./app/images/trash_can_icon.png" alt="">
+                </button>
+              </div>
+            </div>
+
+            <div class="shopping-cart-products__bottom row m-0">
+              <div class="shopping-cart-products__bottom-buttons col-12 p-0 justify-content-between">
+                <a href="#" class="shopping-cart-products__bottom-button btn-transparent">CONTINUE SHOPPING</a>
+                <a href="#" class="shopping-cart-products__bottom-button btn-transparent">CLEAR SHOPPING CART</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="shopping-cart-summary col-md-4 p-0">
+            <div class="shopping-cart-summary__promocodes accordion accordion-flush" id="accordionFlushExample">
+              <div class="shopping-cart-summary__promocodes-item accordion-item">
+                <h2 class="shopping-cart-summary__promocodes-title accordion-header" id="flush-headingOne">
+                  <button class="shopping-cart-summary__promocodes-button accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Have A Promocode?
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                </div>
+              </div>
+              <div class="shopping-cart-summary__promocodes-item accordion-item">
+                <h2 class="shopping-cart-summary__promocodes-title accordion-header" id="flush-headingTwo">
+                  <button class="shopping-cart-summary__promocodes-button accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Apply Gift Certificate
+                  </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                </div>
+              </div>
+              <div class="shopping-cart-summary__promocodes-item accordion-item">
+                <h2 class="shopping-cart-summary__promocodes-title accordion-header" id="flush-headingThree">
+                  <button class="shopping-cart-summary__promocodes-button accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    ESTIMATE SHIPPING AND TAX
+                  </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="shopping-cart-summary__calculation">
+              <div class="shopping-cart-summary__cost">
+                <div class="shopping-cart-summary__subtotal">Subtotal</div>
+                <div class="shopping-cart-summary__subtotal">175 USD</div>
+              </div>
+
+              <div class="shopping-cart-summary__cost">
+                <div class="shopping-cart-summary__tax">Tax</div>
+                <div class="shopping-cart-summary__tax">0 USD</div>
+              </div>
+
+              <div class="shopping-cart-summary__cost">
+                <div class="shopping-cart-summary__total">ORDER TOTAL</div>
+                <div class="shopping-cart-summary__total">175 USD</div>
+              </div>
+
+              <div class="shopping-cart-summary__button d-flex justify-content-center">
+                <a href="#" class="shopping-cart-summary__button-link btn-transparent">PROCEED TO SECURE CHECKOUT</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </section>
     <!-- End of the Shopping Cart section -->
     
     <!-- Start of the Best Sellers section -->
