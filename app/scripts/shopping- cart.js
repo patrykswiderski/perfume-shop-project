@@ -123,3 +123,57 @@ document.querySelectorAll('.js-add-wishlist').forEach((button) => {
 
   inputContainer.addEventListener("click", changeNumber);
 })();
+
+
+let cartSummaryHTML = '';
+
+cart.forEach((cartItem) => {
+  const productId = cartItem.productId;
+
+  let matchingProduct;
+  
+  products.forEach((product) => {
+    if(product.id === productId) {
+      matchingProduct = product;
+    }
+  });
+
+  cartSummaryHTML += `
+    <div class="shopping-cart-products__product row m-0">
+      <div class="shopping-cart-products__product-details col-5 p-0">
+        <div class="shopping-cart-products__product-details-row row m-0 justify-content-between">
+          <div class="shopping-cart-products__product-image col-4 p-0">
+            <img class="item-block__img" src="${matchingProduct.image}" alt="">
+          </div>
+
+          <div class="shopping-cart-products__product-data col-7 p-0">
+            <p class="shopping-cart-products__product-name">${matchingProduct.nameOfProduct}</p>
+            <p class="shopping-cart-products__product-brand">${matchingProduct.brand}</p>
+            <p class="shopping-cart-products__product-type">${matchingProduct.type}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="shopping-cart-products__ col-2 p-0">
+        <p class="shopping-cart-products__product-price">$${(matchingProduct.priceCents / 100).toFixed(2)}</p>
+      </div>
+
+      <div class="shopping-cart-products__quantity col-2">
+        <div class="shopping-cart-products__quantity-container">
+          <div id="minus" class="shopping-cart-products__quantity-minus">-</div>
+          <input class="shopping-cart-products__quantity-picker" type="text" id="number" value="${cartItem.quantity}">
+          <div id="plus" class="shopping-cart-products__quantity-plus">+</div>
+        </div>
+      </div>
+
+      <div class="shopping-cart-products__total col-3 p-0">
+        <p class="shopping-cart-products__product-price">$61.49</p>
+        <button class="shopping-cart-products__trash-button">
+          <img class="shopping-cart-products__trash-icon" src="./app/images/trash_can_icon.png" alt="">
+        </button>
+      </div>
+    </div>
+  `;
+});
+
+document.querySelector('.js-order-products').innerHTML = cartSummaryHTML;
