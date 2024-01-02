@@ -1,5 +1,5 @@
 import {products} from '../data/products.js';
-import {cart} from '../data/cart.js';
+import {cart, removeFromCart} from '../data/cart.js';
 import {wishlist} from '../data/wishlist.js';
 import {formatCurrency} from './utils/money.js';
 
@@ -156,7 +156,7 @@ cart.forEach((cartItem) => {
       </div>
 
       <div class="shopping-cart-products__ col-2 p-0">
-        <p class="shopping-cart-products__product-price">$${(matchingProduct.priceCents / 100).toFixed(2)}</p>
+        <p class="shopping-cart-products__product-price">$${formatCurrency(matchingProduct.priceCents)}</p>
       </div>
 
       <div class="shopping-cart-products__quantity col-2">
@@ -169,7 +169,7 @@ cart.forEach((cartItem) => {
 
       <div class="shopping-cart-products__total col-3 p-0">
         <p class="shopping-cart-products__product-price">$61.49</p>
-        <button class="shopping-cart-products__trash-button">
+        <button class="shopping-cart-products__trash-button js-trash-button" data-product-id="${matchingProduct.id}">
           <img class="shopping-cart-products__trash-icon" src="./app/images/trash_can_icon.png" alt="">
         </button>
       </div>
@@ -178,3 +178,13 @@ cart.forEach((cartItem) => {
 });
 
 document.querySelector('.js-order-products').innerHTML = cartSummaryHTML;
+
+
+document.querySelectorAll('.js-trash-button')
+  .forEach((trashButton) => {
+    trashButton.addEventListener('click', () => {
+      const productId = trashButton.dataset.productId;
+      removeFromCart(productId);
+      console.log(cart);
+    });
+  });
