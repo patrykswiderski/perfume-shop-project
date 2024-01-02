@@ -1,6 +1,7 @@
 import {products} from '../data/products.js';
 import {cart} from '../data/cart.js';
 import {wishlist} from '../data/wishlist.js';
+import {formatCurrency} from './utils/money.js';
 
 
 
@@ -29,7 +30,7 @@ function generateProductHTML(product) {
         <p class="item-block__content-name">${product.nameOfProduct}</p>
         <p class="item-block__content-brand">by <span class="item-block__content-text-underline">${product.brand}</span></p>
         <p class="item-block__content-type">${product.type}</p>
-        <p class="item-block__content-price">from <span class="item-block__content-price-bold">$${(product.priceCents / 100).toFixed(2)}</span></p>
+        <p class="item-block__content-price">from <span class="item-block__content-price-bold">$${formatCurrency(product.priceCents)}</span></p>
       </div>
 
       <div class="item-block__add">
