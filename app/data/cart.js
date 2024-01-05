@@ -2,6 +2,13 @@ export let cart = JSON.parse(localStorage.getItem('cart'));
 
 if (!cart) {
   cart = [];
+  //   {
+  //   productId: '2',
+  //   quantity: 2,
+  // }, {
+  //   productId: '5',
+  //   quantity: 1
+  // }];
 };
 
 
@@ -44,6 +51,22 @@ export function addToCart(productId) {
   };
 
   updateCartQuantity();
+  saveToStorage();
+};
+
+export function removeOneFromCart(productId) {
+  let matchingItem;
+
+  cart.forEach((item) => {
+    if (productId === item.productId) {
+      matchingItem = item;
+    }
+  });
+
+  if (matchingItem && matchingItem.quantity > 1) {
+    matchingItem.quantity -= 1;
+    updateCartQuantity();
+  };
 
   saveToStorage();
 };
@@ -65,7 +88,7 @@ export function removeFromCart(productId) {
 
 export function clearCart() {
   cart = '';
-
+  localStorage.clear();
   saveToStorage();
 };
 
