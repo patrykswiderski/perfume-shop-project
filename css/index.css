@@ -2057,6 +2057,9 @@ a {
 .shopping-cart-products__trash-icon {
   max-height: 1rem;
 }
+.shopping-cart-products__bottom {
+  padding: 1% 0;
+}
 .shopping-cart-products__bottom-buttons {
   display: flex;
 }

@@ -1,9 +1,9 @@
 import {products} from '../data/products.js';
-import {cart} from '../data/cart.js';
+import {cart, addToCart, updateCartQuantity} from '../data/cart.js';
 import {wishlist} from '../data/wishlist.js';
 import {formatCurrency} from './utils/money.js';
 
-
+updateCartQuantity();
 
 function getRandomProducts(allProducts, numberOfProducts) {
   const shuffledProducts = allProducts.slice().sort(() => 0.5 - Math.random());
@@ -53,36 +53,16 @@ const bestSellersProducts = products.sort((a, b) => b.numberPurchase - a.numberP
 const bestSellersProductsHTML = bestSellersProducts.map(generateProductHTML).join('');
 document.querySelector('.js-best-sellers-products').innerHTML = bestSellersProductsHTML;
 
+
 document.querySelectorAll('.js-add-cart').forEach((button) => {
   button.addEventListener('click', () => {
     const productId = button.dataset.productId;
 
-    let matchingItem;
-
-    cart.forEach((item) => {
-      if (productId === item.productId) {
-        matchingItem = item;
-      }
-    })
-
-    if (matchingItem) {
-      matchingItem.quantity += 1;
-    } else {
-      cart.push({
-        productId: productId,
-        quantity: 1,
-      });
-    }
-
-    let cartQuantity = 0;
-
-    cart.forEach((item) => {
-      cartQuantity += item.quantity;
-    });      
-
-    document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+    addToCart(productId);
   });
 });
+
+
 
 document.querySelectorAll('.js-add-wishlist').forEach((button) => {
   button.addEventListener('click', () => {

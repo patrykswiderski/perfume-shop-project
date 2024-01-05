@@ -115,6 +115,10 @@
     max-height: 1rem;
   }
 
+  &__bottom {
+    padding: 1% 0;
+  }
+
   &__bottom-buttons {
     display: flex;
   }
@@ -143,9 +147,6 @@
   &__promocodes-item {
     border-bottom: none !important;
   }
-
-  // &__promocodes-title {
-  // }
 
   &__promocodes-button {
     background-color:  rgb(245, 245, 245) !important;
