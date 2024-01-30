@@ -89,8 +89,7 @@ export function removeFromCart(productId) {
 };
 
 export function clearCart() {
-  cart = '';
-  localStorage.clear();
+  cart = [];
   saveToStorage();
 };
 
