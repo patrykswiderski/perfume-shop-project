@@ -99,6 +99,4 @@ export function updateDeliveryOption(deliveryOptionId) {
     item.deliveryOptionId = deliveryOptionId
     saveToStorage();
   });
-
-  console.log(cart);
 }

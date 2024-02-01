@@ -1,4 +1,4 @@
-import { renderPaymentSummary } from "./payment-summary";
+import { renderPaymentSummary } from "./checkout/paymentSummary";
 
 
 renderPaymentSummary();

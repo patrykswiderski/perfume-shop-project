@@ -2,10 +2,10 @@ import { cart, addToCart, removeFromCart, clearCart, updateCartQuantity, removeO
 import { products } from '../data/products.js';
 import { wishlist } from '../data/wishlist.js';
 import { formatCurrency } from './utils/money.js';
-import {hello} from 'https://unpkg.com/supersimpledev@1.0.1/hello.esm.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
-import { renderPaymentSummary } from './payment-summary.js';
-import { deliveryOptions, getDeliveryOption } from '../data/deliveryOption.js';
+import { renderPaymentSummary } from './checkout/paymentSummary.js';
+import { deliveryOptions, deliveryOptionHTML, getDeliveryOption } from '../data/deliveryOption.js';
+import { generatorCartSummaryHTML } from './checkout/orderSummary.js';
 
 console.log(cart);
 
@@ -90,159 +90,11 @@ document.querySelectorAll('.js-add-wishlist').forEach((button) => {
   });
 });
 
-
-function generatorCartSummaryHTML() {
-  let cartSummaryHTML = '';
-
-  if (!cart) {
-    cart = [];
-  };
-
-  cart.forEach((cartItem) => {
-    const productId = cartItem.productId;
-
-    let matchingProduct;
-
-    products.forEach((product) => {
-      if(product.id === productId) {
-        matchingProduct = product;
-      };
-    });
-
-    cartSummaryHTML += `
-      <div class="shopping-cart-products__product row m-0 js-product-${matchingProduct.id}">
-        <div class="shopping-cart-products__product-details col-5 p-0">
-          <div class="shopping-cart-products__product-details-row row m-0 justify-content-between">
-            <div class="shopping-cart-products__product-image col-4 p-0">
-              <img class="item-block__img" src="${matchingProduct.image}" alt="">
-            </div>
-
-            <div class="shopping-cart-products__product-data col-7 p-0">
-              <p class="shopping-cart-products__product-name">${matchingProduct.nameOfProduct}</p>
-              <p class="shopping-cart-products__product-brand">${matchingProduct.brand}</p>
-              <p class="shopping-cart-products__product-type">${matchingProduct.type}</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="shopping-cart-products__ col-2 p-0">
-          <p class="shopping-cart-products__product-price">$${formatCurrency(matchingProduct.priceCents)}</p>
-        </div>
-
-        <div class="shopping-cart-products__quantity col-2">
-          <div class="shopping-cart-products__quantity-container">
-            <div id="minus" class="shopping-cart-products__quantity-minus js-quantity-minus" data-product-id="${matchingProduct.id}">-</div>
-            <input class="shopping-cart-products__quantity-picker" type="text" id="number" value="${cartItem.quantity}">
-            <div id="plus" class="shopping-cart-products__quantity-plus js-quantity-plus" data-product-id="${matchingProduct.id}">+</div>
-          </div>
-        </div>
-
-        <div class="shopping-cart-products__total col-3 p-0">
-          <p class="shopping-cart-products__product-price">$61.49</p>
-          <button class="shopping-cart-products__trash-button js-trash-button" data-product-id="${matchingProduct.id}">
-            <img class="shopping-cart-products__trash-icon" src="./app/images/trash_can_icon.png" alt="">
-          </button>
-        </div>
-      </div>
-    `;
-  });
-
-  document.querySelector('.js-order-products').innerHTML = cartSummaryHTML;
-
-  document.querySelectorAll('.js-trash-button')
-    .forEach((trashButton) => {
-      trashButton.addEventListener('click', () => {
-        const productId = trashButton.dataset.productId;
-        removeFromCart(productId);
-        updateCartQuantity();
-        
-        const container = document.querySelector(`.js-product-${productId}`);
-        container.remove();
-
-        generatorCartSummaryHTML();
-      });
-    });
-
-  document.querySelectorAll('.js-clear-cart')
-    .forEach((clearButton) => { 
-      clearButton.addEventListener('click', () => {
-        clearCart();
-        updateCartQuantity();
-
-        document.querySelector('.js-order-products').innerHTML = '';
-      });
-    });
-
-  document.querySelectorAll('.js-quantity-minus')
-    .forEach((minusButton) => {
-      minusButton.addEventListener('click', () => {
-        const productId = minusButton.dataset.productId;
-        removeOneFromCart(productId);
-        generatorCartSummaryHTML();
-      });
-    });
-    
-  document.querySelectorAll('.js-quantity-plus')
-    .forEach((plusButton) => {
-      plusButton.addEventListener('click', () => {
-        const productId = plusButton.dataset.productId;
-        addToCart(productId);
-        generatorCartSummaryHTML();
-      });
-    });
-};
+updateCartQuantity();
 
 generatorCartSummaryHTML();
 
 renderPaymentSummary();
-
-
-function deliveryOptionHTML(cart) {
-  let html = '';
-
-  deliveryOptions.forEach((deliveryOption) => {
-    // const deliveryOption = getDeliveryOption(deliveryOptionId);
-    
-    const today = dayjs();
-
-    const deliveryDate = today.add(
-      deliveryOption.deliveryDays,
-      'days'
-    );
-
-    const dateString = deliveryDate.format(
-      'dddd, D MMMM'
-    );
-
-    const priceString = deliveryOption.priceCents === 0
-      ? 'Free'
-      : `$${formatCurrency(deliveryOption.priceCents)} -`;
-    
-    const isChecked = cart[0] && cart[0].deliveryOptionId === deliveryOption.id;
-      
-    html += `
-      <div class="delivery-option js-delivery-option-id"
-      data-delivery-option-id="${deliveryOption.id}">
-        <input type="radio"
-          ${isChecked ? 'checked' : ''}
-          class="delivery-option-input"
-          name="delivery-option-">
-        <div>
-          <div class="delivery-option-date">
-            ${dateString}
-          </div>
-          <div class="delivery-option-price">
-            ${priceString} Shipping
-          </div>
-        </div>
-      </div>
-    
-    `
-  });
-
-  
-  return html;
-};
 
 document.querySelector('.js-delivery-option').innerHTML = deliveryOptionHTML(cart);
 
