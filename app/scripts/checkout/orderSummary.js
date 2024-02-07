@@ -1,6 +1,7 @@
 import { cart, addToCart, removeFromCart, clearCart, updateCartQuantity, removeOneFromCart,updateDeliveryOption } from '../../data/cart.js';
 import { products } from '../../data/products.js';
 import { formatCurrency } from '../utils/money.js';
+import { renderPaymentSummary } from './paymentSummary.js';
 
 export function generatorCartSummaryHTML() {
   let cartSummaryHTML = '';
@@ -69,8 +70,8 @@ export function generatorCartSummaryHTML() {
         
         const container = document.querySelector(`.js-product-${productId}`);
         container.remove();
-
         generatorCartSummaryHTML();
+        renderPaymentSummary();
       });
     });
 
@@ -90,6 +91,7 @@ export function generatorCartSummaryHTML() {
         const productId = minusButton.dataset.productId;
         removeOneFromCart(productId);
         generatorCartSummaryHTML();
+        renderPaymentSummary();
       });
     });
     
@@ -99,6 +101,7 @@ export function generatorCartSummaryHTML() {
         const productId = plusButton.dataset.productId;
         addToCart(productId);
         generatorCartSummaryHTML();
+        renderPaymentSummary();
       });
     });
 
@@ -108,6 +111,7 @@ export function generatorCartSummaryHTML() {
         const deliveryOptionId = element.dataset.deliveryOptionId;
         updateDeliveryOption(deliveryOptionId);
         generatorCartSummaryHTML();
+        renderPaymentSummary();
       });
     });
 };

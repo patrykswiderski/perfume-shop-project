@@ -7,6 +7,7 @@ import { renderPaymentSummary } from './checkout/paymentSummary.js';
 import { deliveryOptions, deliveryOptionHTML, getDeliveryOption } from '../data/deliveryOption.js';
 import { generatorCartSummaryHTML } from './checkout/orderSummary.js';
 
+
 console.log(cart);
 
 function getRandomProducts(allProducts, numberOfProducts) {
@@ -55,6 +56,7 @@ document.querySelectorAll('.js-add-cart').forEach((button) => {
     addToCart(productId);
 
     generatorCartSummaryHTML();
+    renderPaymentSummary();
   });
 });
 
@@ -94,7 +96,7 @@ updateCartQuantity();
 
 generatorCartSummaryHTML();
 
-renderPaymentSummary();
+// renderPaymentSummary();
 
 document.querySelector('.js-delivery-option').innerHTML = deliveryOptionHTML(cart);
 

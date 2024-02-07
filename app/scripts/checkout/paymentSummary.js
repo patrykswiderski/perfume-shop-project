@@ -21,19 +21,12 @@ export function renderPaymentSummary() {
   const taxCents = totalBeforeTaxCents * 0.1;
   const totalCents = totalBeforeTaxCents + taxCents;
 
-  console.log(productPriceCents);
-  console.log(shippingPriceCents);
-  console.log(totalBeforeTaxCents);
-  console.log(taxCents);
-  console.log(totalCents);
-
-
   const paymentSummaryHTML = `
     <div class="shopping-cart-summary__cost">
       <div class="shopping-cart-summary__tax">Shipping & handling</div>
       <div class="shopping-cart-summary__tax">${formatCurrency(shippingPriceCents)} USD</div>
     </div>
-    
+
     <div class="shopping-cart-summary__cost">
       <div class="shopping-cart-summary__subtotal">Total before tax</div>
       <div class="shopping-cart-summary__subtotal">${formatCurrency(productPriceCents)} USD</div>
