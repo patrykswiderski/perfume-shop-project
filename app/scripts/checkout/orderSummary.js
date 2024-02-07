@@ -49,7 +49,7 @@ export function generatorCartSummaryHTML() {
         </div>
 
         <div class="shopping-cart-products__total col-3 p-0">
-          <p class="shopping-cart-products__product-price">$61.49</p>
+          <p class="shopping-cart-products__product-price">$${formatCurrency(cartItem.quantity * matchingProduct.priceCents)}</p>
           <button class="shopping-cart-products__trash-button js-trash-button" data-product-id="${matchingProduct.id}">
             <img class="shopping-cart-products__trash-icon" src="./app/images/trash_can_icon.png" alt="">
           </button>
