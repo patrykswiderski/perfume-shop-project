@@ -96,7 +96,7 @@ updateCartQuantity();
 
 generatorCartSummaryHTML();
 
-// renderPaymentSummary();
+renderPaymentSummary();
 
 document.querySelector('.js-delivery-option').innerHTML = deliveryOptionHTML(cart);
 
