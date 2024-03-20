@@ -2,6 +2,7 @@ function updateClass() {
   let elementOffcanvas = document.getElementById('offcanvas-menu');
   let elementOffcanvas2 = document.getElementById('offcanvas-header');
   let elementCollapse = document.getElementById('navbar-middle__collapse');
+  // let elementNavbarBottomMenuOffcanvas = document.getElementById('navbar-bottom__offcanvas-menu');
 
   if (window.innerWidth < 1024) {
     elementOffcanvas.classList.add('offcanvas', 'offcanvas-start');
@@ -9,12 +10,14 @@ function updateClass() {
     elementOffcanvas2.classList.remove('d-none');
     elementCollapse.setAttribute('data-bs-toggle', 'collapse')
     elementCollapse.setAttribute('data-bs-target', '#navbar-middle__collapse-menu');
+    // elementNavbarBottomMenuOffcanvas.remove('offcanvas');
   } else {
     elementOffcanvas.classList.remove('offcanvas', 'offcanvas-start');
     elementOffcanvas.classList.add('navbar-bottom__row', 'row', 'justify-content-center');
     elementOffcanvas2.classList.add('d-none');
     elementCollapse.removeAttribute('data-bs-toggle')
     elementCollapse.removeAttribute('data-bs-target');
+    // elementNavbarBottomMenuOffcanvas.add('offcanvas');
   }
 }
 

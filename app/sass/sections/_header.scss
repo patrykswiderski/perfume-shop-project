@@ -430,6 +430,10 @@
       font-size: 1rem;
       font-weight: 400;
     }
+
+    &__offcanvas-menu {
+      display: none;
+    }
     
     &__nav {
       display: flex;

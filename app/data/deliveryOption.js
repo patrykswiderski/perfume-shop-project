@@ -52,7 +52,7 @@ export function deliveryOptionHTML(cart) {
     const isChecked = cart[0] && cart[0].deliveryOptionId === deliveryOption.id;
       
     html += `
-      <div class="delivery-option js-delivery-option-id"
+      <div class="shopping-cart-summary__option delivery-option js-delivery-option-id"
       data-delivery-option-id="${deliveryOption.id}">
         <input type="radio"
           ${isChecked ? 'checked' : ''}
@@ -62,7 +62,7 @@ export function deliveryOptionHTML(cart) {
           <div class="delivery-option-date">
             ${dateString}
           </div>
-          <div class="delivery-option-price">
+          <div class="shopping-cart-summary__option-price delivery-option-price">
             ${priceString} Shipping
           </div>
         </div>
