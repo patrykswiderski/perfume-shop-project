@@ -14,8 +14,14 @@ export function renderPaymentSummary() {
     productPriceCents += product.priceCents * cartItem.quantity;
   });
 
-  const deliveryOption = getDeliveryOption(cart[0].deliveryOptionId);
-  shippingPriceCents += deliveryOption.priceCents;
+  try {
+    const deliveryOption = getDeliveryOption(cart[0].deliveryOptionId);
+    shippingPriceCents += deliveryOption.priceCents;
+  } catch (error) {
+    const deliveryOption = 0;
+    shippingPriceCents = 0;
+  }
+  // const deliveryOption = getDeliveryOption(cart[0].deliveryOptionId);
 
   const totalBeforeTaxCents = productPriceCents + shippingPriceCents;
   const taxCents = totalBeforeTaxCents * 0.1;

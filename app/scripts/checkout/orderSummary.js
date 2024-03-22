@@ -82,6 +82,8 @@ export function generatorCartSummaryHTML() {
         updateCartQuantity();
 
         document.querySelector('.js-order-products').innerHTML = '';
+        renderPaymentSummary();
+
       });
     });
 
