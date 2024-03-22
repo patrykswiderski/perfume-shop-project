@@ -415,6 +415,7 @@
   .navbar-bottom {
 
     &__offcanvas {
+      width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -429,6 +430,10 @@
     &__offcanvas-title {
       font-size: 1rem;
       font-weight: 400;
+    }
+
+    &__offcanvas-menu {
+      display: none;
     }
     
     &__nav {
