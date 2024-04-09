@@ -1,1 +1,1 @@
-const wishlist = [];
+export const wishlist = [];

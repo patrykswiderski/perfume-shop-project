@@ -1,4 +1,16 @@
-const products = [{
+export function getProduct(productId) {
+  let matchingProduct;
+
+  products.forEach((product) => {
+    if (product.id === productId) {
+      matchingProduct = product;
+    }
+  });
+
+  return matchingProduct;
+}
+
+export const products = [{
   id: "1",
   gender: 'woman',
   image: 'app/images/Rectangle 1142-00.jpg',

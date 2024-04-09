@@ -1,0 +1,400 @@
+
+.shopping-cart {
+  max-width: 1234px;
+
+  &__top {
+    padding: 3% ;
+  }
+}
+
+.shopping-cart-products {
+  padding-inline: 2%;
+  padding-bottom: 7%;
+
+  &__top-info {
+    padding: 2% 2%;
+    gap: 1.5%;
+    background-color: rgb(181, 217, 238);
+  }
+
+  &__top-info-icon {
+    max-height: 2rem;
+  }
+
+  &__top-info-text {
+    font-size: 0.7rem;
+    line-height: 150%;
+    margin-bottom: 0;
+  }
+
+  &__columns {
+    padding: 4% 0 2% 0;
+    border-bottom: 1px solid $button_gray;
+  }
+
+  &__columns-name-text {
+    color: $footer-menu-item;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  &__product {
+    padding: 2% 0;
+  }
+
+  &__product-name {
+    color: $footer-menu-item;
+    font-size: 0.85rem;
+    font-weight: 550;
+    padding: 0.4rem 0 0.3rem 0;
+    margin: 0;
+  }
+
+  &__product-brand {
+    color: $button_gray;
+    font-size: 0.7rem;
+    padding-bottom: 0.5rem;
+    margin: 0;
+  }
+
+  &__product-type {
+    color: $button_gray;
+    font-size: 0.7rem;
+    margin: 0;
+  }
+
+  &__product-price {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  &__quantity {
+    padding-inline: 0 3%;
+  }
+
+  &__quantity-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    border: 1px solid $button_gray;
+    border-radius: 1px;
+    padding: 6% 10%;
+  }
+
+  &__quantity-picker {
+    font-size: 1rem;
+    font-weight: 500;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    color: $black;
+    text-align: center;
+  }
+
+  &__total {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  &__trash-button {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }  
+  
+  &__trash-icon {
+    max-height: 1rem;
+  }
+
+  &__bottom {
+    padding: 1% 0;
+  }
+
+  &__bottom-buttons {
+    display: flex;
+  }
+
+  &__bottom-button {
+    font-size: 0.8rem;
+    padding: 0.5rem 3.5rem;;
+    border: 2px solid $button_gray;
+  }
+}
+
+#minus,
+#plus {
+    color: $button_gray;
+    height: 100%;
+    cursor: pointer;
+}
+
+.shopping-cart-summary {
+  margin-left: auto;
+
+  &__promocodes {
+    margin-bottom: 2%;
+  }
+
+  &__promocodes-item {
+    border-bottom: none !important;
+  }
+
+  &__promocodes-button {
+    background-color:  rgb(245, 245, 245) !important;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  &__accordion-body {
+    padding: 5px 5px;
+  }
+
+  &__promocodes-placeholder {
+    width: 100%;
+    height: 10vh;
+    max-height: 46px;
+    border-radius: 2px;
+    border: 1px solid #e5e5e5;
+    font-size: 0.8rem;
+    padding-left: 1rem;
+  }
+
+  &__promocodes-placeholder:focus {
+    transition: none;
+    outline: none;
+  }
+
+  &__promocodes-placeholder:focus::placeholder {
+    color: transparent;
+  }
+
+  &__calculation {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(245, 245, 245);
+  }
+
+  &__cost {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  &__subtotal {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  &__tax {
+    color: $button_gray;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  &__total {
+    font-size: 1rem;
+    font-weight: 800;
+  }
+
+  &__button {
+    padding: 5% 0;
+    border-top: 3px solid lightgrey;
+  }
+
+  &__button-link {
+    background-color: $primary;
+    color: $white;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.5rem 3.5rem;;
+  }
+
+  &__option {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding-bottom: 0.3rem;
+    font-size: 0.8rem;
+  }
+
+  &__option-price {
+    font-weight: 600;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .shopping-cart-products {
+  
+    &__product-price {
+      font-size: 0.8rem;
+    }
+  
+    &__quantity-picker {
+      font-size: 0.8rem;
+    }
+    
+    &__bottom-button {
+      font-size: 0.7rem;
+      padding: 0.4rem 2rem;;
+    }
+  }
+
+  .shopping-cart-summary {
+
+    &__promocodes-placeholder {
+      font-size: 0.7rem;
+      padding-left: 0.5rem;
+    }
+    
+    &__subtotal {
+      font-size: 0.7rem;
+    }
+  
+    &__tax {
+      font-size: 0.7rem;
+    }
+  
+    &__total {
+      font-size: 0.8rem;
+    }
+  
+    &__button-link {
+      font-size: 0.7rem;
+      padding: 0.4rem 2rem;
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 435px) {
+
+  .shopping-cart-products {
+
+
+    &__top-info-text {
+      font-size: 0.6rem;
+    }
+
+    &__columns-name-text {
+      font-size: 0.8rem;
+    }
+    
+    &__product-name {
+      font-size: 0.8rem;
+      padding: 0.1rem 0 0.2rem 0;
+    }
+  
+    &__product-brand {
+      font-size: 0.7rem;
+      padding-bottom: 0.2rem;
+    }
+  
+    &__product-type {
+      font-size: 0.5rem;
+    }
+
+    &__product-price {
+      font-size: 0.75rem;
+    }
+  
+    &__quantity-picker {
+      font-size: 0.7rem;
+    }
+    
+    &__bottom-button {
+      padding: 0.4rem 1.4rem;;
+    }
+  }
+
+  .shopping-cart-summary {
+
+    &__promocodes-button {
+      font-size: 0.7rem;
+    }
+  
+    &__subtotal {
+      font-size: 0.7rem;
+    }
+  
+    &__tax {
+      font-size: 0.7rem;
+    }
+  
+    &__total {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+
+  .shopping-cart-products {
+
+    &__top-info-text {
+      font-size: 0.5rem;
+    }
+
+    &__columns-name-text {
+      font-size: 0.7rem;
+    }
+    
+    &__product-name {
+      font-size: 0.7rem;
+      padding: 0.1rem 0 0.2rem 0;
+    }
+  
+    &__product-brand {
+      font-size: 0.6rem;
+      padding-bottom: 0.2rem;
+    }
+  
+    &__product-type {
+      font-size: 0.5rem;
+    }
+
+    &__product-price {
+      font-size: 0.6rem;
+    }
+  
+    &__quantity-picker {
+      font-size: 0.5rem;
+    }
+    
+    &__bottom-button {
+      font-size: 0.5rem;
+      padding: 0.3rem 0.9rem;;
+    }
+  }
+
+  .shopping-cart-summary {
+
+    &__promocodes-button {
+      font-size: 0.6rem;
+    }
+  
+    &__subtotal {
+      font-size: 0.6rem;
+    }
+  
+    &__tax {
+      font-size: 0.6rem;
+    }
+  
+    &__total {
+      font-size: 0.7rem;
+    }
+  }
+}
